@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+  overflow-x: hidden;
+}
+body #main {
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+}
+body #main #header h1 {
+  color: white;
+}/*# sourceMappingURL=index.css.map */
