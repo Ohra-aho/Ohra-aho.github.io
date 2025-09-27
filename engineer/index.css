@@ -1,6 +1,7 @@
 body {
   background-color: black;
   overflow-x: hidden;
+  width: 100vw;
 }
 body #main {
   width: 100vw;
@@ -8,6 +9,252 @@ body #main {
   height: fit-content;
   margin: 0;
 }
+body #main #header {
+  width: 100vw;
+  height: 6vh;
+  border-bottom: 2px dashed white;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  text-align: center;
+}
+body #main #header a {
+  text-decoration: none;
+}
+body #main #header a h1 {
+  width: -moz-fit-content;
+  width: fit-content;
+}
 body #main #header h1 {
   color: white;
+  line-height: 100%;
+  display: inline;
+  width: 80vw;
+}
+body #main #intro {
+  position: relative;
+  top: 20vh;
+  display: flex;
+  justify-content: space-between;
+  width: 99vw;
+  height: 30vh;
+}
+body #main #intro #info {
+  width: 40vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid white;
+  position: relative;
+  left: -1vw;
+  border-radius: 5px;
+}
+body #main #intro #info img {
+  width: 40%;
+  height: auto;
+}
+body #main #intro #info #text_box {
+  position: relative;
+  top: 0;
+  color: white;
+  display: inline-block;
+  height: 100%;
+}
+body #main #intro #info #text_box p {
+  font-size: 1.1em;
+}
+body #main #intro #left {
+  width: 35vw;
+  border: 2px solid white;
+  position: relative;
+  right: -2vw;
+  padding: 0 1vw 0 1vw;
+  border-radius: 5px;
+}
+body #main #intro #left #section {
+  color: white;
+  width: 100%;
+  margin-top: 1%;
+  border-radius: 4px;
+  padding: 1px;
+}
+body #main #intro #left #section a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  align-items: center;
+  justify-content: space-between;
+}
+body #main #intro #left #section h2 {
+  display: inline;
+  font-size: 2em;
+}
+body #main #intro #left #section img {
+  width: 100px;
+  height: auto;
+}
+body #main #intro #left #section:last-of-type {
+  margin-top: 9%;
+}
+body #main #intro #left #section:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+}
+body #main #grid_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 99vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  top: 30vh;
+}
+body #main #grid_container h2 {
+  color: white;
+}
+body #main #grid_container #skill_grid {
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  gap: 10px;
+  align-items: center;
+}
+body #main #grid_container #skill_grid .skill {
+  position: relative;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+body #main #grid_container #skill_grid .skill p {
+  color: white;
+  text-align: center;
+}
+body #main #grid_container #skill_grid .skill #info {
+  border: 2px solid white;
+  border-radius: 10px;
+  position: absolute;
+  left: 100%;
+  top: 100%;
+  width: 200px;
+  background-color: black;
+  z-index: 1;
+  display: none;
+}
+body #main #grid_container #skill_grid .skill:hover #info {
+  display: block;
+}
+body #main #grid_container #skill_grid #s1 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+body #main #grid_container #skill_grid #s2 {
+  grid-row-start: 3;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 6;
+}
+body #main #grid_container #skill_grid #s3 {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 9;
+  grid-column-end: 11;
+}
+body #main #grid_container #skill_grid #s4 {
+  grid-row-start: 7;
+  grid-row-end: 8;
+  grid-column-start: 5;
+  grid-column-end: 6;
+}
+body #main #grid_container #skill_grid #s5 {
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+body #main #grid_container #skill_grid #s6 {
+  grid-row-start: 10;
+  grid-row-end: 11;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+body #main #grid_container #skill_grid #s7 {
+  grid-row-start: 8;
+  grid-row-end: 9;
+  grid-column-start: 6;
+  grid-column-end: 9;
+}
+body #main #grid_container #skill_grid #s8 {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 7;
+  grid-column-end: 9;
+}
+body #main #grid_container #skill_grid #s9 {
+  grid-row-start: 6;
+  grid-row-end: 7;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+body #main #grid_container #skill_grid #s10 {
+  grid-row-start: 9;
+  grid-row-end: 10;
+  grid-column-start: 2;
+  grid-column-end: 5;
+}
+body #main #grid_container #skill_grid #s11 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 7;
+  grid-column-end: 9;
+}
+body #main #grid_container #skill_grid #s12 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+body #main #grid_container #skill_grid #s13 {
+  grid-row-start: 10;
+  grid-row-end: 11;
+  grid-column-start: 8;
+  grid-column-end: 10;
+}
+body #main #grid_container #skill_grid #s14 {
+  grid-row-start: 6;
+  grid-row-end: 7;
+  grid-column-start: 7;
+  grid-column-end: 9;
+}
+body #main #grid_container #skill_grid #s15 {
+  grid-row-start: 4;
+  grid-row-end: 5;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+body #main #grid_container #skill_grid #s16 {
+  grid-row-start: 8;
+  grid-row-end: 9;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+body #main #grid_container #skill_grid #s17 {
+  grid-row-start: 5;
+  grid-row-end: 6;
+  grid-column-start: 9;
+  grid-column-end: 11;
 }/*# sourceMappingURL=index.css.map */

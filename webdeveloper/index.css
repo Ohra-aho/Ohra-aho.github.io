@@ -8,6 +8,17 @@ body #main {
   height: fit-content;
   margin: 0;
 }
-body #main #header h1 {
+body #main #header {
+  width: 100vw;
+  height: 6vh;
+  border-bottom: 2px dashed white;
+  margin: 0;
+  position: fixed;
+  z-index: 1;
+}
+body #main #header a {
+  text-decoration: none;
+}
+body #main #header a h1 {
   color: white;
 }/*# sourceMappingURL=index.css.map */

@@ -1,17 +1,13 @@
+@use "../utils/utils" as *;
+
 body {
-	background-color: black;
-	overflow-x: hidden;
+	@include body();
 
 	#main {
-		width: 100vw;
-		height: fit-content;
-		margin: 0;
+		@include main();
 
 		#header {
-			h1 {
-				color: white;
-				
-			}
+			@include sub_page_header();
 		}
 	}
 }

@@ -1,0 +1,47 @@
+@mixin body() {
+	background-color: black;
+	overflow-x: hidden;
+	width: 100vw;
+}
+
+@mixin main() {
+	width: 100vw;
+	height: fit-content;
+	margin: 0;
+}
+
+@mixin sub_page_header() {
+	width: 100vw;
+	height: 6vh;
+	border-bottom: 2px dashed white;
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	background-color: black;
+	
+	a {
+		text-decoration: none;
+		h1 {
+			width: fit-content;
+		}
+	}
+
+	h1 {
+		color: white;
+		line-height: 100%;
+		display: inline;
+		width: 80vw;
+	}
+	
+}
+
+@mixin top_displacement($top: 20vh) {
+	position: relative;
+	top: $top;
+}
