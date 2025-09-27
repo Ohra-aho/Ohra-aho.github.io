@@ -57,7 +57,7 @@ body {
 				width: 35vw;
 				border: 2px solid white;
 				position: relative;
-				right: -2vw;
+				//right: -1vw;
 				padding: 0 1vw 0 1vw;
 				border-radius: 5px;
 
@@ -167,5 +167,90 @@ body {
 				#s17 { @include skill_cordinates(9, 5, 2); }
 			}
 		}
+
+		#work_history {
+			display: grid;
+			grid-template-rows: 30vw 30vw;
+			grid-template-columns: 50vh 50vh 50vh;
+			gap: 15px;
+			align-items: center;
+			justify-content: center;
+			@include top_displacement(35vh);
+
+			.job {
+				border: 2px dashed rgba(white, 0.5);
+				border-radius: 5px;
+				height: 100%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+
+				color: white;
+				h2 {
+					width: 100%;
+					text-align: center;
+					border-bottom: 2px dashed rgba(white, 0.5);
+				}
+
+				div {
+					display: flex;
+					align-items: center;
+					justify-content: space-between;
+					margin: 0 10px 0 10px;
+					height: 10%;
+					h3 {
+						border-right: 2px dashed rgba(white, 0.5);
+						width: 50%;
+						margin: 0;
+					}
+					p {
+						font-size: 1.1em;
+						margin: 0;
+					}
+				}
+
+				div:last-of-type {
+					border-bottom: 2px dashed rgba(white, 0.5);
+				}
+
+				h3 {
+					margin: 20px 10px 0 10px;
+				}
+				p {
+					margin: 20px 10px 0 10px;
+				}
+			}
+		}
 	}
+
+	#footer {
+			width: 100vw;
+			height: 10vh;
+
+			position: relative;
+			top: 40vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			border-top: 2px dashed white;
+
+			
+			a {
+				width: 10vw;
+				height: 70%;
+				text-decoration: none;
+				color: white;
+				outline: white solid 2px;
+				text-align: center;
+				line-height: 4em;
+				border-radius: 10px;
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+
+			a:hover {
+				background-color: rgba(65, 65, 65, 0.5);
+			}
+		}
 }
