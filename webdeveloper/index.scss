@@ -10,6 +10,43 @@ body {
 			@include sub_page_header();
 		}
 
+		#intro {
+			@include top_displacement();
+			height: 30vh;
+			display: flex;
+			justify-content: center;
+			p {
+				color: white;
+				font-size: 2em;
+			}
+		}
+
+		#sample_links {
+			@include top_displacement();
+			height: 30vh;
+			margin-top: 5vh;
+			display: flex;
+			justify-content: center;
+			#grid {
+				display: grid;
+				grid-template-columns: 100px 100px;
+				grid-template-rows: 100px 100px;
+				gap: 10px;
+				a {
+					color: white;
+					text-decoration: none;
+					border: 2px solid white;
+					border-radius: 5px;
+					text-align: center;
+					line-height: 100px;
+				}
+
+				a:hover {
+					background-color: rgba(gray, 0.5);
+				}
+			}
+		}
+
 		@include footer();
 	}
 }

@@ -37,6 +37,42 @@ body #main #header h1 {
   display: inline;
   width: 80vw;
 }
+body #main #intro {
+  position: relative;
+  top: 20vh;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+}
+body #main #intro p {
+  color: white;
+  font-size: 2em;
+}
+body #main #sample_links {
+  position: relative;
+  top: 20vh;
+  height: 30vh;
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+}
+body #main #sample_links #grid {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-template-rows: 100px 100px;
+  gap: 10px;
+}
+body #main #sample_links #grid a {
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 100px;
+}
+body #main #sample_links #grid a:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+}
 body #main #footer {
   width: 100vw;
   height: 10vh;
