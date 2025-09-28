@@ -9,5 +9,7 @@ body {
 		#header {
 			@include sub_page_header();
 		}
+
+		@include footer();
 	}
 }

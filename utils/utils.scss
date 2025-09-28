@@ -45,3 +45,36 @@
 	position: relative;
 	top: $top;
 }
+
+@mixin footer() {
+	#footer {
+		width: 100vw;
+		height: 10vh;
+
+		position: relative;
+		top: 40vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border-top: 2px dashed white;
+
+		
+		a {
+			width: 10vw;
+			height: 70%;
+			text-decoration: none;
+			color: white;
+			outline: white solid 2px;
+			text-align: center;
+			line-height: 4em;
+			border-radius: 10px;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		a:hover {
+			background-color: rgba(65, 65, 65, 0.5);
+		}
+	}
+}

@@ -259,7 +259,7 @@ body #main #grid_container #skill_grid #s17 {
 }
 body #main #work_history {
   display: grid;
-  grid-template-rows: 30vw 30vw;
+  grid-template-rows: 30vw;
   grid-template-columns: 50vh 50vh 50vh;
   gap: 15px;
   align-items: center;
