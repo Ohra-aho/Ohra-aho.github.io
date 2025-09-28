@@ -36,4 +36,162 @@ body #main #header h1 {
   line-height: 100%;
   display: inline;
   width: 80vw;
+}
+body #main #intro {
+  position: relative;
+  top: 20vh;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 30vh;
+}
+body #main #intro p {
+  color: white;
+  text-align: center;
+  width: 50vw;
+  font-size: 2em;
+}
+body #main .section {
+  position: relative;
+  top: 20vh;
+  width: 100vw;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body #main .section #media_1, body #main .section #media_2 {
+  width: 30vw;
+  margin-right: 1vw;
+}
+body #main .section #media_1 video, body #main .section #media_2 video {
+  height: auto;
+  width: 100%;
+}
+body #main .section #inner {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  width: 50vw;
+  padding-left: 5vw;
+}
+body #main .section #inner #image_holder {
+  position: relative;
+  height: 100%;
+  width: 49%;
+  margin: 0.5%;
+}
+body #main .section #inner #image_holder img {
+  position: absolute;
+  height: auto;
+  filter: drop-shadow(2px 2px 5px white) drop-shadow(-2px -2px 5px white);
+}
+body #main .section #inner #image_holder img:hover {
+  filter: drop-shadow(2px 2px 5px rgb(123, 255, 200)) drop-shadow(-2px -2px 5px green);
+}
+body #main .section #inner #image_holder img:nth-of-type(1) {
+  width: 100%;
+  bottom: 50%;
+}
+body #main .section #inner #image_holder img:nth-of-type(2) {
+  width: 50%;
+  bottom: 20%;
+  transform: scaleX(-1);
+}
+body #main .section #inner #image_holder img:nth-of-type(3) {
+  width: 50%;
+  bottom: 0;
+  right: -10%;
+}
+body #main .section #inner #image_holder img:nth-of-type(4) {
+  width: 100%;
+  top: -40%;
+}
+body #main .section #inner #info {
+  height: 80%;
+  width: 45%;
+  margin: 0 0.5% 0 3%;
+  position: relative;
+  color: white;
+}
+body #main .section #inner #info p {
+  font-size: 1.2em;
+}
+body #main .section #inner #info a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+}
+body #main .section.left {
+  margin-top: 20vh;
+}
+body #main .section.left #media_2 {
+  margin-left: 1vw;
+  margin-right: 0;
+}
+body #main .section.left #inner {
+  padding-right: 5vw;
+  padding-left: 0;
+}
+body #main .section.left #inner #image_holder img {
+  filter: drop-shadow(2px 2px 5px white) drop-shadow(-2px -2px 5px white);
+}
+body #main .section.left #inner #image_holder img:hover {
+  filter: drop-shadow(2px 2px 5px red) drop-shadow(-2px -2px 5px red);
+}
+body #main .section.left #inner #image_holder img:nth-of-type(1) {
+  width: 100%;
+  bottom: 10%;
+}
+body #main .section.left #inner #image_holder img:nth-of-type(2) {
+  width: 50%;
+  bottom: 25%;
+  right: 25%;
+  transform: scaleX(1);
+  transform: rotate(-130deg);
+}
+body #main .section.left #inner #image_holder img:nth-of-type(3) {
+  width: 50%;
+  bottom: 40%;
+  right: 5%;
+  transform: rotate(-100deg);
+}
+body #main .section.left #inner #image_holder img:nth-of-type(4) {
+  width: 50%;
+  bottom: 0%;
+  right: -15%;
+  top: 40%;
+  transform: rotate(-80deg);
+}
+body #main .section.left #inner #info {
+  margin: 0 3% 0 0.5%;
+}
+body #main #footer {
+  width: 100vw;
+  height: 10vh;
+  position: relative;
+  top: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px dashed white;
+}
+body #main #footer a {
+  width: 10vw;
+  height: 70%;
+  text-decoration: none;
+  color: white;
+  outline: white solid 2px;
+  text-align: center;
+  line-height: 4em;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+body #main #footer a:hover {
+  background-color: rgba(65, 65, 65, 0.5);
 }/*# sourceMappingURL=index.css.map */

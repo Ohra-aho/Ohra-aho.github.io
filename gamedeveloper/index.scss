@@ -9,5 +9,158 @@ body {
 		#header {
 			@include sub_page_header();
 		}
+
+		#intro {
+			@include top_displacement();
+			display: flex;
+			justify-content: center;
+			width: 100vw;
+			height: 30vh;
+			p {
+				color: white;
+				text-align: center;
+				width: 50vw;
+				font-size: 2em;
+			}
+		}
+
+		.section {
+			@include top_displacement();
+			width: 100vw;
+			height: 40vh;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			#media_1, #media_2 {
+				width: 30vw;
+				margin-right: 1vw;
+				video {
+					height: auto;
+					width: 100%;
+				}
+			}
+
+			#inner {
+				display: flex;
+				justify-content: space-around;
+				height: 100%;
+				width: 50vw;
+				padding-left: 5vw;
+
+				#image_holder {
+					position: relative;
+					height: 100%;
+					width: 49%;
+					margin: 0.5%;
+					img {
+						position: absolute;
+						height: auto;
+						filter: drop-shadow(2px 2px 5px white) 
+          						drop-shadow(-2px -2px 5px white);
+					}
+
+					img:hover {
+						filter: drop-shadow(2px 2px 5px rgb(123, 255, 200)) 
+          						drop-shadow(-2px -2px 5px green);
+					}
+
+					img:nth-of-type(1) {
+						width: 100%;
+						bottom: 50%;
+					}
+					img:nth-of-type(2) {
+						width: 50%;
+						bottom: 20%;
+						transform: scaleX(-1);
+					}
+					img:nth-of-type(3) {
+						width: 50%;
+						bottom: 0;
+						right: -10%;
+					}
+					img:nth-of-type(4) {
+						width: 100%;
+						top: -40%;
+					}
+				}
+
+				#info {
+					height: 80%;
+					width: 45%;
+					margin: 0 0.5% 0 3%;
+					position: relative;
+					color: white;
+					p { font-size: 1.2em; }
+					a {
+						color: white;
+						text-decoration: none;
+						font-size: 1.1em;
+						position: absolute;
+						right: 0;
+						bottom: 0;
+						margin: 10px;
+					}
+				}
+			}
+		}
+
+		.section.left {
+			margin-top: 20vh;
+
+			#media_2 {
+				margin-left: 1vw;
+				margin-right: 0;
+			}
+
+			#inner {
+				padding-right: 5vw;
+				padding-left: 0;
+				
+				#image_holder {
+					img {
+						filter: drop-shadow(2px 2px 5px white) 
+          						drop-shadow(-2px -2px 5px white);
+					}
+
+					img:hover {
+						filter: drop-shadow(2px 2px 5px red) 
+          						drop-shadow(-2px -2px 5px red);
+					}
+
+					img:nth-of-type(1) {
+						width: 100%;
+						bottom: 10%;
+					}
+					img:nth-of-type(2) {
+						width: 50%;
+						bottom: 25%;
+						right: 25%;
+						transform: scaleX(1);
+						transform: rotate(-130deg);
+					}
+					img:nth-of-type(3) {
+						width: 50%;
+						bottom: 40%;
+						right: 5%;
+						transform: rotate(-100deg);
+					}
+					img:nth-of-type(4) {
+						width: 50%;
+						bottom: 0%;
+						right: -15%;
+						top: 40%;
+						transform: rotate(-80deg);
+					}
+				}
+
+				#info {
+					margin: 0 3% 0 0.5%;
+				}
+			}
+		}
+		
+		@include footer();
+
 	}
 }

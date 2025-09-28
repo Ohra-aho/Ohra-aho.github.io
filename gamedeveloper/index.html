@@ -6,15 +6,73 @@
 	<title>Ohra-aho</title>
 
 	<link rel="stylesheet" href="index.css">
+	<script src="game_developer.js"></script>
 </head>
 <body>
 	<div id="main">
 		<div id="header">
 			<a href="javascript:history.back()">
-				<div id="header">
-					<h1>Takaisin</h1>
-				</div>
+				<h1>&#8592 Takaisin</h1>
 			</a>
+			<h1>Pelinkehittäjä</h1>
+		</div>
+
+		<div id="intro">
+			<p>
+				Teen pelejä harrastuksena. Unity on pelimoottori, jota parhaiten osaan, mutta olen myös jonkin verran tutkaillut Godottia. Seawall demo on ainoa tuote, jonka olen tähän mennessä julkaissut, mutta Rock, Paper and Guillotine on tulossa.
+			</p>
+		</div>
+
+		<div class="section">
+			<div id="inner">
+				<div id="image_holder">
+					<img src="../media/images/Seawall 1.png" alt="wall" onclick="PlayAudio(3, 1)">
+					<img src="../media/images/workshop.png" alt="b_building" onclick="PlayAudio(2 ,1)">
+					<img src="../media/images/barraks.png" alt="building" onclick="PlayAudio(4, 1)">
+					<img src="../media/images/title.png" alt="building" onclick="PlayAudio(1, 1)">
+				</div>
+				<div id="info">
+					<h2>Seawall</h2>
+					<p>
+						Jotain pelistä. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, autem! Tenetur nobis deleniti aut iusto quod aperiam distinctio facere maiores provident voluptatum tempora, hic et commodi accusamus soluta officiis molestiae!
+					</p>
+					<a href="https://seawall-project.itch.io/seawall-demo" target="_blank">Pelin Sivut &#8594;</a>
+				</div>
+			</div>
+			<div id="media_1">
+				<video src="../media/video/Untitled.mp4" controls></video>
+				<audio src="../media/audio/Stars through the craks.mp3"></audio>
+				<audio src="../media/audio/Leviathan.mp3"></audio>
+				<audio src="../media/audio/Humid horror.wav"></audio>
+				<audio src="../media/audio/We won't collapse.mp3"></audio>
+			</div>
+		</div>
+
+		<div class="section left">
+			<div id="media_2">
+				<video src="../media/video/Untitled.mp4" controls></video>
+			</div>
+			<div id="inner">
+				<div id="info">
+					<h2>Rock, Paper and Guillotine</h2>
+					<p>
+						Jotain pelistä. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio laboriosam molestias doloremque nulla veritatis odio iste nesciunt. Illo perferendis iste dolorem eos? Nostrum molestiae debitis ab ea cum? Praesentium, eos?
+					</p>
+				</div>
+				<div id="image_holder">
+					<img src="../media/images/barraks.png" alt="wall">
+					<img src="../media/images/giljotiini.png" alt="b_building">
+					<img src="../media/images/piikkipallo.png" alt="building">
+					<img src="../media/images/pyhä teksti.png" alt="building">
+				</div>
+			</div>
+		</div>
+
+		<div id="footer">
+			<a href="https://www.linkedin.com/in/panu-ohra-aho-4917042aa/" target="_blank">Linkedin</a>
+			<a href="https://www.instagram.com/nunumies_mk5000/" target="_blank">Instagram</a>
+			<a href="https://seawall-project.itch.io/" target="_blank">Itch.io</a>
+			<a href="https://github.com/Ohra-aho" target="_blank">GitHub</a>
 		</div>
 	</div>
 </body>
