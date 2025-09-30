@@ -58,8 +58,8 @@ body #main #intro #info {
   border-radius: 5px;
 }
 body #main #intro #info img {
-  width: 40%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 body #main #intro #info #text_box {
   position: relative;
@@ -69,7 +69,8 @@ body #main #intro #info #text_box {
   height: 100%;
 }
 body #main #intro #info #text_box p {
-  font-size: 1.1em;
+  font-size: 1.2em;
+  margin-right: 5px;
 }
 body #main #intro #left {
   width: 35vw;
@@ -151,6 +152,7 @@ body #main #grid_container #skill_grid .skill #info {
   background-color: black;
   z-index: 1;
   display: none;
+  font-size: 1.1em;
 }
 body #main #grid_container #skill_grid .skill:hover #info {
   display: block;
@@ -305,6 +307,7 @@ body #main #work_history .job h3 {
 }
 body #main #work_history .job p {
   margin: 20px 10px 0 10px;
+  font-size: 1.2em;
 }
 body #footer {
   width: 100vw;

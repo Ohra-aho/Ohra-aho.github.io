@@ -37,8 +37,8 @@ body {
 				border-radius: 5px;
 
 				img {
-					width: 40%;
-					height: auto;
+					width: auto;
+					height: 100%;
 				}
 				#text_box {
 					position: relative;
@@ -48,7 +48,8 @@ body {
 					height: 100%;
 
 					p {
-						font-size: 1.1em;
+						font-size: 1.2em;
+						margin-right: 5px;
 					}
 				}
 			}
@@ -139,6 +140,7 @@ body {
 						background-color: black;
 						z-index: 1;
 						display: none;
+						font-size: 1.1em;
 					}
 				}
 
@@ -216,8 +218,10 @@ body {
 				h3 {
 					margin: 20px 10px 0 10px;
 				}
+				
 				p {
 					margin: 20px 10px 0 10px;
+					font-size: 1.2em;
 				}
 			}
 		}
