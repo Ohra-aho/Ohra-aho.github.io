@@ -266,7 +266,6 @@ body #main #footer a:hover {
     width: 90vw;
   }
   body #main .section #inner {
-    display: flex;
     justify-content: center;
     flex-direction: column;
     height: 100%;
@@ -385,7 +384,6 @@ body #main #footer a:hover {
     width: 90vw;
   }
   body #main .section #inner {
-    display: flex;
     justify-content: center;
     flex-direction: column;
     height: 100%;
@@ -434,5 +432,113 @@ body #main #footer a:hover {
     width: 20vw;
     height: 50%;
     line-height: 3em;
+  }
+  body #main #header {
+    width: 100vw;
+    height: 6vh;
+    background-color: black;
+    margin: 0;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px dashed white;
+    top: 0;
+    height: 5vh;
+    width: 100vw;
+    height: 6vh;
+    background-color: black;
+    margin: 0;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px dashed white;
+    top: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    text-align: center;
+    height: 11vh;
+  }
+  body #main #header a {
+    text-decoration: none;
+  }
+  body #main #header a h1 {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body #main #header h1 {
+    color: white;
+    line-height: 100%;
+    display: inline;
+    width: 80vw;
+  }
+  body #main #header a {
+    width: 30vw;
+  }
+  body #main #header a h1 {
+    font-size: 1.2em;
+  }
+  body #main #header h1 {
+    width: 70vw;
+  }
+  body #main #intro {
+    position: relative;
+    top: 10vh;
+  }
+  body #main #intro p {
+    width: 90vw;
+    font-size: 1.5em;
+  }
+  body #main .section {
+    position: relative;
+    top: 100vh;
+    height: 250vh;
+  }
+  body #main .section #inner {
+    height: 100%;
+  }
+  body #main .section #inner #image_holder {
+    height: 120vh;
+  }
+  body #main .section #inner #info {
+    height: 30%;
+  }
+  body #main .section.left {
+    margin-top: 100vh;
+  }
+  body #main .section.left #media_2 {
+    position: relative;
+    top: 70%;
+  }
+  body #main .section.left #inner {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  body #main .section.left #inner #image_holder {
+    position: relative;
+    bottom: 100%;
+  }
+  body #main .section.left #inner #info {
+    margin: 1% 0.5% 1% 3%;
+  }
+  body #main #footer {
+    height: 10vh;
+    top: 30vh;
+    justify-content: space-evenly;
+  }
+  body #main #footer a {
+    width: 20vw;
+    height: 50%;
+    line-height: 3em;
+  }
+  body #main #footer {
+    top: 150vh;
+    height: 13vh;
+  }
+  body #main #footer a {
+    height: 60%;
+    line-height: 2em;
   }
 }/*# sourceMappingURL=index.css.map */
