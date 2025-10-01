@@ -499,4 +499,106 @@ body #main #footer a:hover {
     height: 50%;
     line-height: 3em;
   }
+  body #main #header {
+    height: 13vh;
+  }
+  body #main #intro {
+    position: relative;
+    top: 30vh;
+  }
+  body #main #art {
+    position: relative;
+    top: 30vh;
+  }
+  body #main #art #grid {
+    justify-content: center;
+    grid-template-columns: repeat(1, 30vw);
+    grid-template-rows: repeat(1, 100vh);
+  }
+  body #main #art #grid img:nth-of-type(1) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #art #grid img:nth-of-type(2) {
+    grid-row-start: 12;
+    grid-row-end: 13;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #art #grid img:nth-of-type(3) {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #art #grid img:nth-of-type(4) {
+    grid-row-start: 10;
+    grid-row-end: 11;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #art #grid img:nth-of-type(5) {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #art #grid img:nth-of-type(6) {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #art #grid img:nth-of-type(7) {
+    grid-row-start: 7;
+    grid-row-end: 8;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #art #grid img:nth-of-type(8) {
+    grid-row-start: 8;
+    grid-row-end: 9;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #art #grid img:nth-of-type(9) {
+    grid-row-start: 9;
+    grid-row-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #art #grid img:nth-of-type(10) {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #art #grid img:nth-of-type(11) {
+    grid-row-start: 11;
+    grid-row-end: 12;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #art #grid img:nth-of-type(12) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #art #grid img:nth-of-type(13) {
+    grid-row-start: 13;
+    grid-row-end: 14;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #footer {
+    top: 70vh;
+    height: 13vh;
+  }
+  body #main #footer a {
+    height: 60%;
+    line-height: 2em;
+  }
 }/*# sourceMappingURL=index.css.map */
