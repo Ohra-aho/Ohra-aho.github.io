@@ -277,4 +277,15 @@ body #main #footer a:hover {
     height: 50%;
     line-height: 3em;
   }
+  body #main #header {
+    height: 12vh;
+  }
+  body #main #footer {
+    top: 70vh;
+    height: 13vh;
+  }
+  body #main #footer a {
+    height: 60%;
+    line-height: 2em;
+  }
 }/*# sourceMappingURL=index.css.map */

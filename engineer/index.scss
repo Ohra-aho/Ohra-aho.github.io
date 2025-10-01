@@ -343,7 +343,37 @@ body {
 @media screen and (min-width: $narrow) and (max-width: $medium) {
 	@include narrowScreen();
 
-	
+	body {
+		#main {
+			#header { height: 11vh; }
+
+			#intro {
+				height: 100vh;
+				#left {
+					#section:last-of-type { margin-top: 1%; }
+				}
+			}
+
+			#grid_container {
+				@include top_displacement(40vh);
+			}
+
+			#work_history {
+				grid-template-columns: 90vw;
+				grid-template-rows: repeat(3, 70vh);
+				@include top_displacement(60vh);
+			}
+		}
+
+		#footer { 
+			top: 70vh;
+			height: 13vh;
+			a {
+				height: 60%;
+				line-height: 2em;
+			}
+		}
+	}
 }
 
 //wide screen

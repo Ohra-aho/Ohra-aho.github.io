@@ -788,4 +788,31 @@ body #footer a:hover {
   body #footer {
     top: 40vh;
   }
+  body #main #header {
+    height: 11vh;
+  }
+  body #main #intro {
+    height: 100vh;
+  }
+  body #main #intro #left #section:last-of-type {
+    margin-top: 1%;
+  }
+  body #main #grid_container {
+    position: relative;
+    top: 40vh;
+  }
+  body #main #work_history {
+    grid-template-columns: 90vw;
+    grid-template-rows: repeat(3, 70vh);
+    position: relative;
+    top: 60vh;
+  }
+  body #footer {
+    top: 70vh;
+    height: 13vh;
+  }
+  body #footer a {
+    height: 60%;
+    line-height: 2em;
+  }
 }/*# sourceMappingURL=index.css.map */

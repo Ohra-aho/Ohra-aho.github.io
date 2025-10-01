@@ -123,7 +123,20 @@ body {
 @media screen and (min-width: $narrow) and (max-width: $medium) {
 	@include narrowScreen();
 
-	
+	body {
+		#main {
+			#header { height: 12vh; }
+
+			#footer { 
+				top: 70vh;
+				height: 13vh;
+				a {
+					height: 60%;
+					line-height: 2em;
+				}
+			}
+		}
+	}
 }
 
 //wide screen
