@@ -285,13 +285,67 @@ body {
 //narrow screen
 @media screen and (max-width: $narrow) {
 	@include narrowScreen();
+
 }
 
 //medium screen
 @media screen and (min-width: $narrow) and (max-width: $medium) {
 	@include narrowScreen();
 
-	
+	body {
+		#main {
+			.header { height: 11vh; }
+
+			h1 { top: 15vh; }
+
+			#intro {
+				@include narrow_intro(10vh);
+				top: 30vh;
+			}
+
+			#snippet_holder {
+				top: 70vh;
+				.narrow_image { display: none; }
+
+				.snippet {
+					width: 100vw;
+					height: 60vh;
+					margin-top: 5vh;
+					margin-bottom: 10vh;
+
+					#back {
+						height: 70vh;
+						width: 100%;
+						bottom: 0;
+					}
+
+					.container {
+						width: 90vw;
+
+						.info { height: 90%; }
+
+						#image {
+							display: inline-block;
+							width: 50vw;
+							height: auto;
+						}
+					}
+				}
+			}
+
+			@include narrow_footer();
+			#footer {
+				height: 13vh;
+				top: 100vh;
+
+				a {
+					width: 20vw;
+					height: 60%;
+					line-height: 2em;
+				}
+			}
+		}
+	}
 }
 
 //wide screen
