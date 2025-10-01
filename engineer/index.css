@@ -2,6 +2,7 @@ body {
   background-color: black;
   overflow-x: hidden;
   width: 100vw;
+  margin: 0;
 }
 body #main {
   width: 100vw;
@@ -12,17 +13,18 @@ body #main {
 body #main #header {
   width: 100vw;
   height: 6vh;
-  border-bottom: 2px dashed white;
+  background-color: black;
   margin: 0;
-  padding: 0;
   position: fixed;
-  top: 0;
-  left: 0;
   z-index: 1;
   display: flex;
   align-items: center;
+  border-bottom: 2px dashed white;
+  top: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
   text-align: center;
-  background-color: black;
   text-align: center;
 }
 body #main #header a {
@@ -128,8 +130,8 @@ body #main #grid_container #skill_grid {
   border-radius: 5px;
   padding: 10px;
   display: grid;
-  grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
-  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-rows: repeat(10, 50px);
+  grid-template-columns: repeat(10, 50px);
   gap: 10px;
   align-items: center;
 }
@@ -157,103 +159,103 @@ body #main #grid_container #skill_grid .skill #info {
 body #main #grid_container #skill_grid .skill:hover #info {
   display: block;
 }
-body #main #grid_container #skill_grid #s1 {
+body #main #grid_container #skill_grid .skill:nth-of-type(1) {
   grid-row-start: 1;
   grid-row-end: 2;
   grid-column-start: 1;
   grid-column-end: 2;
 }
-body #main #grid_container #skill_grid #s2 {
+body #main #grid_container #skill_grid .skill:nth-of-type(2) {
   grid-row-start: 3;
   grid-row-end: 4;
   grid-column-start: 2;
   grid-column-end: 6;
 }
-body #main #grid_container #skill_grid #s3 {
+body #main #grid_container #skill_grid .skill:nth-of-type(3) {
   grid-row-start: 1;
   grid-row-end: 2;
   grid-column-start: 9;
   grid-column-end: 11;
 }
-body #main #grid_container #skill_grid #s4 {
+body #main #grid_container #skill_grid .skill:nth-of-type(4) {
   grid-row-start: 7;
   grid-row-end: 8;
   grid-column-start: 5;
   grid-column-end: 6;
 }
-body #main #grid_container #skill_grid #s5 {
+body #main #grid_container #skill_grid .skill:nth-of-type(5) {
   grid-row-start: 5;
   grid-row-end: 6;
   grid-column-start: 3;
   grid-column-end: 5;
 }
-body #main #grid_container #skill_grid #s6 {
+body #main #grid_container #skill_grid .skill:nth-of-type(6) {
   grid-row-start: 10;
   grid-row-end: 11;
   grid-column-start: 1;
   grid-column-end: 2;
 }
-body #main #grid_container #skill_grid #s7 {
+body #main #grid_container #skill_grid .skill:nth-of-type(7) {
   grid-row-start: 8;
   grid-row-end: 9;
   grid-column-start: 6;
   grid-column-end: 9;
 }
-body #main #grid_container #skill_grid #s8 {
+body #main #grid_container #skill_grid .skill:nth-of-type(8) {
   grid-row-start: 4;
   grid-row-end: 5;
   grid-column-start: 7;
   grid-column-end: 9;
 }
-body #main #grid_container #skill_grid #s9 {
+body #main #grid_container #skill_grid .skill:nth-of-type(9) {
   grid-row-start: 6;
   grid-row-end: 7;
   grid-column-start: 1;
   grid-column-end: 3;
 }
-body #main #grid_container #skill_grid #s10 {
+body #main #grid_container #skill_grid .skill:nth-of-type(10) {
   grid-row-start: 9;
   grid-row-end: 10;
   grid-column-start: 2;
   grid-column-end: 5;
 }
-body #main #grid_container #skill_grid #s11 {
+body #main #grid_container #skill_grid .skill:nth-of-type(11) {
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 7;
   grid-column-end: 9;
 }
-body #main #grid_container #skill_grid #s12 {
+body #main #grid_container #skill_grid .skill:nth-of-type(12) {
   grid-row-start: 2;
   grid-row-end: 3;
   grid-column-start: 3;
   grid-column-end: 5;
 }
-body #main #grid_container #skill_grid #s13 {
+body #main #grid_container #skill_grid .skill:nth-of-type(13) {
   grid-row-start: 10;
   grid-row-end: 11;
   grid-column-start: 8;
   grid-column-end: 10;
 }
-body #main #grid_container #skill_grid #s14 {
+body #main #grid_container #skill_grid .skill:nth-of-type(14) {
   grid-row-start: 6;
   grid-row-end: 7;
   grid-column-start: 7;
   grid-column-end: 9;
 }
-body #main #grid_container #skill_grid #s15 {
+body #main #grid_container #skill_grid .skill:nth-of-type(15) {
   grid-row-start: 4;
   grid-row-end: 5;
   grid-column-start: 1;
   grid-column-end: 3;
 }
-body #main #grid_container #skill_grid #s16 {
+body #main #grid_container #skill_grid .skill:nth-of-type(16) {
   grid-row-start: 8;
   grid-row-end: 9;
   grid-column-start: 3;
   grid-column-end: 5;
 }
-body #main #grid_container #skill_grid #s17 {
+body #main #grid_container #skill_grid .skill:nth-of-type(17) {
   grid-row-start: 5;
   grid-row-end: 6;
   grid-column-start: 9;
@@ -313,7 +315,7 @@ body #footer {
   width: 100vw;
   height: 10vh;
   position: relative;
-  top: 40vh;
+  top: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -333,4 +335,457 @@ body #footer a {
 }
 body #footer a:hover {
   background-color: rgba(65, 65, 65, 0.5);
+}
+
+@media screen and (max-width: 500px) {
+  body #main #header {
+    width: 100vw;
+    height: 6vh;
+    background-color: black;
+    margin: 0;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px dashed white;
+    top: 0;
+    height: 5vh;
+    width: 100vw;
+    height: 6vh;
+    background-color: black;
+    margin: 0;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px dashed white;
+    top: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+  body #main #header a {
+    text-decoration: none;
+  }
+  body #main #header a h1 {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body #main #header h1 {
+    color: white;
+    line-height: 100%;
+    display: inline;
+    width: 80vw;
+  }
+  body #main #header a {
+    width: 30vw;
+  }
+  body #main #header a h1 {
+    font-size: 1.2em;
+  }
+  body #main #header h1 {
+    width: 70vw;
+  }
+  body #main #intro {
+    display: block;
+    width: 100vw;
+    height: 60vh;
+  }
+  body #main #intro #info {
+    width: 99vw;
+    height: 49%;
+    left: 0;
+  }
+  body #main #intro #info img {
+    display: none;
+  }
+  body #main #intro #info #text_box h2 {
+    margin-left: 5px;
+  }
+  body #main #intro #info #text_box p {
+    font-size: 1.1em;
+    margin: 5px;
+  }
+  body #main #intro #left {
+    width: 99vw;
+    padding: 0;
+    margin-top: 1vh;
+  }
+  body #main #intro #left #section {
+    width: 100%;
+  }
+  body #main #intro #left #section a {
+    justify-content: space-between;
+    margin: 0 5px 0 5px;
+  }
+  body #main #intro #left #section h2 {
+    display: inline;
+    font-size: 1.5em;
+  }
+  body #main #intro #left #section:last-of-type {
+    margin-top: 4%;
+  }
+  body #main #grid_container {
+    flex-direction: column;
+    width: 100vw;
+    position: relative;
+    top: 20vh;
+  }
+  body #main #grid_container #skill_grid {
+    padding: 5px;
+    grid-template-rows: repeat(1, 50px);
+    grid-template-columns: repeat(1, 90vw);
+  }
+  body #main #grid_container #skill_grid .skill #info {
+    left: 0;
+    width: 100%;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(1) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(2) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(3) {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(4) {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(5) {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(6) {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(7) {
+    grid-row-start: 7;
+    grid-row-end: 8;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(8) {
+    grid-row-start: 8;
+    grid-row-end: 9;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(9) {
+    grid-row-start: 9;
+    grid-row-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(10) {
+    grid-row-start: 10;
+    grid-row-end: 11;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(11) {
+    grid-row-start: 11;
+    grid-row-end: 12;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(12) {
+    grid-row-start: 12;
+    grid-row-end: 13;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(13) {
+    grid-row-start: 13;
+    grid-row-end: 14;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(14) {
+    grid-row-start: 14;
+    grid-row-end: 15;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(15) {
+    grid-row-start: 15;
+    grid-row-end: 16;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(16) {
+    grid-row-start: 16;
+    grid-row-end: 17;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(17) {
+    grid-row-start: 17;
+    grid-row-end: 18;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #work_history {
+    grid-template-columns: 90vw;
+    grid-template-rows: 50vh 50vh 50vh;
+    position: relative;
+    top: 30vh;
+  }
+  body #footer {
+    height: 10vh;
+    top: 30vh;
+    justify-content: space-evenly;
+  }
+  body #footer a {
+    width: 20vw;
+    height: 50%;
+    line-height: 3em;
+  }
+  body #footer {
+    top: 40vh;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1030px) {
+  body #main #header {
+    width: 100vw;
+    height: 6vh;
+    background-color: black;
+    margin: 0;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px dashed white;
+    top: 0;
+    height: 5vh;
+    width: 100vw;
+    height: 6vh;
+    background-color: black;
+    margin: 0;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px dashed white;
+    top: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    text-align: center;
+  }
+  body #main #header a {
+    text-decoration: none;
+  }
+  body #main #header a h1 {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  body #main #header h1 {
+    color: white;
+    line-height: 100%;
+    display: inline;
+    width: 80vw;
+  }
+  body #main #header a {
+    width: 30vw;
+  }
+  body #main #header a h1 {
+    font-size: 1.2em;
+  }
+  body #main #header h1 {
+    width: 70vw;
+  }
+  body #main #intro {
+    display: block;
+    width: 100vw;
+    height: 60vh;
+  }
+  body #main #intro #info {
+    width: 99vw;
+    height: 49%;
+    left: 0;
+  }
+  body #main #intro #info img {
+    display: none;
+  }
+  body #main #intro #info #text_box h2 {
+    margin-left: 5px;
+  }
+  body #main #intro #info #text_box p {
+    font-size: 1.1em;
+    margin: 5px;
+  }
+  body #main #intro #left {
+    width: 99vw;
+    padding: 0;
+    margin-top: 1vh;
+  }
+  body #main #intro #left #section {
+    width: 100%;
+  }
+  body #main #intro #left #section a {
+    justify-content: space-between;
+    margin: 0 5px 0 5px;
+  }
+  body #main #intro #left #section h2 {
+    display: inline;
+    font-size: 1.5em;
+  }
+  body #main #intro #left #section:last-of-type {
+    margin-top: 4%;
+  }
+  body #main #grid_container {
+    flex-direction: column;
+    width: 100vw;
+    position: relative;
+    top: 20vh;
+  }
+  body #main #grid_container #skill_grid {
+    padding: 5px;
+    grid-template-rows: repeat(1, 50px);
+    grid-template-columns: repeat(1, 90vw);
+  }
+  body #main #grid_container #skill_grid .skill #info {
+    left: 0;
+    width: 100%;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(1) {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(2) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(3) {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(4) {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(5) {
+    grid-row-start: 5;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(6) {
+    grid-row-start: 6;
+    grid-row-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(7) {
+    grid-row-start: 7;
+    grid-row-end: 8;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(8) {
+    grid-row-start: 8;
+    grid-row-end: 9;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(9) {
+    grid-row-start: 9;
+    grid-row-end: 10;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(10) {
+    grid-row-start: 10;
+    grid-row-end: 11;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(11) {
+    grid-row-start: 11;
+    grid-row-end: 12;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(12) {
+    grid-row-start: 12;
+    grid-row-end: 13;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(13) {
+    grid-row-start: 13;
+    grid-row-end: 14;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(14) {
+    grid-row-start: 14;
+    grid-row-end: 15;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(15) {
+    grid-row-start: 15;
+    grid-row-end: 16;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(16) {
+    grid-row-start: 16;
+    grid-row-end: 17;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #grid_container #skill_grid .skill:nth-of-type(17) {
+    grid-row-start: 17;
+    grid-row-end: 18;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+  body #main #work_history {
+    grid-template-columns: 90vw;
+    grid-template-rows: 50vh 50vh 50vh;
+    position: relative;
+    top: 30vh;
+  }
+  body #footer {
+    height: 10vh;
+    top: 30vh;
+    justify-content: space-evenly;
+  }
+  body #footer a {
+    width: 20vw;
+    height: 50%;
+    line-height: 3em;
+  }
+  body #footer {
+    top: 40vh;
+  }
 }/*# sourceMappingURL=index.css.map */

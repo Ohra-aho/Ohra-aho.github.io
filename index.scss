@@ -1,9 +1,9 @@
+@use "./utils/utils" as *;
 
 $top_displacement: 30vh;
 
 body {
-	background-color: black;
-	overflow-x: hidden;
+	@include body();
 
 	#main {
 		width: 100vw;
@@ -11,18 +11,12 @@ body {
 		margin: 0;
 
 		.header {
-			width: 100vw;
-			height: 6vh;
-			background-color: black;
-			margin: 0;
-			position: fixed;
+			@include header();
+
 			top: -7vh;
 			left: 0;
 			z-index: 1;
-			display: flex;
 			justify-content: space-evenly;
-			align-items: center;
-			border-bottom: 2px dashed white;
 
 			animation: grow_header linear;
 			animation-timeline: scroll();
@@ -77,30 +71,19 @@ body {
 			justify-content: center;
 			position: relative;
 			top: $top_displacement;
-			pointer-events: none;
 		}
 
 		#intro {
-			width: 100vw;
-			height: 30vh;
-			position: relative;
-			top: 35vh;
-			text-align: center;
-			display: flex;
-			justify-content: center;
-			
-			p {
-				width: 50vw;
-				line-height: 1.4em;
-				font-size: 1.5em;
-				color: white;
-				margin: 0px 15px 0px 15px;
-			}
+			@include intro(35vh);
 		}
 
 		#snippet_holder {
 			position: relative;
 			top: 40vh;
+
+			.narrow_image {
+				display: none;
+			}
 
 			.snippet {
 				width: 100vw;
@@ -177,35 +160,7 @@ body {
 			}
 		}
 
-		#footer {
-			width: 100vw;
-			height: 10vh;
-
-			position: relative;
-			top: 50vh;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			border-top: 2px dashed white;
-
-			a {
-				width: 10vw;
-				height: 70%;
-				text-decoration: none;
-				color: white;
-				outline: white solid 2px;
-				text-align: center;
-				line-height: 4em;
-				border-radius: 10px;
-				margin-left: 10px;
-				margin-right: 10px;
-			}
-
-			a:hover {
-				background-color: rgba(65, 65, 65, 0.5);
-			}
-		}
+		@include footer();
 	}
 }
 
@@ -220,4 +175,126 @@ body {
 	to {
 		top: 0vh;
 	}
+}
+
+
+/////////////////
+//Narrow screen
+@mixin narrowScreen() {
+	body {
+		@include body();
+		#main {
+			.header {
+				@include narrow_header();
+
+				top: 0;
+				animation: none;
+
+				.header_links {
+					width: 50vw;
+					a { font-size: 0.7em; }
+				}
+			}
+
+			h1 {
+				font-size: 4em;
+				animation: none;
+				position: relative;
+				z-index: 0;
+				top: 7vh;
+			}
+
+			#title {
+				display: none;
+			}
+
+			#intro {
+				@include narrow_intro(10vh);
+			}
+
+			#snippet_holder {
+				top: 20vh;
+				.narrow_image {
+					display: flex;
+					justify-content: center;
+					position: relative;
+					#back {
+						display: none;
+						position: absolute;
+						z-index: -1;
+						width: 100vw;
+						height: 30vh;
+					}
+					#image {
+						height: 30vh;
+						width: auto;
+					}
+				}
+
+				.snippet {
+					width: 100vw;
+					margin-top: 5vh;
+					margin-bottom: 10vh;
+
+					#back {
+						width: 100%;
+						-webkit-transform: scaleX(1); 
+						transform: scaleX(1);
+					}
+
+					.container {
+						width: 90vw;
+
+						.info {
+							width: 100%;
+							h2 {
+								font-size: large;
+							}
+
+							p {
+								font-size: 1.05em;
+							}
+
+							a {
+								font-size: 1.3em;
+							}
+						}
+
+						#image {
+							display: none;
+						}
+					}
+				}
+
+				.left {
+					left: 0;
+					.container {
+						left: 0;
+					}
+					.back {
+						left: 0;
+					}
+				}
+			}
+
+			@include narrow_footer();
+		}
+	}
+}
+
+//narrow screen
+@media screen and (max-width: $narrow) {
+	@include narrowScreen();
+}
+
+//medium screen
+@media screen and (min-width: $narrow) and (max-width: $medium) {
+	@include narrowScreen();
+
+	
+}
+
+//wide screen
+@media screen and (min-width: $medium) and (max-width: $wide) {
+	
 }
