@@ -557,7 +557,7 @@ body #footer a:hover {
   body #footer a {
     width: 20vw;
     height: 50%;
-    line-height: 3em;
+    line-height: 0;
   }
   body #footer {
     top: 40vh;
@@ -783,7 +783,7 @@ body #footer a:hover {
   body #footer a {
     width: 20vw;
     height: 50%;
-    line-height: 3em;
+    line-height: 0;
   }
   body #footer {
     top: 40vh;

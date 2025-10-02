@@ -313,7 +313,7 @@ body #main #footer a:hover {
   body #main #footer a {
     width: 20vw;
     height: 50%;
-    line-height: 3em;
+    line-height: 0;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 1030px) {
@@ -431,7 +431,7 @@ body #main #footer a:hover {
   body #main #footer a {
     width: 20vw;
     height: 50%;
-    line-height: 3em;
+    line-height: 0;
   }
   body #main #header {
     width: 100vw;
@@ -531,7 +531,7 @@ body #main #footer a:hover {
   body #main #footer a {
     width: 20vw;
     height: 50%;
-    line-height: 3em;
+    line-height: 0;
   }
   body #main #footer {
     top: 150vh;

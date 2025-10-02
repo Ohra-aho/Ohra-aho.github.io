@@ -28,13 +28,13 @@ body {
 				display: flex;
 				justify-content: space-evenly;
 				align-items: center;
-				width: 40vh;
+				width: 30%;
 				height: 100%;
 
 				a {
 					border: 1px solid white;
 					border-radius: 5px;
-					width: 30%;
+					width: 35%;
 					text-align: center;
 					color: white;
 					text-decoration: none;
@@ -51,7 +51,7 @@ body {
 			font-size: 9em;
 			color: white;
 			position: fixed;
-			width: 100vw;
+			width: 100%;
 			text-align: center;
 			margin: 0;
 			z-index: 1;
@@ -65,7 +65,7 @@ body {
 		}
 
 		#title {
-			width: 100vw;
+			width: 100%;
 			height: 70vh;
 			display: flex;
 			justify-content: center;
@@ -80,59 +80,60 @@ body {
 		#snippet_holder {
 			position: relative;
 			top: 40vh;
+			width: 100%;
 
-			.narrow_image {
-				display: none;
-			}
+			.narrow_image { display: none; }
 
 			.snippet {
-				width: 100vw;
+				width: 100%;
 				height: 30vh;
 				margin-top: 20px;
 				margin-bottom: 20px;
 				position: relative;
 
-				#back {
-					position: absolute;
-					z-index: -1;
-					width: 50%;
-					height: 130%;
-					bottom: -20%;
-					left: -1%;
-				}
-
 				.container {
-					width: 48vw;
+					width: 48%;
 					height: 100%;
 					display: flex;
 					position: relative;
 
+					#back {
+						position: absolute;
+						z-index: -1;
+						width: 100%;
+						height: 110%;
+						bottom: 0;
+						left: 0;
+					}
+
 					.info {
 						width: 60%;
+						height: 100%;
 						position: relative;
+
 						h2 {
 							font-size: large;
 							width: 100%;
 							margin-left: 5px;
-							border-bottom:  2px solid black;
+							border-bottom: 2px solid black;
 						}
 
 						p {
 							font-size: 1.2em;
 							width: 100%;
-							height: auto;
+							height: 60%;
 							margin: 10px 5px 10px 5px;
 						}
 
 						a {
+							position: absolute;
+							right: 5px;
+							font-size: 1.2em;
+
 							margin-left: 5px;
 							margin-bottom: 10px;
 							color: black;
 							text-decoration: none;
-							position: absolute;
-							right: 5px;
-							bottom: 0;
-							font-size: 1.2em;
 						}
 					}
 
@@ -145,17 +146,19 @@ body {
 
 			.left {
 				position: relative;
-				left: 50vw;
+				left: 50%;
 				right: 0;
 
-				#back {
-					-webkit-transform: scaleX(-1); 
-					transform: scaleX(-1);
-					margin-left: 0;
-				}
-
-				.container {
-					left: 5%;
+				.container  {
+					left: 6%;
+					#back {
+						-webkit-transform: scaleX(-1); 
+						transform: scaleX(-1);
+						margin-left: 0;
+						width: 100%;
+						height: 110%;
+						left: -10%;
+					}
 				}
 			}
 		}
@@ -191,13 +194,16 @@ body {
 				animation: none;
 
 				.header_links {
-					width: 50vw;
-					a { font-size: 0.7em; }
+					width: 50%;
+					a { 
+						font-size: 0.7em; 
+						padding: 5px;
+					}
 				}
 			}
 
 			h1 {
-				font-size: 4em;
+				font-size: 2.5em;
 				animation: none;
 				position: relative;
 				z-index: 0;
@@ -214,6 +220,7 @@ body {
 
 			#snippet_holder {
 				top: 20vh;
+				width: 100%;
 				.narrow_image {
 					display: flex;
 					justify-content: center;
@@ -222,7 +229,7 @@ body {
 						display: none;
 						position: absolute;
 						z-index: -1;
-						width: 100vw;
+						width: 100%;
 						height: 30vh;
 					}
 					#image {
@@ -232,36 +239,28 @@ body {
 				}
 
 				.snippet {
-					width: 100vw;
+					width: 100%;
 					margin-top: 5vh;
 					margin-bottom: 10vh;
 
-					#back {
-						width: 100%;
-						-webkit-transform: scaleX(1); 
-						transform: scaleX(1);
-					}
-
 					.container {
-						width: 90vw;
+						width: 90%;
+						height: 110%;
 
 						.info {
 							width: 100%;
-							h2 {
-								font-size: large;
-							}
+							h2 { font-size: $small_title; }
+							p { font-size: $small_font; }
 
-							p {
-								font-size: 1.05em;
-							}
-
-							a {
-								font-size: 1.3em;
-							}
+							a { font-size: 1.1em; }
 						}
 
-						#image {
-							display: none;
+						#image { display: none; }
+
+						#back {
+							width: 110%;
+							-webkit-transform: scaleX(1); 
+							transform: scaleX(1);
 						}
 					}
 				}
@@ -270,9 +269,10 @@ body {
 					left: 0;
 					.container {
 						left: 0;
-					}
-					.back {
-						left: 0;
+						#back { 
+							left: 0; 
+							width: 110%;
+						}
 					}
 				}
 			}

@@ -2,6 +2,9 @@ $narrow: 500px;
 $medium: 1030px;
 $wide: 1500px;
 
+$small_title: 1em;
+$small_font: 1em;
+
 @mixin body() {
 	background-color: black;
 	overflow-x: hidden;
@@ -53,7 +56,11 @@ $wide: 1500px;
 
 @mixin narrow_intro($top: 10vh) {
 	@include intro();
-	p { width: 90vw; }
+	p { 
+		width: 90vw;
+		line-height: 1.2em;
+		font-size: 1.2em;
+	}
 }
 
 @mixin sub_page_header() {
@@ -127,16 +134,17 @@ $wide: 1500px;
 	}
 }
 
-@mixin narrow_footer() {
+@mixin narrow_footer($top: 30vh) {
 	#footer {
 		height: 10vh;
-		top: 30vh;
+		top: $top;
 		justify-content: space-evenly;
 
 		a {
 			width: 20vw;
-			height: 50%;
-			line-height: 3em;
+			height: fit-content;
+			line-height: 1em;
+			padding: 2%;
 		}
 	}
 }
