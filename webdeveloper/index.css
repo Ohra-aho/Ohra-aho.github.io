@@ -84,8 +84,9 @@ body #main #sample_links #grid a p {
   margin: 5px;
 }
 body #main #sample_links #grid a:hover {
-  width: 200px;
-  height: 200px;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: auto;
   position: relative;
 }
 body #main #sample_links #grid a:hover h3 {
@@ -115,16 +116,15 @@ body #main #footer {
   border-top: 2px dashed white;
 }
 body #main #footer a {
-  width: 10vw;
-  height: 70%;
   text-decoration: none;
   color: white;
   outline: white solid 2px;
   text-align: center;
-  line-height: 4em;
+  line-height: 1em;
   border-radius: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  padding: 1% 5% 1% 5%;
 }
 body #main #footer a:hover {
   background-color: rgba(65, 65, 65, 0.5);
@@ -178,7 +178,7 @@ body #main #footer a:hover {
     font-size: 1.2em;
   }
   body #main #header h1 {
-    width: 70vw;
+    width: 65vw;
   }
   body #main #intro {
     position: relative;
@@ -200,8 +200,10 @@ body #main #footer a:hover {
   }
   body #main #footer a {
     width: 20vw;
-    height: 50%;
-    line-height: 0;
+    height: -moz-fit-content;
+    height: fit-content;
+    line-height: 1em;
+    padding: 2%;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 1030px) {
@@ -252,7 +254,7 @@ body #main #footer a:hover {
     font-size: 1.2em;
   }
   body #main #header h1 {
-    width: 70vw;
+    width: 65vw;
   }
   body #main #intro {
     position: relative;
@@ -274,8 +276,10 @@ body #main #footer a:hover {
   }
   body #main #footer a {
     width: 20vw;
-    height: 50%;
-    line-height: 0;
+    height: -moz-fit-content;
+    height: fit-content;
+    line-height: 1em;
+    padding: 2%;
   }
   body #main #header {
     height: 12vh;

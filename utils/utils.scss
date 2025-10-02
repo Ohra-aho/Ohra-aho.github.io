@@ -94,7 +94,7 @@ $small_font: 1em;
 		h1 { font-size: 1.2em; }
 	}
 
-	h1 { width: 70vw; }
+	h1 { width: 65vw; }
 }
 
 @mixin top_displacement($top: 20vh) {
@@ -116,16 +116,15 @@ $small_font: 1em;
 		border-top: 2px dashed white;
 
 		a {
-			width: 10vw;
-			height: 70%;
 			text-decoration: none;
 			color: white;
 			outline: white solid 2px;
 			text-align: center;
-			line-height: 4em;
+			line-height: 1em;
 			border-radius: 10px;
 			margin-left: 10px;
 			margin-right: 10px;
+			padding: 1% 5% 1% 5%;
 		}
 
 		a:hover {

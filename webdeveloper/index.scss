@@ -56,17 +56,13 @@ body {
 				}
 
 				a:hover {
-					width: 200px;
-					height: 200px;
+					width: fit-content;
+					height: auto;
 					position: relative;
 
-					h3 {
-						line-height: 50px;
-					}
+					h3 { line-height: 50px; }
 
-					p {
-						display: block;
-					}
+					p { display: block; }
 				}
 
 				a:nth-of-type(1):hover {
