@@ -95,7 +95,10 @@ $small_font: 1em;
 		h1 { font-size: 1.2em; }
 	}
 
-	h1 { width: 65vw; }
+	h1 { 
+		width: 65vw; 
+		font-size: 1.5em;
+	}
 }
 
 @mixin top_displacement($top: 20vh) {
@@ -135,6 +138,7 @@ $small_font: 1em;
 }
 
 @mixin narrow_footer($top: 30vh) {
+	@include footer();
 	#footer {
 		height: 10vh;
 		top: $top;
@@ -144,6 +148,7 @@ $small_font: 1em;
 			width: 20vw;
 			height: fit-content;
 			line-height: 1em;
+			font-size: 0.7em;
 			padding: 2%;
 		}
 	}

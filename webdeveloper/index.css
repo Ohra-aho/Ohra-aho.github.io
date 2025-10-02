@@ -60,6 +60,7 @@ body #main #sample_links {
   margin-top: 5vh;
   display: flex;
   justify-content: center;
+  width: 100vw;
 }
 body #main #sample_links #grid {
   display: grid;
@@ -142,7 +143,9 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
-    height: 5vh;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 10px;
     width: 100vw;
     height: 6vh;
     background-color: black;
@@ -179,6 +182,7 @@ body #main #footer a:hover {
   }
   body #main #header h1 {
     width: 65vw;
+    font-size: 1.5em;
   }
   body #main #intro {
     position: relative;
@@ -194,6 +198,30 @@ body #main #footer a:hover {
     height: 30vh;
   }
   body #main #footer {
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    top: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px dashed white;
+  }
+  body #main #footer a {
+    text-decoration: none;
+    color: white;
+    outline: white solid 2px;
+    text-align: center;
+    line-height: 1em;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 1% 5% 1% 5%;
+  }
+  body #main #footer a:hover {
+    background-color: rgba(65, 65, 65, 0.5);
+  }
+  body #main #footer {
     height: 10vh;
     top: 30vh;
     justify-content: space-evenly;
@@ -203,6 +231,7 @@ body #main #footer a:hover {
     height: -moz-fit-content;
     height: fit-content;
     line-height: 1em;
+    font-size: 0.7em;
     padding: 2%;
   }
 }
@@ -218,7 +247,9 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
-    height: 5vh;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 10px;
     width: 100vw;
     height: 6vh;
     background-color: black;
@@ -255,6 +286,7 @@ body #main #footer a:hover {
   }
   body #main #header h1 {
     width: 65vw;
+    font-size: 1.5em;
   }
   body #main #intro {
     position: relative;
@@ -270,6 +302,30 @@ body #main #footer a:hover {
     height: 30vh;
   }
   body #main #footer {
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    top: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px dashed white;
+  }
+  body #main #footer a {
+    text-decoration: none;
+    color: white;
+    outline: white solid 2px;
+    text-align: center;
+    line-height: 1em;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 1% 5% 1% 5%;
+  }
+  body #main #footer a:hover {
+    background-color: rgba(65, 65, 65, 0.5);
+  }
+  body #main #footer {
     height: 10vh;
     top: 30vh;
     justify-content: space-evenly;
@@ -279,6 +335,7 @@ body #main #footer a:hover {
     height: -moz-fit-content;
     height: fit-content;
     line-height: 1em;
+    font-size: 0.7em;
     padding: 2%;
   }
   body #main #header {
