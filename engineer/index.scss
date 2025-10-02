@@ -10,16 +10,15 @@
 body {
 	@include body();
 
+	#header {
+		@include sub_page_header();
+		text-align: center;
+	}
+
 	#main {
 		@include main();
 
-		#header {
-			@include sub_page_header();
-			text-align: center;
-		}
-
 		#intro {
-			@include top_displacement();
 			display: flex;
 			justify-content: space-between;
 			width: 99vw;
@@ -106,7 +105,7 @@ body {
 			flex-direction: column;
 			width: 99vw;
 			height: fit-content;
-			@include top_displacement(30vh);
+			//@include top_displacement(30vh);
 
 			h2 {
 				color: white;
@@ -177,7 +176,8 @@ body {
 			gap: 15px;
 			align-items: center;
 			justify-content: center;
-			@include top_displacement(35vh);
+			margin-top: 5vh;
+			//@include top_displacement(35vh);
 
 			.job {
 				border: 2px dashed rgba(white, 0.5);
@@ -235,19 +235,17 @@ body {
 
 @mixin narrowScreen() {
 	body {
+		#header { @include narrow_sub_page_header(); }
 		#main {
-			#header { 
-				@include narrow_sub_page_header(); 
-			}
 
 			#intro {
 				display: block;
 				width: 100vw;
-				height: 60vh;
+				height: fit-content;
 
 				#info {
 					width: 99vw;
-					height: 49%;
+					height: fit-content;
 					left: 0;
 
 					img { display: none; }
@@ -288,8 +286,7 @@ body {
 			#grid_container {
 				flex-direction: column;
 				width: 100vw;
-				@include top_displacement(20vh);
-
+				margin-top: 10vh;
 				#skill_grid {
 					padding: 5px;
 					grid-template-rows: repeat(1, 50px);
@@ -323,14 +320,22 @@ body {
 			}
 
 			#work_history {
-				grid-template-columns: 90vw;
-				grid-template-rows: 50vh 50vh 50vh;
-				@include top_displacement(30vh);
+				display: flex;
+				flex-direction: column;
+				height: fit-content;
+				width: 100vw;
+				justify-content: center;
+				margin-top: 10vh;
+				.job { 
+					width: 90vw;
+					height: fit-content;
+					div { p { text-align: end; } }
+				}
 			}
 		}
 
 		@include narrow_footer();
-		#footer { top: 40vh; }
+		#footer { top: 60vh; }
 	}
 }
 
@@ -370,7 +375,7 @@ body {
 			height: 13vh;
 			a {
 				height: 60%;
-				line-height: 2em;
+				line-height: 1em;
 			}
 		}
 	}

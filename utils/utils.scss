@@ -13,6 +13,7 @@ $small_font: 1em;
 }
 
 @mixin main() {
+	@include top_displacement();
 	width: 100vw;
 	height: fit-content;
 	margin: 0;
@@ -33,7 +34,6 @@ $small_font: 1em;
 
 @mixin narrow_header() {
 	@include header();
-	height: fit-content;
 	margin-bottom: 10px;
 }
 
@@ -41,10 +41,11 @@ $small_font: 1em;
 	width: 100vw;
 	height: 30vh;
 	position: relative;
-	top: $top;
+	//top: $top;
 	text-align: center;
 	display: flex;
 	justify-content: center;
+	margin-top: 5vh;
 	
 	p {
 		width: 50vw;
@@ -112,7 +113,8 @@ $small_font: 1em;
 		height: 10vh;
 
 		position: relative;
-		top: 50vh;
+		//top: 30vh;
+		margin-top: 10vh;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -141,7 +143,8 @@ $small_font: 1em;
 	@include footer();
 	#footer {
 		height: 10vh;
-		top: $top;
+		//top: $top;
+		margin-top: 10vh;
 		justify-content: space-evenly;
 
 		a {

@@ -4,13 +4,7 @@ body {
   width: 100vw;
   margin: 0;
 }
-body #main {
-  width: 100vw;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 0;
-}
-body #main #header {
+body #header {
   width: 100vw;
   height: 6vh;
   background-color: black;
@@ -26,22 +20,28 @@ body #main #header {
   left: 0;
   text-align: center;
 }
-body #main #header a {
+body #header a {
   text-decoration: none;
 }
-body #main #header a h1 {
+body #header a h1 {
   width: -moz-fit-content;
   width: fit-content;
 }
-body #main #header h1 {
+body #header h1 {
   color: white;
   line-height: 100%;
   display: inline;
   width: 80vw;
 }
-body #main #intro {
+body #main {
   position: relative;
   top: 20vh;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+}
+body #main #intro {
   display: flex;
   justify-content: center;
   width: 100vw;
@@ -54,8 +54,6 @@ body #main #intro p {
   font-size: 2em;
 }
 body #main .section {
-  position: relative;
-  top: 20vh;
   width: 100vw;
   height: 40vh;
   display: flex;
@@ -179,7 +177,7 @@ body #main #footer {
   width: 100vw;
   height: 10vh;
   position: relative;
-  top: 50vh;
+  margin-top: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -201,7 +199,7 @@ body #main #footer a:hover {
 }
 
 @media screen and (max-width: 500px) {
-  body #main #header {
+  body #header {
     width: 100vw;
     height: 6vh;
     background-color: black;
@@ -212,8 +210,6 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
-    height: -moz-fit-content;
-    height: fit-content;
     margin-bottom: 10px;
     width: 100vw;
     height: 6vh;
@@ -230,31 +226,30 @@ body #main #footer a:hover {
     left: 0;
     text-align: center;
   }
-  body #main #header a {
+  body #header a {
     text-decoration: none;
   }
-  body #main #header a h1 {
+  body #header a h1 {
     width: -moz-fit-content;
     width: fit-content;
   }
-  body #main #header h1 {
+  body #header h1 {
     color: white;
     line-height: 100%;
     display: inline;
     width: 80vw;
   }
-  body #main #header a {
+  body #header a {
     width: 30vw;
   }
-  body #main #header a h1 {
+  body #header a h1 {
     font-size: 1.2em;
   }
-  body #main #header h1 {
+  body #header h1 {
     width: 65vw;
     font-size: 1.5em;
   }
-  body #main #intro {
-    position: relative;
+  body #main {
     top: 10vh;
   }
   body #main #intro p {
@@ -262,8 +257,7 @@ body #main #footer a:hover {
     font-size: 1.2em;
   }
   body #main .section {
-    position: relative;
-    top: 30vh;
+    margin-top: 10vh;
     height: -moz-fit-content;
     height: fit-content;
     flex-direction: column;
@@ -299,6 +293,7 @@ body #main #footer a:hover {
     bottom: -10%;
   }
   body #main #narrow_section {
+    margin-top: 15vh;
     display: flex;
     width: 100vw;
     justify-content: center;
@@ -314,7 +309,7 @@ body #main #footer a:hover {
     width: 100vw;
     height: 10vh;
     position: relative;
-    top: 50vh;
+    margin-top: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -336,7 +331,7 @@ body #main #footer a:hover {
   }
   body #main #footer {
     height: 10vh;
-    top: 30vh;
+    margin-top: 10vh;
     justify-content: space-evenly;
   }
   body #main #footer a {
@@ -349,7 +344,7 @@ body #main #footer a:hover {
   }
 }
 @media screen and (min-width: 500px) and (max-width: 1030px) {
-  body #main #header {
+  body #header {
     width: 100vw;
     height: 6vh;
     background-color: black;
@@ -360,8 +355,6 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
-    height: -moz-fit-content;
-    height: fit-content;
     margin-bottom: 10px;
     width: 100vw;
     height: 6vh;
@@ -378,31 +371,30 @@ body #main #footer a:hover {
     left: 0;
     text-align: center;
   }
-  body #main #header a {
+  body #header a {
     text-decoration: none;
   }
-  body #main #header a h1 {
+  body #header a h1 {
     width: -moz-fit-content;
     width: fit-content;
   }
-  body #main #header h1 {
+  body #header h1 {
     color: white;
     line-height: 100%;
     display: inline;
     width: 80vw;
   }
-  body #main #header a {
+  body #header a {
     width: 30vw;
   }
-  body #main #header a h1 {
+  body #header a h1 {
     font-size: 1.2em;
   }
-  body #main #header h1 {
+  body #header h1 {
     width: 65vw;
     font-size: 1.5em;
   }
-  body #main #intro {
-    position: relative;
+  body #main {
     top: 10vh;
   }
   body #main #intro p {
@@ -410,8 +402,7 @@ body #main #footer a:hover {
     font-size: 1.2em;
   }
   body #main .section {
-    position: relative;
-    top: 30vh;
+    margin-top: 10vh;
     height: -moz-fit-content;
     height: fit-content;
     flex-direction: column;
@@ -447,6 +438,7 @@ body #main #footer a:hover {
     bottom: -10%;
   }
   body #main #narrow_section {
+    margin-top: 15vh;
     display: flex;
     width: 100vw;
     justify-content: center;
@@ -462,7 +454,7 @@ body #main #footer a:hover {
     width: 100vw;
     height: 10vh;
     position: relative;
-    top: 50vh;
+    margin-top: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -484,7 +476,7 @@ body #main #footer a:hover {
   }
   body #main #footer {
     height: 10vh;
-    top: 30vh;
+    margin-top: 10vh;
     justify-content: space-evenly;
   }
   body #main #footer a {
@@ -506,8 +498,6 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
-    height: -moz-fit-content;
-    height: fit-content;
     margin-bottom: 10px;
     width: 100vw;
     height: 6vh;
@@ -592,7 +582,7 @@ body #main #footer a:hover {
     width: 100vw;
     height: 10vh;
     position: relative;
-    top: 50vh;
+    margin-top: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -614,7 +604,7 @@ body #main #footer a:hover {
   }
   body #main #footer {
     height: 10vh;
-    top: 30vh;
+    margin-top: 10vh;
     justify-content: space-evenly;
   }
   body #main #footer a {

@@ -9,16 +9,14 @@
 
 body {
 	@include body();
+	#header {
+		@include sub_page_header();
+	}
 
 	#main {
 		@include main();
 
-		#header {
-			@include sub_page_header();
-		}
-
 		#intro {
-			@include top_displacement();
 			display: flex;
 			justify-content: center;
 			width: 100vw;
@@ -32,7 +30,6 @@ body {
 		}
 
 		#art {
-			@include top_displacement();
 			width: 99vw;
 			height: fit-content;
 
@@ -71,13 +68,12 @@ body {
 //Narrow screen
 @mixin narrowScreen() {
 	body {
+		#header {
+			@include narrow_sub_page_header();
+		}
 		#main {
-			#header {
-				@include narrow_sub_page_header();
-			}
-
 			#intro {
-				@include top_displacement(10vh);
+				height: fit-content;
 				p {
 					width: 90vw;
 					font-size: 1.5em;
@@ -85,7 +81,6 @@ body {
 			}
 
 			#art {
-				@include top_displacement(10vh);
 				width: 99vw;
 				height: fit-content;
 

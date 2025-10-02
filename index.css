@@ -4,13 +4,7 @@ body {
   width: 100vw;
   margin: 0;
 }
-body #main {
-  width: 100vw;
-  height: -moz-fit-content;
-  height: fit-content;
-  margin: 0;
-}
-body #main .header {
+body .header {
   width: 100vw;
   height: 6vh;
   background-color: black;
@@ -31,14 +25,14 @@ body #main .header {
   animation-range-end: 50%;
   animation-fill-mode: forwards;
 }
-body #main .header .header_links {
+body .header .header_links {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 30%;
   height: 100%;
 }
-body #main .header .header_links a {
+body .header .header_links a {
   border: 1px solid white;
   border-radius: 5px;
   width: 35%;
@@ -47,8 +41,19 @@ body #main .header .header_links a {
   text-decoration: none;
   padding: 10px;
 }
-body #main .header .header_links a:hover {
+body .header .header_links a:hover {
   background-color: rgba(65, 65, 65, 0.5);
+}
+body #main {
+  position: relative;
+  top: 20vh;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 0;
+  width: 100vw;
+  height: fit-content;
+  margin: 0;
 }
 body #main h1 {
   font-size: 9em;
@@ -58,7 +63,7 @@ body #main h1 {
   text-align: center;
   margin: 0;
   z-index: 1;
-  top: 5vh;
+  top: 0;
   pointer-events: none;
   animation: move_title linear;
   animation-timeline: scroll();
@@ -71,16 +76,15 @@ body #main #title {
   display: flex;
   justify-content: center;
   position: relative;
-  top: 30vh;
 }
 body #main #intro {
   width: 100vw;
   height: 30vh;
   position: relative;
-  top: 35vh;
   text-align: center;
   display: flex;
   justify-content: center;
+  margin-top: 5vh;
 }
 body #main #intro p {
   width: 50vw;
@@ -91,7 +95,7 @@ body #main #intro p {
 }
 body #main #snippet_holder {
   position: relative;
-  top: 40vh;
+  margin-top: 10vh;
   width: 100%;
 }
 body #main #snippet_holder .narrow_image {
@@ -171,7 +175,7 @@ body #main #footer {
   width: 100vw;
   height: 10vh;
   position: relative;
-  top: 50vh;
+  margin-top: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -210,7 +214,7 @@ body #main #footer a:hover {
     width: 100vw;
     margin: 0;
   }
-  body #main .header {
+  body .header {
     width: 100vw;
     height: 6vh;
     background-color: black;
@@ -221,26 +225,26 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
-    height: -moz-fit-content;
-    height: fit-content;
     margin-bottom: 10px;
     top: 0;
     animation: none;
   }
-  body #main .header .header_links {
+  body .header .header_links {
     width: 100%;
   }
-  body #main .header .header_links a {
+  body .header .header_links a {
     width: 45%;
     font-size: 0.7em;
     padding: 5px;
+  }
+  body #main {
+    top: 20vh;
   }
   body #main h1 {
     font-size: 2.5em;
     animation: none;
     position: relative;
     z-index: 0;
-    top: 12vh;
   }
   body #main #title {
     display: none;
@@ -249,10 +253,10 @@ body #main #footer a:hover {
     width: 100vw;
     height: 30vh;
     position: relative;
-    top: 13vh;
     text-align: center;
     display: flex;
     justify-content: center;
+    margin-top: 5vh;
   }
   body #main #intro p {
     width: 50vw;
@@ -267,7 +271,6 @@ body #main #footer a:hover {
     font-size: 1.2em;
   }
   body #main #snippet_holder {
-    top: 20vh;
     width: 100%;
   }
   body #main #snippet_holder .narrow_image {
@@ -326,8 +329,32 @@ body #main #footer a:hover {
     width: 110%;
   }
   body #main #footer {
+    width: 100vw;
     height: 10vh;
-    top: 30vh;
+    position: relative;
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px dashed white;
+  }
+  body #main #footer a {
+    text-decoration: none;
+    color: white;
+    outline: white solid 2px;
+    text-align: center;
+    line-height: 1em;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 1% 5% 1% 5%;
+  }
+  body #main #footer a:hover {
+    background-color: rgba(65, 65, 65, 0.5);
+  }
+  body #main #footer {
+    height: 10vh;
+    margin-top: 10vh;
     justify-content: space-evenly;
   }
   body #main #footer a {
@@ -335,6 +362,7 @@ body #main #footer a:hover {
     height: -moz-fit-content;
     height: fit-content;
     line-height: 1em;
+    font-size: 0.7em;
     padding: 2%;
   }
 }
@@ -345,7 +373,7 @@ body #main #footer a:hover {
     width: 100vw;
     margin: 0;
   }
-  body #main .header {
+  body .header {
     width: 100vw;
     height: 6vh;
     background-color: black;
@@ -356,26 +384,26 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
-    height: -moz-fit-content;
-    height: fit-content;
     margin-bottom: 10px;
     top: 0;
     animation: none;
   }
-  body #main .header .header_links {
+  body .header .header_links {
     width: 100%;
   }
-  body #main .header .header_links a {
+  body .header .header_links a {
     width: 45%;
     font-size: 0.7em;
     padding: 5px;
+  }
+  body #main {
+    top: 20vh;
   }
   body #main h1 {
     font-size: 2.5em;
     animation: none;
     position: relative;
     z-index: 0;
-    top: 12vh;
   }
   body #main #title {
     display: none;
@@ -384,10 +412,10 @@ body #main #footer a:hover {
     width: 100vw;
     height: 30vh;
     position: relative;
-    top: 13vh;
     text-align: center;
     display: flex;
     justify-content: center;
+    margin-top: 5vh;
   }
   body #main #intro p {
     width: 50vw;
@@ -402,7 +430,6 @@ body #main #footer a:hover {
     font-size: 1.2em;
   }
   body #main #snippet_holder {
-    top: 20vh;
     width: 100%;
   }
   body #main #snippet_holder .narrow_image {
@@ -461,8 +488,32 @@ body #main #footer a:hover {
     width: 110%;
   }
   body #main #footer {
+    width: 100vw;
     height: 10vh;
-    top: 30vh;
+    position: relative;
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px dashed white;
+  }
+  body #main #footer a {
+    text-decoration: none;
+    color: white;
+    outline: white solid 2px;
+    text-align: center;
+    line-height: 1em;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 1% 5% 1% 5%;
+  }
+  body #main #footer a:hover {
+    background-color: rgba(65, 65, 65, 0.5);
+  }
+  body #main #footer {
+    height: 10vh;
+    margin-top: 10vh;
     justify-content: space-evenly;
   }
   body #main #footer a {
@@ -470,6 +521,7 @@ body #main #footer a:hover {
     height: -moz-fit-content;
     height: fit-content;
     line-height: 1em;
+    font-size: 0.7em;
     padding: 2%;
   }
   body #main .header {
@@ -482,10 +534,10 @@ body #main #footer a:hover {
     width: 100vw;
     height: 30vh;
     position: relative;
-    top: 10vh;
     text-align: center;
     display: flex;
     justify-content: center;
+    margin-top: 5vh;
     top: 30vh;
   }
   body #main #intro p {
@@ -529,8 +581,32 @@ body #main #footer a:hover {
     height: auto;
   }
   body #main #footer {
+    width: 100vw;
     height: 10vh;
-    top: 30vh;
+    position: relative;
+    margin-top: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px dashed white;
+  }
+  body #main #footer a {
+    text-decoration: none;
+    color: white;
+    outline: white solid 2px;
+    text-align: center;
+    line-height: 1em;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 1% 5% 1% 5%;
+  }
+  body #main #footer a:hover {
+    background-color: rgba(65, 65, 65, 0.5);
+  }
+  body #main #footer {
+    height: 10vh;
+    margin-top: 10vh;
     justify-content: space-evenly;
   }
   body #main #footer a {
@@ -538,6 +614,7 @@ body #main #footer a:hover {
     height: -moz-fit-content;
     height: fit-content;
     line-height: 1em;
+    font-size: 0.7em;
     padding: 2%;
   }
   body #main #footer {

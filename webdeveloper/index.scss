@@ -3,15 +3,15 @@
 body {
 	@include body();
 
+	#header {
+		@include sub_page_header();
+	}
+
 	#main {
 		@include main();
-
-		#header {
-			@include sub_page_header();
-		}
+		top: 10vh;
 
 		#intro {
-			@include top_displacement();
 			height: 30vh;
 			display: flex;
 			justify-content: center;
@@ -25,8 +25,7 @@ body {
 		}
 
 		#sample_links {
-			@include top_displacement();
-			height: 30vh;
+			height: 50vh;
 			margin-top: 5vh;
 			display: flex;
 			justify-content: center;
@@ -94,7 +93,6 @@ body {
 			}
 
 			#intro {
-				@include top_displacement(10vh);
 				p {
 					font-size: 1.5em;
 					width: 90vw;
@@ -102,8 +100,7 @@ body {
 			}
 
 			#sample_links {
-				@include top_displacement(10vh);
-				height: 30vh;
+				height: 50vh;
 			}
 
 			@include narrow_footer();
@@ -125,7 +122,7 @@ body {
 			#header { height: 12vh; }
 
 			#footer { 
-				top: 70vh;
+				//top: 70vh;
 				height: 13vh;
 				a {
 					height: 60%;
