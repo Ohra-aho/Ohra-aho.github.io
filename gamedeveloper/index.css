@@ -128,6 +128,9 @@ body #main .section #inner #info a {
   bottom: 0;
   margin: 10px;
 }
+body #main #narrow_section {
+  display: none;
+}
 body #main .section.left {
   margin-top: 20vh;
 }
@@ -183,16 +186,15 @@ body #main #footer {
   border-top: 2px dashed white;
 }
 body #main #footer a {
-  width: 10vw;
-  height: 70%;
   text-decoration: none;
   color: white;
   outline: white solid 2px;
   text-align: center;
-  line-height: 4em;
+  line-height: 1em;
   border-radius: 10px;
   margin-left: 10px;
   margin-right: 10px;
+  padding: 1% 5% 1% 5%;
 }
 body #main #footer a:hover {
   background-color: rgba(65, 65, 65, 0.5);
@@ -210,7 +212,9 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
-    height: 5vh;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 10px;
     width: 100vw;
     height: 6vh;
     background-color: black;
@@ -246,7 +250,8 @@ body #main #footer a:hover {
     font-size: 1.2em;
   }
   body #main #header h1 {
-    width: 70vw;
+    width: 65vw;
+    font-size: 1.5em;
   }
   body #main #intro {
     position: relative;
@@ -254,56 +259,80 @@ body #main #footer a:hover {
   }
   body #main #intro p {
     width: 90vw;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   body #main .section {
     position: relative;
     top: 30vh;
-    height: 90vh;
+    height: -moz-fit-content;
+    height: fit-content;
     flex-direction: column;
+    justify-content: center;
   }
   body #main .section #media_1, body #main .section #media_2 {
     width: 90vw;
+    margin-top: 10%;
   }
   body #main .section #inner {
     justify-content: center;
     flex-direction: column;
     height: 100%;
     width: 90vw;
-    padding-left: 5vw;
-  }
-  body #main .section #inner #image_holder {
-    height: 100%;
-    width: 80%;
-  }
-  body #main .section #inner #info {
-    height: 100%;
-    width: 90%;
-    margin: 1% 0.5% 1% 3%;
-  }
-  body #main .section #inner #info p {
-    font-size: 1.2em;
-  }
-  body #main .section #inner #info a {
-    font-size: 1.2em;
-  }
-  body #main .section.left {
-    margin-top: 20vh;
-  }
-  body #main .section.left #media_2 {
-    position: relative;
-    top: 70%;
-  }
-  body #main .section.left #inner {
-    padding-right: 0;
     padding-left: 0;
   }
-  body #main .section.left #inner #image_holder {
-    position: relative;
-    bottom: 100%;
+  body #main .section #inner #image_holder {
+    height: 30vh;
+    width: 80%;
+    padding: 0;
   }
-  body #main .section.left #inner #info {
-    margin: 1% 0.5% 1% 3%;
+  body #main .section #inner #info {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 90%;
+    margin: 0;
+  }
+  body #main .section #inner #info p {
+    font-size: 1em;
+  }
+  body #main .section #inner #info a {
+    font-size: 1.1em;
+    bottom: -10%;
+  }
+  body #main #narrow_section {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+  }
+  body #main #narrow_section #inner {
+    padding: 0;
+    margin: 0;
+  }
+  body #main .section.left {
+    display: none;
+  }
+  body #main #footer {
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    top: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px dashed white;
+  }
+  body #main #footer a {
+    text-decoration: none;
+    color: white;
+    outline: white solid 2px;
+    text-align: center;
+    line-height: 1em;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 1% 5% 1% 5%;
+  }
+  body #main #footer a:hover {
+    background-color: rgba(65, 65, 65, 0.5);
   }
   body #main #footer {
     height: 10vh;
@@ -312,8 +341,11 @@ body #main #footer a:hover {
   }
   body #main #footer a {
     width: 20vw;
-    height: 50%;
-    line-height: 0;
+    height: -moz-fit-content;
+    height: fit-content;
+    line-height: 1em;
+    font-size: 0.7em;
+    padding: 2%;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 1030px) {
@@ -328,7 +360,9 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
-    height: 5vh;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 10px;
     width: 100vw;
     height: 6vh;
     background-color: black;
@@ -364,7 +398,8 @@ body #main #footer a:hover {
     font-size: 1.2em;
   }
   body #main #header h1 {
-    width: 70vw;
+    width: 65vw;
+    font-size: 1.5em;
   }
   body #main #intro {
     position: relative;
@@ -372,56 +407,80 @@ body #main #footer a:hover {
   }
   body #main #intro p {
     width: 90vw;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   body #main .section {
     position: relative;
     top: 30vh;
-    height: 90vh;
+    height: -moz-fit-content;
+    height: fit-content;
     flex-direction: column;
+    justify-content: center;
   }
   body #main .section #media_1, body #main .section #media_2 {
     width: 90vw;
+    margin-top: 10%;
   }
   body #main .section #inner {
     justify-content: center;
     flex-direction: column;
     height: 100%;
     width: 90vw;
-    padding-left: 5vw;
-  }
-  body #main .section #inner #image_holder {
-    height: 100%;
-    width: 80%;
-  }
-  body #main .section #inner #info {
-    height: 100%;
-    width: 90%;
-    margin: 1% 0.5% 1% 3%;
-  }
-  body #main .section #inner #info p {
-    font-size: 1.2em;
-  }
-  body #main .section #inner #info a {
-    font-size: 1.2em;
-  }
-  body #main .section.left {
-    margin-top: 20vh;
-  }
-  body #main .section.left #media_2 {
-    position: relative;
-    top: 70%;
-  }
-  body #main .section.left #inner {
-    padding-right: 0;
     padding-left: 0;
   }
-  body #main .section.left #inner #image_holder {
-    position: relative;
-    bottom: 100%;
+  body #main .section #inner #image_holder {
+    height: 30vh;
+    width: 80%;
+    padding: 0;
   }
-  body #main .section.left #inner #info {
-    margin: 1% 0.5% 1% 3%;
+  body #main .section #inner #info {
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 90%;
+    margin: 0;
+  }
+  body #main .section #inner #info p {
+    font-size: 1em;
+  }
+  body #main .section #inner #info a {
+    font-size: 1.1em;
+    bottom: -10%;
+  }
+  body #main #narrow_section {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+  }
+  body #main #narrow_section #inner {
+    padding: 0;
+    margin: 0;
+  }
+  body #main .section.left {
+    display: none;
+  }
+  body #main #footer {
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    top: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px dashed white;
+  }
+  body #main #footer a {
+    text-decoration: none;
+    color: white;
+    outline: white solid 2px;
+    text-align: center;
+    line-height: 1em;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 1% 5% 1% 5%;
+  }
+  body #main #footer a:hover {
+    background-color: rgba(65, 65, 65, 0.5);
   }
   body #main #footer {
     height: 10vh;
@@ -430,8 +489,11 @@ body #main #footer a:hover {
   }
   body #main #footer a {
     width: 20vw;
-    height: 50%;
-    line-height: 0;
+    height: -moz-fit-content;
+    height: fit-content;
+    line-height: 1em;
+    font-size: 0.7em;
+    padding: 2%;
   }
   body #main #header {
     width: 100vw;
@@ -444,7 +506,9 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
-    height: 5vh;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 10px;
     width: 100vw;
     height: 6vh;
     background-color: black;
@@ -481,7 +545,8 @@ body #main #footer a:hover {
     font-size: 1.2em;
   }
   body #main #header h1 {
-    width: 70vw;
+    width: 65vw;
+    font-size: 1.5em;
   }
   body #main #intro {
     position: relative;
@@ -524,14 +589,41 @@ body #main #footer a:hover {
     margin: 1% 0.5% 1% 3%;
   }
   body #main #footer {
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    top: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px dashed white;
+  }
+  body #main #footer a {
+    text-decoration: none;
+    color: white;
+    outline: white solid 2px;
+    text-align: center;
+    line-height: 1em;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 1% 5% 1% 5%;
+  }
+  body #main #footer a:hover {
+    background-color: rgba(65, 65, 65, 0.5);
+  }
+  body #main #footer {
     height: 10vh;
     top: 30vh;
     justify-content: space-evenly;
   }
   body #main #footer a {
     width: 20vw;
-    height: 50%;
-    line-height: 0;
+    height: -moz-fit-content;
+    height: fit-content;
+    line-height: 1em;
+    font-size: 0.7em;
+    padding: 2%;
   }
   body #main #footer {
     top: 150vh;
