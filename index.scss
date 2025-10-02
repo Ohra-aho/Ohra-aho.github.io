@@ -86,14 +86,14 @@ body {
 
 			.snippet {
 				width: 100%;
-				height: 30vh;
+				height: fit-content;
 				margin-top: 20px;
 				margin-bottom: 20px;
 				position: relative;
 
 				.container {
 					width: 48%;
-					height: 100%;
+					height: fit-content;
 					display: flex;
 					position: relative;
 
@@ -108,7 +108,7 @@ body {
 
 					.info {
 						width: 60%;
-						height: 100%;
+						height: fit-content;
 						position: relative;
 
 						h2 {
@@ -121,7 +121,7 @@ body {
 						p {
 							font-size: 1.2em;
 							width: 100%;
-							height: 60%;
+							height: fit-content;
 							margin: 10px 5px 10px 5px;
 						}
 
@@ -189,15 +189,17 @@ body {
 		#main {
 			.header {
 				@include narrow_header();
-
 				top: 0;
 				animation: none;
 
 				.header_links {
-					width: 50%;
+					width: 100%;
+					//flex-direction: column;
 					a { 
+						width: 45%;
 						font-size: 0.7em; 
 						padding: 5px;
+						//margin: 2px;
 					}
 				}
 			}
@@ -207,16 +209,12 @@ body {
 				animation: none;
 				position: relative;
 				z-index: 0;
-				top: 7vh;
+				top: 12vh;
 			}
 
-			#title {
-				display: none;
-			}
+			#title { display: none; }
 
-			#intro {
-				@include narrow_intro(10vh);
-			}
+			#intro { @include narrow_intro(13vh); }
 
 			#snippet_holder {
 				top: 20vh;
@@ -233,7 +231,7 @@ body {
 						height: 30vh;
 					}
 					#image {
-						height: 30vh;
+						height: 35vh;
 						width: auto;
 					}
 				}
@@ -245,7 +243,7 @@ body {
 
 					.container {
 						width: 90%;
-						height: 110%;
+						//height: 110%;
 
 						.info {
 							width: 100%;
@@ -258,7 +256,9 @@ body {
 						#image { display: none; }
 
 						#back {
+							top: 0;
 							width: 110%;
+							height: 120%;
 							-webkit-transform: scaleX(1); 
 							transform: scaleX(1);
 						}
