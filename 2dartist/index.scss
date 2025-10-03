@@ -81,6 +81,7 @@ body {
 			}
 
 			#art {
+				margin-top: 100px;
 				width: 99vw;
 				height: fit-content;
 
@@ -125,17 +126,13 @@ body {
 	@include narrowScreen();
 
 	body {
+		#header { height: 13vh; }
 		#main {
-			#header { height: 13vh; }
-
-			#intro { @include top_displacement(30vh); }
-
+			top: 100px;
 			#art {
-				@include top_displacement(30vh);
-
 				#grid {
 					justify-content: center;
-					grid-template-columns: repeat(1, 30vw);
+					grid-template-columns: repeat(1, 40vw);
 					grid-template-rows: repeat(1, 100vh);
 
 					img:nth-of-type(1) { @include skill_cordinates(1, 1, 1, 1); }
@@ -155,12 +152,8 @@ body {
 			}
 
 			#footer { 
-				top: 70vh;
 				height: 13vh;
-				a {
-					height: 60%;
-					line-height: 1em;
-				}
+				a { line-height: 1em; }
 			}
 		}
 	}

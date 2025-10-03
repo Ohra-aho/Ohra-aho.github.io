@@ -248,14 +248,13 @@ body {
 	@include narrowScreen();
 
 	body {
+		#header {
+			@include narrow_sub_page_header();
+			height: 11vh;
+		}
 		#main {
-			#header {
-				@include narrow_sub_page_header();
-				height: 11vh;
-			}
-
 			#intro {
-				@include top_displacement(10vh);
+				height: fit-content;
 				p {
 					width: 90vw;
 					font-size: 1.5em;
@@ -263,53 +262,35 @@ body {
 			}
 
 			.section {
-				@include top_displacement(100vh);
-				height: 250vh;
+				margin-top: 150px;
+				height: fit-content;
 
 				#inner {
 					height: 100%;
-
-					#image_holder {
-						height: 120vh;
-					}
-
-					#info {
-						height: 30%;
-					}
+					#image_holder { height: 120vh;}
+					#info { height: 30%; }
 				}
 			}
 
-			.section.left {
-				margin-top: 100vh;
-
-				#media_2 {
-					position: relative;
-					top: 70%;
-				}
+			#narrow_section {
+				margin-top: 150px;
+				#media_2 { position: relative; }
 
 				#inner {
 					padding-right: 0;
 					padding-left: 0;
 					
-					#image_holder {
-						position: relative;
-						bottom: 100%;
-					}
-
-					#info {
-						margin: 1% 0.5% 1% 3%;
-					}
+					#image_holder { position: relative; }
+					#info { margin: 1% 0.5% 1% 3%; }
 				}
 			}
 			
 			@include narrow_footer();
 			#footer { 
-				top: 150vh;
+				padding-top: 10px;
+				top: 100px;
 				height: 13vh;
-				a {
-					height: 60%;
-					line-height: 2em;
-				}
+				a { line-height: 1em; }
 			}
 
 		}

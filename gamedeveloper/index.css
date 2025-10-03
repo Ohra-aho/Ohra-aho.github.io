@@ -487,7 +487,7 @@ body #main #footer a:hover {
     font-size: 0.7em;
     padding: 2%;
   }
-  body #main #header {
+  body #header {
     width: 100vw;
     height: 6vh;
     background-color: black;
@@ -515,41 +515,41 @@ body #main #footer a:hover {
     text-align: center;
     height: 11vh;
   }
-  body #main #header a {
+  body #header a {
     text-decoration: none;
   }
-  body #main #header a h1 {
+  body #header a h1 {
     width: -moz-fit-content;
     width: fit-content;
   }
-  body #main #header h1 {
+  body #header h1 {
     color: white;
     line-height: 100%;
     display: inline;
     width: 80vw;
   }
-  body #main #header a {
+  body #header a {
     width: 30vw;
   }
-  body #main #header a h1 {
+  body #header a h1 {
     font-size: 1.2em;
   }
-  body #main #header h1 {
+  body #header h1 {
     width: 65vw;
     font-size: 1.5em;
   }
   body #main #intro {
-    position: relative;
-    top: 10vh;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   body #main #intro p {
     width: 90vw;
     font-size: 1.5em;
   }
   body #main .section {
-    position: relative;
-    top: 100vh;
-    height: 250vh;
+    margin-top: 150px;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   body #main .section #inner {
     height: 100%;
@@ -560,22 +560,20 @@ body #main #footer a:hover {
   body #main .section #inner #info {
     height: 30%;
   }
-  body #main .section.left {
-    margin-top: 100vh;
+  body #main #narrow_section {
+    margin-top: 150px;
   }
-  body #main .section.left #media_2 {
+  body #main #narrow_section #media_2 {
     position: relative;
-    top: 70%;
   }
-  body #main .section.left #inner {
+  body #main #narrow_section #inner {
     padding-right: 0;
     padding-left: 0;
   }
-  body #main .section.left #inner #image_holder {
+  body #main #narrow_section #inner #image_holder {
     position: relative;
-    bottom: 100%;
   }
-  body #main .section.left #inner #info {
+  body #main #narrow_section #inner #info {
     margin: 1% 0.5% 1% 3%;
   }
   body #main #footer {
@@ -616,11 +614,11 @@ body #main #footer a:hover {
     padding: 2%;
   }
   body #main #footer {
-    top: 150vh;
+    padding-top: 10px;
+    top: 100px;
     height: 13vh;
   }
   body #main #footer a {
-    height: 60%;
-    line-height: 2em;
+    line-height: 1em;
   }
 }/*# sourceMappingURL=index.css.map */

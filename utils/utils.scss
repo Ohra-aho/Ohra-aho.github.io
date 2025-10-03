@@ -91,7 +91,7 @@ $small_font: 1em;
 	@include sub_page_header();
 	
 	a {
-		width: 30vw;
+		width: fit-content;
 		h1 { font-size: 1.2em; }
 	}
 
