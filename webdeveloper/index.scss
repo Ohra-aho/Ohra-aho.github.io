@@ -87,10 +87,10 @@ body {
 //Narrow screen
 @mixin narrowScreen() {
 	body {
+		#header {
+			@include narrow_sub_page_header();
+		}
 		#main {
-			#header {
-				@include narrow_sub_page_header();
-			}
 
 			#intro {
 				p {
@@ -100,7 +100,7 @@ body {
 			}
 
 			#sample_links {
-				height: 50vh;
+				height: fit-content;
 			}
 
 			@include narrow_footer();
@@ -118,15 +118,26 @@ body {
 	@include narrowScreen();
 
 	body {
+		#header { height: 12vh; }
 		#main {
-			#header { height: 12vh; }
+			#intro {
+				height: 70vh;
+				p {
+					font-size: 1.5em;
+					width: 90vw;
+				}
+			}
+
+			#sample_links {
+				height: fit-content;
+			}
 
 			#footer { 
-				//top: 70vh;
-				height: 13vh;
+				top: 50px;
+				height: fit-content;
+				padding-top: 5px;
 				a {
-					height: 60%;
-					line-height: 2em;
+					line-height: 1em;
 				}
 			}
 		}

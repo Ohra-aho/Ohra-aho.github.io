@@ -131,7 +131,7 @@ body #main #footer a:hover {
 }
 
 @media screen and (max-width: 500px) {
-  body #main #header {
+  body #header {
     width: 100vw;
     height: 6vh;
     background-color: black;
@@ -158,26 +158,26 @@ body #main #footer a:hover {
     left: 0;
     text-align: center;
   }
-  body #main #header a {
+  body #header a {
     text-decoration: none;
   }
-  body #main #header a h1 {
+  body #header a h1 {
     width: -moz-fit-content;
     width: fit-content;
   }
-  body #main #header h1 {
+  body #header h1 {
     color: white;
     line-height: 100%;
     display: inline;
     width: 80vw;
   }
-  body #main #header a {
+  body #header a {
     width: 30vw;
   }
-  body #main #header a h1 {
+  body #header a h1 {
     font-size: 1.2em;
   }
-  body #main #header h1 {
+  body #header h1 {
     width: 65vw;
     font-size: 1.5em;
   }
@@ -186,7 +186,8 @@ body #main #footer a:hover {
     width: 90vw;
   }
   body #main #sample_links {
-    height: 50vh;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   body #main #footer {
     width: 100vw;
@@ -227,7 +228,7 @@ body #main #footer a:hover {
   }
 }
 @media screen and (min-width: 500px) and (max-width: 1030px) {
-  body #main #header {
+  body #header {
     width: 100vw;
     height: 6vh;
     background-color: black;
@@ -254,26 +255,26 @@ body #main #footer a:hover {
     left: 0;
     text-align: center;
   }
-  body #main #header a {
+  body #header a {
     text-decoration: none;
   }
-  body #main #header a h1 {
+  body #header a h1 {
     width: -moz-fit-content;
     width: fit-content;
   }
-  body #main #header h1 {
+  body #header h1 {
     color: white;
     line-height: 100%;
     display: inline;
     width: 80vw;
   }
-  body #main #header a {
+  body #header a {
     width: 30vw;
   }
-  body #main #header a h1 {
+  body #header a h1 {
     font-size: 1.2em;
   }
-  body #main #header h1 {
+  body #header h1 {
     width: 65vw;
     font-size: 1.5em;
   }
@@ -282,7 +283,8 @@ body #main #footer a:hover {
     width: 90vw;
   }
   body #main #sample_links {
-    height: 50vh;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   body #main #footer {
     width: 100vw;
@@ -321,14 +323,27 @@ body #main #footer a:hover {
     font-size: 0.7em;
     padding: 2%;
   }
-  body #main #header {
+  body #header {
     height: 12vh;
   }
+  body #main #intro {
+    height: 70vh;
+  }
+  body #main #intro p {
+    font-size: 1.5em;
+    width: 90vw;
+  }
+  body #main #sample_links {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
   body #main #footer {
-    height: 13vh;
+    top: 50px;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-top: 5px;
   }
   body #main #footer a {
-    height: 60%;
-    line-height: 2em;
+    line-height: 1em;
   }
 }/*# sourceMappingURL=index.css.map */
