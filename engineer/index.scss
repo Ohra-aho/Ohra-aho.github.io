@@ -349,32 +349,31 @@ body {
 	@include narrowScreen();
 
 	body {
+		#header { height: 11vh; }
 		#main {
-			#header { height: 11vh; }
 
 			#intro {
-				height: 100vh;
+				height: fit-content;
 				#left {
 					#section:last-of-type { margin-top: 1%; }
 				}
 			}
 
 			#grid_container {
-				@include top_displacement(40vh);
+				top: 100px;
 			}
 
 			#work_history {
 				grid-template-columns: 90vw;
 				grid-template-rows: repeat(3, 70vh);
-				@include top_displacement(60vh);
 			}
 		}
 
 		#footer { 
-			top: 70vh;
-			height: 13vh;
+			margin-top: 50px;
+			height: fit-content;
 			a {
-				height: 60%;
+				margin-top: 5px;
 				line-height: 1em;
 			}
 		}
