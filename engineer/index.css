@@ -312,7 +312,7 @@ body #footer {
   width: 100vw;
   height: 10vh;
   position: relative;
-  top: 30vh;
+  margin-top: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -345,8 +345,6 @@ body #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
-    height: -moz-fit-content;
-    height: fit-content;
     margin-bottom: 10px;
     width: 100vw;
     height: 6vh;
@@ -564,7 +562,7 @@ body #footer a:hover {
     width: 100vw;
     height: 10vh;
     position: relative;
-    top: 30vh;
+    margin-top: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -586,7 +584,7 @@ body #footer a:hover {
   }
   body #footer {
     height: 10vh;
-    top: 30vh;
+    margin-top: 10vh;
     justify-content: space-evenly;
   }
   body #footer a {
@@ -613,8 +611,6 @@ body #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
-    height: -moz-fit-content;
-    height: fit-content;
     margin-bottom: 10px;
     width: 100vw;
     height: 6vh;
@@ -832,7 +828,7 @@ body #footer a:hover {
     width: 100vw;
     height: 10vh;
     position: relative;
-    top: 30vh;
+    margin-top: 10vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -854,7 +850,7 @@ body #footer a:hover {
   }
   body #footer {
     height: 10vh;
-    top: 30vh;
+    margin-top: 10vh;
     justify-content: space-evenly;
   }
   body #footer a {

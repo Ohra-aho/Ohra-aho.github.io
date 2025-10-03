@@ -245,7 +245,6 @@ body {
 
 					.container {
 						width: 90%;
-						//height: 110%;
 
 						.info {
 							width: 100%;
@@ -295,37 +294,32 @@ body {
 	@include narrowScreen();
 
 	body {
+		.header { height: 11vh; }
 		#main {
-			.header { height: 11vh; }
-
+			top: 10vh;
 			h1 { top: 15vh; }
 
 			#intro {
 				@include narrow_intro(10vh);
-				top: 30vh;
+				margin-top: 50px;
 			}
 
 			#snippet_holder {
-				top: 70vh;
 				.narrow_image { display: none; }
+				margin-top: 100px;
 
 				.snippet {
 					width: 100vw;
-					height: 60vh;
-					margin-top: 5vh;
-					margin-bottom: 10vh;
-
-					#back {
-						height: 70vh;
-						width: 100%;
-						bottom: 0;
-					}
+					margin-top: 50px;
+					margin-bottom: 50px;
 
 					.container {
 						width: 90vw;
-
-						.info { height: 90%; }
-
+						align-items: center;
+						#back {
+							height: 120%;
+							top: -2%;
+						}
 						#image {
 							display: inline-block;
 							width: 50vw;
@@ -337,13 +331,14 @@ body {
 
 			@include narrow_footer();
 			#footer {
-				height: 13vh;
-				top: 100vh;
+				height: fit-content;
+				top: 100px;
 
 				a {
 					width: 20vw;
-					height: 60%;
-					line-height: 2em;
+					height: fit-content;
+					line-height: 1em;
+					margin-top: 10px;
 				}
 			}
 		}

@@ -524,8 +524,11 @@ body #main #footer a:hover {
     font-size: 0.7em;
     padding: 2%;
   }
-  body #main .header {
+  body .header {
     height: 11vh;
+  }
+  body #main {
+    top: 10vh;
   }
   body #main h1 {
     top: 15vh;
@@ -538,7 +541,7 @@ body #main #footer a:hover {
     display: flex;
     justify-content: center;
     margin-top: 5vh;
-    top: 30vh;
+    margin-top: 50px;
   }
   body #main #intro p {
     width: 50vw;
@@ -553,27 +556,23 @@ body #main #footer a:hover {
     font-size: 1.2em;
   }
   body #main #snippet_holder {
-    top: 70vh;
+    margin-top: 100px;
   }
   body #main #snippet_holder .narrow_image {
     display: none;
   }
   body #main #snippet_holder .snippet {
     width: 100vw;
-    height: 60vh;
-    margin-top: 5vh;
-    margin-bottom: 10vh;
-  }
-  body #main #snippet_holder .snippet #back {
-    height: 70vh;
-    width: 100%;
-    bottom: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
   body #main #snippet_holder .snippet .container {
     width: 90vw;
+    align-items: center;
   }
-  body #main #snippet_holder .snippet .container .info {
-    height: 90%;
+  body #main #snippet_holder .snippet .container #back {
+    height: 120%;
+    top: -2%;
   }
   body #main #snippet_holder .snippet .container #image {
     display: inline-block;
@@ -618,12 +617,15 @@ body #main #footer a:hover {
     padding: 2%;
   }
   body #main #footer {
-    height: 13vh;
-    top: 100vh;
+    height: -moz-fit-content;
+    height: fit-content;
+    top: 100px;
   }
   body #main #footer a {
     width: 20vw;
-    height: 60%;
-    line-height: 2em;
+    height: -moz-fit-content;
+    height: fit-content;
+    line-height: 1em;
+    margin-top: 10px;
   }
 }/*# sourceMappingURL=index.css.map */
