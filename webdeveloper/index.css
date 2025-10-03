@@ -39,6 +39,7 @@ body #main {
   width: 100vw;
   height: -moz-fit-content;
   height: fit-content;
+  min-height: 100vh;
   margin: 0;
   top: 10vh;
 }
@@ -108,7 +109,8 @@ body #main #sample_links #grid a:nth-of-type(3):hover {
 body #main #footer {
   width: 100vw;
   height: 10vh;
-  position: relative;
+  position: absolute;
+  bottom: 0;
   margin-top: 10vh;
   display: flex;
   align-items: center;
@@ -172,7 +174,8 @@ body #main #footer a:hover {
     width: 80vw;
   }
   body #header a {
-    width: 30vw;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   body #header a h1 {
     font-size: 1.2em;
@@ -192,7 +195,8 @@ body #main #footer a:hover {
   body #main #footer {
     width: 100vw;
     height: 10vh;
-    position: relative;
+    position: absolute;
+    bottom: 0;
     margin-top: 10vh;
     display: flex;
     align-items: center;
@@ -269,7 +273,8 @@ body #main #footer a:hover {
     width: 80vw;
   }
   body #header a {
-    width: 30vw;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   body #header a h1 {
     font-size: 1.2em;
@@ -289,7 +294,8 @@ body #main #footer a:hover {
   body #main #footer {
     width: 100vw;
     height: 10vh;
-    position: relative;
+    position: absolute;
+    bottom: 0;
     margin-top: 10vh;
     display: flex;
     align-items: center;
@@ -325,9 +331,11 @@ body #main #footer a:hover {
   }
   body #header {
     height: 12vh;
+    max-height: 50px;
   }
   body #main #intro {
-    height: 70vh;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   body #main #intro p {
     font-size: 1.5em;
@@ -336,9 +344,9 @@ body #main #footer a:hover {
   body #main #sample_links {
     height: -moz-fit-content;
     height: fit-content;
+    min-height: 55vh;
   }
   body #main #footer {
-    top: 50px;
     height: -moz-fit-content;
     height: fit-content;
     padding-top: 5px;

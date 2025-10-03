@@ -80,7 +80,6 @@ body {
 		#snippet_holder {
 			position: relative;
 			margin-top: 10vh;
-			//top: 40vh;
 			width: 100%;
 
 			.narrow_image { display: none; }
@@ -194,12 +193,10 @@ body {
 
 			.header_links {
 				width: 100%;
-				//flex-direction: column;
 				a { 
 					width: 45%;
 					font-size: 0.7em; 
 					padding: 5px;
-					//margin: 2px;
 				}
 			}
 		}
@@ -248,9 +245,10 @@ body {
 
 						.info {
 							width: 100%;
+							//h2 { font-size: max($small_title, 1.5em); }
+							//p { font-size: max($small_font, 1.3em); }
 							h2 { font-size: $small_title; }
 							p { font-size: $small_font; }
-
 							a { font-size: 1.1em; }
 						}
 
@@ -294,10 +292,16 @@ body {
 	@include narrowScreen();
 
 	body {
-		.header { height: 11vh; }
+		.header { 
+			height: 11vh;
+			max-height: 50px;
+			a {
+				font-size: 1em;
+			}
+		}
 		#main {
-			top: 10vh;
-			h1 { top: 15vh; }
+			top: 50px;
+			h1 { top: 50px; }
 
 			#intro {
 				@include narrow_intro(10vh);
@@ -311,7 +315,7 @@ body {
 				.snippet {
 					width: 100vw;
 					margin-top: 50px;
-					margin-bottom: 50px;
+					padding-bottom: 50px;
 
 					.container {
 						width: 90vw;
@@ -323,6 +327,7 @@ body {
 						#image {
 							display: inline-block;
 							width: 50vw;
+							max-width: 300px;
 							height: auto;
 						}
 					}
@@ -332,7 +337,6 @@ body {
 			@include narrow_footer();
 			#footer {
 				height: fit-content;
-				top: 100px;
 
 				a {
 					width: 20vw;

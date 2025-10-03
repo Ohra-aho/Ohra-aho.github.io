@@ -118,10 +118,13 @@ body {
 	@include narrowScreen();
 
 	body {
-		#header { height: 12vh; }
+		#header { 
+			height: 12vh; 
+			max-height: 50px;
+		}
 		#main {
 			#intro {
-				height: 70vh;
+				height: fit-content;
 				p {
 					font-size: 1.5em;
 					width: 90vw;
@@ -130,10 +133,11 @@ body {
 
 			#sample_links {
 				height: fit-content;
+				min-height: 55vh;
 			}
 
 			#footer { 
-				top: 50px;
+				//top: 50px;
 				height: fit-content;
 				padding-top: 5px;
 				a {

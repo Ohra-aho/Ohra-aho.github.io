@@ -335,7 +335,6 @@ body {
 		}
 
 		@include narrow_footer();
-		#footer { top: 60vh; }
 	}
 }
 
@@ -349,7 +348,10 @@ body {
 	@include narrowScreen();
 
 	body {
-		#header { height: 11vh; }
+		#header { 
+			height: 11vh; 
+			max-height: 50px;
+		}
 		#main {
 
 			#intro {

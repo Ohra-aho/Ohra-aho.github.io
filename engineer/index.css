@@ -40,7 +40,9 @@ body #main {
   width: 100vw;
   height: -moz-fit-content;
   height: fit-content;
+  min-height: 100vh;
   margin: 0;
+  position: relative;
 }
 body #main #intro {
   display: flex;
@@ -311,7 +313,9 @@ body #main #work_history .job p {
 body #footer {
   width: 100vw;
   height: 10vh;
-  position: relative;
+  max-height: 60px;
+  position: absolute;
+  bottom: -10vh;
   margin-top: 10vh;
   display: flex;
   align-items: center;
@@ -375,7 +379,8 @@ body #footer a:hover {
     width: 80vw;
   }
   body #header a {
-    width: 30vw;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   body #header a h1 {
     font-size: 1.2em;
@@ -561,7 +566,9 @@ body #footer a:hover {
   body #footer {
     width: 100vw;
     height: 10vh;
-    position: relative;
+    max-height: 60px;
+    position: absolute;
+    bottom: -10vh;
     margin-top: 10vh;
     display: flex;
     align-items: center;
@@ -594,9 +601,6 @@ body #footer a:hover {
     line-height: 1em;
     font-size: 0.7em;
     padding: 2%;
-  }
-  body #footer {
-    top: 60vh;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 1030px) {
@@ -641,7 +645,8 @@ body #footer a:hover {
     width: 80vw;
   }
   body #header a {
-    width: 30vw;
+    width: -moz-fit-content;
+    width: fit-content;
   }
   body #header a h1 {
     font-size: 1.2em;
@@ -827,7 +832,9 @@ body #footer a:hover {
   body #footer {
     width: 100vw;
     height: 10vh;
-    position: relative;
+    max-height: 60px;
+    position: absolute;
+    bottom: -10vh;
     margin-top: 10vh;
     display: flex;
     align-items: center;
@@ -861,11 +868,9 @@ body #footer a:hover {
     font-size: 0.7em;
     padding: 2%;
   }
-  body #footer {
-    top: 60vh;
-  }
   body #header {
     height: 11vh;
+    max-height: 50px;
   }
   body #main #intro {
     height: -moz-fit-content;

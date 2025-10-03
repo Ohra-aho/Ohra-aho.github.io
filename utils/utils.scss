@@ -16,7 +16,9 @@ $small_font: 1em;
 	@include top_displacement();
 	width: 100vw;
 	height: fit-content;
+	min-height: 100vh;
 	margin: 0;
+	position: relative;
 }
 
 @mixin header() {
@@ -39,7 +41,7 @@ $small_font: 1em;
 
 @mixin intro($top: 10vh) {
 	width: 100vw;
-	height: 30vh;
+	height: fit-content;
 	position: relative;
 	text-align: center;
 	display: flex;
@@ -110,9 +112,10 @@ $small_font: 1em;
 	#footer {
 		width: 100vw;
 		height: 10vh;
+		max-height: 60px;
 
-		position: relative;
-		//top: 30vh;
+		position: absolute;
+		bottom: -10vh;
 		margin-top: 10vh;
 		display: flex;
 		align-items: center;
@@ -142,7 +145,6 @@ $small_font: 1em;
 	@include footer();
 	#footer {
 		height: 10vh;
-		//top: $top;
 		margin-top: 10vh;
 		justify-content: space-evenly;
 
