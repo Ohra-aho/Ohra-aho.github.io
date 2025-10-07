@@ -57,13 +57,13 @@ body #main #intro p {
   text-align: center;
 }
 body #main #sample_links {
-  height: 50vh;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-top: 5vh;
-  display: flex;
-  justify-content: center;
   width: 100vw;
 }
 body #main #sample_links .section {
+  margin-top: 100px;
   background-image: linear-gradient(transparent, white 5% 95%, transparent);
   width: 100%;
   height: -moz-fit-content;
@@ -89,6 +89,10 @@ body #main #sample_links .section .media_grid img, body #main #sample_links .sec
 }
 body #main #sample_links .section .media_grid img:hover, body #main #sample_links .section .media_grid video:hover {
   border: 3px solid rgba(0, 0, 0, 0.7);
+}
+body #main #sample_links .section #WoN {
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(1, 550px);
 }
 body #main #footer {
   width: 100vw;
