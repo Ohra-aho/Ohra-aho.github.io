@@ -31,51 +31,34 @@ body {
 			justify-content: center;
 			width: 100vw;
 
-			#grid {
-				display: grid;
-				grid-template-columns: 100px 100px;
-				grid-template-rows: 100px 100px;
-				gap: 10px;
-				a {
-					color: white;
-					text-decoration: none;
-					border: 2px solid white;
-					border-radius: 5px;
-					background-color: black;
+			.section {
+				background-image: linear-gradient(transparent, white 5% 95%, transparent);
+				width: 100%;
+				height: fit-content;
+				display: flex;
 
-					h3 {
-						line-height: 100px;
-						text-align: center;
-						margin: 0;
+				.info {
+					margin: 10px;
+					font-size: 1.2em;
+				}
+
+				.media_grid {
+					margin: 20px;
+					display: grid;
+					grid-template-columns: repeat(3, 300px);
+					grid-template-rows: repeat(3, 150px);
+					gap: 10px;
+					justify-items: center;
+					align-content: center;
+
+					img, video {
+						height: 100%;
+						width: auto;
 					}
 
-					p {
-						display: none;
-						margin: 5px;
+					img:hover, video:hover {
+						border: 3px solid rgba(black, 0.7);
 					}
-				}
-
-				a:hover {
-					width: fit-content;
-					height: auto;
-					position: relative;
-
-					h3 { line-height: 50px; }
-
-					p { display: block; }
-				}
-
-				a:nth-of-type(1):hover {
-					right: 100%;
-					bottom: 100%
-				}
-
-				a:nth-of-type(2):hover {
-					bottom: 100%;
-				}
-
-				a:nth-of-type(3):hover {
-					right: 100%;
 				}
 			}
 		}
@@ -101,6 +84,16 @@ body {
 
 			#sample_links {
 				height: fit-content;
+
+				.section {
+					flex-direction: column;
+
+					.media_grid {
+						grid-template-columns: repeat(1, 300px);
+						grid-template-rows: repeat(9, 150px);
+						justify-content: center;
+					}
+				}
 			}
 
 			@include narrow_footer();
@@ -134,10 +127,19 @@ body {
 			#sample_links {
 				height: fit-content;
 				min-height: 55vh;
+
+				.section {
+					flex-direction: column;
+
+					.media_grid {
+						grid-template-columns: repeat(2, 300px);
+						grid-template-rows: repeat(5, 150px);
+						justify-content: center;
+					}
+				}
 			}
 
 			#footer { 
-				//top: 50px;
 				height: fit-content;
 				padding-top: 5px;
 				a {
