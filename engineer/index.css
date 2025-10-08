@@ -82,6 +82,9 @@ body #main #intro #left {
   position: relative;
   padding: 0 1vw 0 1vw;
   border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 body #main #intro #left #section {
   color: white;
@@ -108,7 +111,7 @@ body #main #intro #left #section img {
   height: auto;
 }
 body #main #intro #left #section:last-of-type {
-  margin-top: 9%;
+  margin-top: 10px;
 }
 body #main #intro #left #section:hover {
   background-color: rgba(128, 128, 128, 0.5);

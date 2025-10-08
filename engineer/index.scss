@@ -60,6 +60,9 @@ body {
 				//right: -1vw;
 				padding: 0 1vw 0 1vw;
 				border-radius: 5px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
 
 				#section {
 					color: white;
@@ -89,7 +92,7 @@ body {
 				}
 
 				#section:last-of-type {
-					margin-top: 9%;
+					margin-top: 10px;
 				}
 
 				#section:hover {
