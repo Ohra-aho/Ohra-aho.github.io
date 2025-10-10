@@ -147,7 +147,7 @@ body #main #grid_container #skill_grid .skill p {
   color: white;
   text-align: center;
 }
-body #main #grid_container #skill_grid .skill #info {
+body #main #grid_container #skill_grid .skill .info {
   border: 2px solid white;
   border-radius: 10px;
   position: absolute;
@@ -159,8 +159,11 @@ body #main #grid_container #skill_grid .skill #info {
   display: none;
   font-size: 1.1em;
 }
-body #main #grid_container #skill_grid .skill:hover #info {
+body #main #grid_container #skill_grid .skill .visible {
   display: block;
+}
+body #main #grid_container #skill_grid .skill:hover {
+  cursor: pointer;
 }
 body #main #grid_container #skill_grid .skill:nth-of-type(1) {
   grid-row-start: 1;
@@ -443,7 +446,7 @@ body #footer a:hover {
     grid-template-rows: repeat(1, 50px);
     grid-template-columns: repeat(1, 90vw);
   }
-  body #main #grid_container #skill_grid .skill #info {
+  body #main #grid_container #skill_grid .skill .info {
     left: 0;
     width: 100%;
   }
@@ -709,7 +712,7 @@ body #footer a:hover {
     grid-template-rows: repeat(1, 50px);
     grid-template-columns: repeat(1, 90vw);
   }
-  body #main #grid_container #skill_grid .skill #info {
+  body #main #grid_container #skill_grid .skill .info {
     left: 0;
     width: 100%;
   }

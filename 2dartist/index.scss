@@ -44,6 +44,8 @@ body {
 					height: 100%;
 				}
 
+				img:hover { cursor: pointer; }
+
 				img:nth-of-type(1) { @include skill_cordinates(1, 1, 2, 6); }
 				img:nth-of-type(2) { @include skill_cordinates(3, 3, 2, 6); }
 				img:nth-of-type(3) { @include skill_cordinates(7, 5, 4, 10); }
@@ -62,6 +64,47 @@ body {
 		}
 
 		@include footer();
+	}
+
+	#full_screen {
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(black, 0.9);
+
+		display: none;
+		align-items: center;
+		justify-content: space-around;
+		position: fixed;
+		top: 0;
+		z-index: 2;
+
+		img {
+			height: 90%;
+			width: auto; 
+			max-width: 80%;
+		}
+
+		button {
+			height: 100px;
+			width: 30px;
+			border: none;
+			border-radius: 10px;
+			font-size: 1.2em;
+		}
+
+		button:hover {
+			cursor: pointer;
+		}
+
+		.close {
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			border-radius: 50%;
+			border: none;
+			top: 20px;
+			right: 30px;
+		}
 	}
 }
 
@@ -113,6 +156,13 @@ body {
 
 			@include narrow_footer();
 		}
+
+		#full_screen {
+			img {
+				height: auto;
+				width: 80%;
+			}
+		}
 	}
 }
 
@@ -154,8 +204,13 @@ body {
 				}
 			}
 
-			#footer { 
-				a { line-height: 1em; }
+			#footer { a { line-height: 1em; } }
+		}
+		#full_screen {
+			img {
+				height: auto;
+				width: auto;
+				max-height: 100vh;
 			}
 		}
 	}

@@ -6,8 +6,9 @@
 	<title>Ohra-aho</title>
 
 	<link rel="stylesheet" href="../engineer/index.css">
+	<script src="engineer.js"></script>
 </head>
-<body>
+<body onload="DisplayGridContent(content)">
 	<div id="header">
 		<a href="javascript:history.back()">
 			<h1>&#8592 Takaisin</h1>
@@ -49,128 +50,7 @@
 		<div id="grid_container">
 			<h2>Mitä osaan</h2>
 			<div id="skill_grid">
-				<div class="skill" id="s1">
-					<p>C#</p>
-					<div id="info">
-						<p>Tutuin kieleni. Käytän sitä hyvin usein pelejä tehdessäni.</p>
-					</div>
-				</div>
-				<div class="skill" id="s2">
-					<p>html, css/scss, JavaScript</p>
-					<div id="info">
-						<p>Nämä sivut on tehty näillä työkaluilla. Hieman ruosteessa olen, mutta hommat sujuu.</p>
-					</div>
-				</div>
-				<div class="skill" id="s3">
-					<p>TypeScript</p>
-					<div id="info">
-						<p>Tuli tutuksi opintojen aikana, mutta ei ole sittemmin ollut tarvetta. Muistan tosin pitäneeni siitä.</p>
-					</div>
-				</div>
-				<div class="skill" id="s4">
-					<p>C++</p>
-					<div id="info">
-						<p>Ensimmäinen koodikieleni. Joku sanoi internetissä että siitä on hyvä aloittaa jos haluaa pelejä tehdä. Oli Python helppoa sen jälkeen.</p>
-					</div>
-				</div>
-				<div class="skill" id="s5">
-					<p>Node.js</p>
-					<div id="info">
-						<p>Toinen suurista tuttavuuksista Casamedialla ollessani. Pääasiallisin taustajärjestelmätyökaluni. Osaan tätä siinä missä JavaScriptiä.</p>
-					</div>
-				</div>
-				<div class="skill" id="s6">
-					<p>Git</p>
-					<div id="info">
-						<p>Tulee käytettyä lähes kaikkien projektien kanssa. Perusjutut sujuu, mutta en velho ole.</p>
-					</div>
-				</div>
-				<div class="skill" id="s7">
-					<p>Microsoft Office</p>
-					<div id="info">
-						<p>
-							Osaan perus triolla vippaskonsteja ja ongelmatilanteissa tiedän sen verran, että osaan kysyä oikeita kysymyksiä. 
-							Exceliä tulee käytettyä ihan arjen budjetoinnissa ja pelinkehityksen apuna.
-						</p>
-					</div>
-				</div>
-				<div class="skill" id="s8">
-					<p>Flutter, Dart</p>
-					<div id="info">
-						<p>
-							Käytin näitä Casamedialla ollessani. On hetki kun olen käyttänyt, mutta huono en ole.
-							Aloitin aivan ummikkona, mutta kun sopimus oli lopuillaan niin vastuullani oli erillisen tekstaussovelluksen kehittäminen.
-						</p>
-					</div>
-				</div>
-				<div class="skill" id="s9">
-					<p>Unity</p>
-					<div id="info">
-						<p>Lähes ainoa pelimoottori jota käytän. 2D puolella osaan asiani. Muuten olen tuttu perusasioiden ja hieman monimutkaisempienkin juttujen kanssa. Selviän useimmista ongelmista.</p>
-					</div>
-				</div>
-				<div class="skill" id="s10">
-					<p>Android Studio</p>
-					<div id="info">
-						<p>
-							Tuli opintojen aikana tehtyä säätä seuraava kännykkäaplikaatio. 
-							Tällä hetkellä en ilman nettiä selviäisi projektista, mutta vanhoja tuttuja ollaan.
-						</p>
-					</div>
-				</div>
-				<div class="skill" id="s11">
-					<p>Python</p>
-					<div id="info">
-						<p>
-							Joskus yritin tälläkin pelejä tehdä. Fysiikkamoottorin kohdalla meni mielenkiinto.
-						</p>
-					</div>
-				</div>
-				<div class="skill" id="s12">
-					<p>Godot</p>
-					<div id="info">
-						<p>Olen tätä itsenäisesti ja ystävän kanssa pyöritellyt. Pieniä projekteja ja homma vielä vähän hakusessa.</p>
-					</div>
-				</div>
-				<div class="skill" id="s13">
-					<p>Gimp</p>
-					<div id="info">
-						<p>Oli hyvin yleinen työkalu opintojen aikana. Nykyään käytän enemmän piirto-ohjelmia, mutta käytän tätäkin joskus viimeistelemään töitäni.</p>
-					</div>
-				</div>
-				<div class="skill" id="s14">
-					<p>Audacity</p>
-					<div id="info">
-						<p>Päätyökalu pelieni audiomaailman luomisessa. Teidän tarpeeksi selviytyäkseni perus trimmaamisesta, korjailusta ja ääniefektien kasaamisesta.</p>
-					</div>
-				</div>
-				<div class="skill" id="s15">
-					<p>Blender</p>
-					<div id="info">
-						<p>
-							Useampi kurssi on tätä käyty mallinnuksesta animoimiseen. Olen jonkin verran myös mallintanut hahmoja muuten vaan tai kohteita peleihini. 
-							Olen tykästynyt low-poly-tyyliin.
-						</p>
-					</div>
-				</div>
-				<div class="skill" id="s16">
-					<p>Angular</p>
-					<div id="info">
-						<p>
-							Opiskelin tätä useampia kursseja. Sittemmin ei ole tullut tälle käyttöä. On päässyt parhaimmat unohtumaan, 
-							mutta pienellä totuttelulla saisin taas hommasta kiinni.
-						</p>
-					</div>
-				</div>
-				<div class="skill" id="s17">
-					<p>React</p>
-					<div id="info">
-						<p>
-							Flutter:in jälkeen ehkä yksi mielityökaluistani käyttöliittymän puolella. 
-							Tosin en ole päässyt taitoja hyödyntämään opintojen ulkopuolella, joten vaatisi uudelleen opetelua.
-						</p>
-					</div>
-				</div>
+				
 			</div>
 		</div>
 
