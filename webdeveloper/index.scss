@@ -57,6 +57,7 @@ body {
 
 					img:hover, video:hover {
 						border: 3px solid rgba(black, 0.7);
+						cursor: pointer;
 					}
 				}
 
@@ -68,6 +69,47 @@ body {
 		}
 
 		@include footer();
+	}
+
+	#full_screen {
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(black, 0.9);
+
+		display: none;
+		align-items: center;
+		justify-content: space-around;
+		position: fixed;
+		top: 0;
+		z-index: 2;
+
+		img {
+			height: 90%;
+			width: auto; 
+			max-width: 80%;
+		}
+
+		button {
+			height: 100px;
+			width: 30px;
+			border: none;
+			border-radius: 10px;
+			font-size: 1.2em;
+		}
+
+		button:hover {
+			cursor: pointer;
+		}
+
+		.close {
+			width: 30px;
+			height: 30px;
+			position: absolute;
+			border-radius: 50%;
+			border: none;
+			top: 20px;
+			right: 30px;
+		}
 	}
 }
 
@@ -97,10 +139,21 @@ body {
 						grid-template-rows: repeat(9, 150px);
 						justify-content: center;
 					}
+
+					#WoN {
+						grid-template-columns: repeat(1, 300px);
+						grid-template-rows: repeat(3, 550px);
+					}
 				}
 			}
 
 			@include narrow_footer();
+		}
+		#full_screen {
+			img {
+				height: auto;
+				width: 80%;
+			}
 		}
 	}
 }
@@ -149,6 +202,13 @@ body {
 				a {
 					line-height: 1em;
 				}
+			}
+		}
+		#full_screen {
+			img {
+				height: auto;
+				width: auto;
+				max-height: 100vh;
 			}
 		}
 	}

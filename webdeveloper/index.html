@@ -6,6 +6,7 @@
 	<title>Ohra-aho</title>
 
 	<link rel="stylesheet" href="index.css">
+	<script src="webdeveloper.js"></script>
 </head>
 <body>
 	<div id="header">
@@ -33,13 +34,13 @@
 					</p>
 				</div>
 				<div class="media_grid">
-					<img src="../media/images/amma/home_page.jpg" alt="">
-					<img src="../media/images/amma/feature_page.jpg" alt="">
-					<img src="../media/images/amma/one feature.jpg" alt="">
-					<img src="../media/images/amma/community page.jpg" alt="">
-					<img src="../media/images/amma/contact.jpg" alt="">
-					<img src="../media/images/amma/devlog.jpg" alt="">
-					<img src="../media/images/amma/devlog detail.jpg" alt="">
+					<img src="../media/images/amma/home_page.jpg" alt="" onclick="OpenFullScreen(0, 'amma')">
+					<img src="../media/images/amma/feature_page.jpg" alt="" onclick="OpenFullScreen(1, 'amma')">
+					<img src="../media/images/amma/one feature.jpg" alt="" onclick="OpenFullScreen(2, 'amma')">
+					<img src="../media/images/amma/community page.jpg" alt="" onclick="OpenFullScreen(3, 'amma')">
+					<img src="../media/images/amma/contact.jpg" alt="" onclick="OpenFullScreen(4, 'amma')">
+					<img src="../media/images/amma/devlog.jpg" alt="" onclick="OpenFullScreen(5, 'amma')">
+					<img src="../media/images/amma/devlog detail.jpg" alt="" onclick="OpenFullScreen(6, 'amma')">
 				</div>
 			</div>
 
@@ -55,9 +56,9 @@
 					</p>
 				</div>
 				<div class="media_grid" id="WoN">
-					<img src="../media/images/WoN 3.jpg" alt="">
-					<img src="../media/images/WoN 2.jpg" alt="">
-					<img src="../media/images/WoN 4.jpg" alt="">
+					<img src="../media/images/WoN/WoN 3.jpg" alt="" onclick="OpenFullScreen(0, 'WoN')">
+					<img src="../media/images/WoN/WoN 2.jpg" alt="" onclick="OpenFullScreen(1, 'WoN')">
+					<img src="../media/images/WoN/WoN 4.jpg" alt="" onclick="OpenFullScreen(2, 'WoN')">
 				</div>
 			</div>
 
@@ -71,5 +72,11 @@
 		</div>
 	</div>
 
+	<div id="full_screen">
+		<button class="close" onclick="CloseFullScreen()">&#10006;</button>
+		<button onclick="ChangeImage(false)">&#8592;</button>
+		<img src="../media/images/amma/home_page.jpg" alt="art" id="full_screen_image">
+		<button onclick="ChangeImage(true)">&#8594;</button>
+	</div>
 	
 </body>
