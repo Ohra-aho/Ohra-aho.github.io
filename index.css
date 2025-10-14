@@ -44,6 +44,16 @@ body .header .header_links a {
 body .header .header_links a:hover {
   background-color: rgba(65, 65, 65, 0.5);
 }
+body .header .header_links button {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 3px;
+}
+body .header .header_links button:hover {
+  cursor: pointer;
+}
 body #main {
   position: relative;
   top: 20vh;

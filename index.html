@@ -6,16 +6,20 @@
 	<title>Ohra-aho</title>
 
 	<link rel="stylesheet" href="index.css">
+	<script src="./utils/language.js"></script>
+	<script src="home.js"></script>
 </head>
-<body>
+<body onload="LoadLanguage(); ChangeLanguage()">
+
 	<div class="header">
 		<div class="header_links">
 			<a href="./engineer/index.html">IT-insinööri</a>
-			<a href="./webdeveloper/index.html">Web kehittäjä</a>
+			<a href="./webdeveloper/index.html">Web-kehittäjä</a>
 		</div>
 		<div class="header_links">
 			<a href="./gamedeveloper/index.html">Pelinkehittäjä</a>
 			<a href="./2dartist/index.html">2D artisti</a>
+			<button onclick="SetNewLanguage(); ChangeLanguage()">Suomi</button>
 		</div>
 	</div>
 	
@@ -75,7 +79,7 @@
 				<div class="container">
 					<img src="./media/images/section b.png" alt="" id="back">
 					<div class="info">
-						<h2>Web kehittäjä</h2>
+						<h2>Web-kehittäjä</h2>
 						<p>
 							Tähän opintoni painottuivat ja tätä olen eniten päässyt tekemään. Työkaluja on hyvässä muistissa muutama, mutta käyttänyt olen aika monia muitakin. 
 							Perus html totta kai, mukana PHP hitusen React:ia ja Angular:ia ja Flutter:ia. PHP:n lisäksi taustajärjestelmissä on käytetty Node.js:sää.
@@ -141,6 +145,7 @@
 			<a href="https://www.linkedin.com/in/panu-ohra-aho-4917042aa/" target="_blank">Linkedin</a>
 			<a href="https://www.instagram.com/nunumies_mk5000/" target="_blank">Instagram</a>
 			<a href="https://seawall-project.itch.io/" target="_blank">Itch.io</a>
+			<a href="https://github.com/Ohra-aho" target="_blank">GitHub</a>
 		</div>
 	</div>
 </body>
