@@ -122,6 +122,9 @@ function ShowInfo(index) {
 function DisplayGridContent() {
 	let current_language = window.sessionStorage.getItem("language");
 	let temp = [];
+	if(current_language == undefined || current_language == null) {
+		current_language = "suomi";
+	}
 	switch(current_language) {
 		case "englanti": temp = english_content; break;
 		case "suomi": temp = content; break;
@@ -159,6 +162,9 @@ function ShowIntro() {
 
 	let current_language = window.sessionStorage.getItem("language");
 	let temp = [];
+	if(current_language == undefined || current_language == null) {
+		current_language = "suomi";
+	}
 	switch(current_language) {
 		case "englanti": temp = english_intro; break;
 		case "suomi": temp = finnish_intro; break;
@@ -176,7 +182,9 @@ function ShowJobs() {
 	let current_language = window.sessionStorage.getItem("language");
 	let temp_template = [];
 	let temp = [];
-
+	if(current_language == undefined || current_language == null) {
+		current_language = "suomi";
+	}
 	switch(current_language) {
 		case "englanti": 
 			temp_template = english_job_template;

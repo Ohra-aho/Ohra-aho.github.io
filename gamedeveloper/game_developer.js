@@ -41,6 +41,9 @@ function ShowContent() {
 
 	let current_language = window.sessionStorage.getItem("language");
 	let temp = [];
+	if(current_language == undefined || current_language == null) {
+		current_language = "suomi";
+	}
 	switch(current_language) {
 		case "englanti": 
 			temp = english_content; 
