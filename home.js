@@ -1,7 +1,7 @@
 
 const finnish_text = [
 	//header
-	["IT-insinööri", "Web-kehittäjä", "Pelinkehittäjä", "2D-artisti", "Suomi"],
+	["IT-insinööri", "Web-kehittäjä", "Pelinkehittäjä", "2D-artisti", "English"],
 	//intros
 	[
 		"Olen Panu Ohra-aho ja olen IT-insinööri. Kirjoitan koneella kummallista kieltä, joka saa koneet tekemään mitä haluan. Ainakin toisinaan kone ja minä ymmärrämme toisiamme, mutta toisinaan emme. Tämän sivuston kohdalla kone ymmärsi mitä tarkoitin. Sivut ovat olemassa kertoakseen, millainen insinööri minä olen. Tervetuloa.",
@@ -16,7 +16,7 @@ const finnish_text = [
 
 const english_text = [
 	//header
-	["IT engineer", "Web developer", "Game developer", "2D artist", "English"],
+	["IT engineer", "Web developer", "Game developer", "2D artist", "Suomi"],
 	//intros
 	[
 		"I am Panu Ohra-aho, and IT-engineer. I write strange language with a machine, that gets that machine to do what I want. At least sometimes that machine and and I understand each other. What comes to this site, machine understood me. This site exists to tell, what kind of engineer I am. Welcome.",
@@ -53,6 +53,9 @@ function ChangeLanguage() {
 	for(let i = 0; i < header_links.length; i++) {
 		header_links[i].innerHTML = temp[0][i];
 	}
+
+	let language_button = document.getElementsByClassName("header")[0].children[2];
+	language_button.innerHTML = temp[0][temp[0].length-1];
 
 	//intros
 	let intro_text = [];

@@ -39,18 +39,17 @@ body {
 			a:hover {
 				background-color: rgba(65, 65, 65, 0.5);
 			}
+		}
+		button {
+			background-color: black;
+			color: white;
+			border: 1px solid white;
+			border-radius: 5px;
+			padding: 3px;
+		}
 
-			button {
-				background-color: black;
-				color: white;
-				border: 1px solid white;
-				border-radius: 5px;
-				padding: 3px;
-			}
-
-			button:hover {
-				cursor: pointer;
-			}
+		button:hover {
+			cursor: pointer;
 		}
 	}
 
@@ -104,6 +103,7 @@ body {
 				margin-top: 20px;
 				margin-bottom: 20px;
 				position: relative;
+				//padding-bottom: 20px; 
 
 				.container {
 					width: 48%;
@@ -204,13 +204,17 @@ body {
 			@include narrow_header();
 			top: 0;
 			animation: none;
+			height: fit-content;
 
 			.header_links {
 				width: 100%;
+				flex-direction: column;
 				a { 
-					width: 45%;
+					width: fit-content;
+					min-width: 50%;
 					font-size: 0.7em; 
 					padding: 5px;
+					margin: 2px;
 				}
 			}
 		}
@@ -283,7 +287,7 @@ body {
 					.container {
 						left: 0;
 						#back { 
-							left: 0; 
+							left: 0;
 							width: 110%;
 						}
 					}
