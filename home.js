@@ -54,7 +54,7 @@ function ChangeLanguage() {
 		header_links[i].innerHTML = temp[0][i];
 	}
 
-	let language_button = document.getElementsByClassName("header")[0].children[2];
+	let language_button = document.getElementsByClassName("header")[0].children[1];
 	language_button.innerHTML = temp[0][temp[0].length-1];
 
 	//intros

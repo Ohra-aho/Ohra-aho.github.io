@@ -252,11 +252,14 @@ body #main #footer a:hover {
     height: -moz-fit-content;
     height: fit-content;
   }
-  body .header .header_links {
+  body .header #link_holder {
+    justify-content: space-around;
+  }
+  body .header #link_holder .header_links {
     width: 100%;
     flex-direction: column;
   }
-  body .header .header_links a {
+  body .header #link_holder .header_links a {
     width: -moz-fit-content;
     width: fit-content;
     min-width: 50%;
@@ -420,11 +423,14 @@ body #main #footer a:hover {
     height: -moz-fit-content;
     height: fit-content;
   }
-  body .header .header_links {
+  body .header #link_holder {
+    justify-content: space-around;
+  }
+  body .header #link_holder .header_links {
     width: 100%;
     flex-direction: column;
   }
-  body .header .header_links a {
+  body .header #link_holder .header_links a {
     width: -moz-fit-content;
     width: fit-content;
     min-width: 50%;
