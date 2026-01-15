@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ohra-aho</title>
+
+	<link rel="stylesheet" href="../tools/main/body.css">
+	<link rel="stylesheet" href="../tools/main/container/separator.css">
+	<link rel="stylesheet" href="../tools/main/container/main_container.css">
+	<link rel="stylesheet" href="../tools/main/footer/footer.css">
+	<link rel="stylesheet" href="../tools/main/header/header.css">
+	<link rel="stylesheet" href="../tools/main/container/section.css">
+
+	<link rel="stylesheet" href="../tools/adjusting/row_column.css">
+
+	<link rel="stylesheet" href="../tools/content/text_column/text_column.css">
+	<link rel="stylesheet" href="../tools/content/card/card.css">
+	<link rel="stylesheet" href="../tools/content/media_displayer/media_displayer.css">
+	<link rel="stylesheet" href="../tools/content/link_list/link_list.css">
+	<link rel="stylesheet" href="../tools/content/title_card/title_card.css">
+	<link rel="stylesheet" href="../tools/content/contact/contact.css">
+
+	<link rel="stylesheet" href="../tools/popups/popups.css">
+
+	<link rel="stylesheet" href="../tools/icons/icons.css">
+
+	<script defer src="../tools/main/container/main_container.js"></script>
+	<script defer src="../tools/main/footer/footer.js"></script>
+	<script defer src="../tools/main/header/header.js"></script>
+
+	<script defer src="../tools/popups/sidebar.js"></script>
+	
+	<script defer src="../tools/content/text_column/text_column.js"></script>
+	<script defer src="../tools/content/card/card.js"></script>
+	<script defer src="../tools/content/media_displayer/media_displayer.js"></script>
+	<script defer src="../tools/content/link_list/link_list.js"></script>
+	<script defer src="../tools/content/title_card/title_card.js"></script>
+	<script defer src="../tools/content/contact/contact.js"></script>
+	<script defer src="../tools/content/contact/simple_contact.js"></script>
+	
+	<script defer src="../tools/adjusting/grid.js"></script>
+
+	<script defer src="../tools/icons/icons.js"></script>
+
+
+	<!--main links-->
+	<link rel="stylesheet" href="./header/header.css">
+	<link rel="stylesheet" href="./index.css">
+
+</head>
+<body>
+	<background>
+		<img src="../tools/media/images/body/placeholder_background.png" alt="back">
+	</background>
+
+	<!--
+	<header>
+		<div style="width: 100%; height: 7vh">
+			<custom_center>
+				<link-list>
+					<a href="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu">Link</a>
+					<a href="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu">Link</a>
+					<a href="https://fi.wikipedia.org/wiki/Wikipedia:Etusivu">Link</a>
+				</link-list>
+			</custom_center>
+		</div>
+	</header>
+	-->
+	
+	<sticky-header>
+		<div style="width: 100%; height: 7vh">
+			<a href="javascript:history.back()">
+				<h1>&#8592 Takaisin</h1>
+			</a>
+			<h1 id="title">Tool showcase</h1>
+			<link-list>
+				<a href="#text-column">Text Column</a>
+				<a href="#title-card">Title rack</a>
+				<a href="#cards">Cards</a>
+				<a href="#media-displayers">Image gallery</a>
+				<a href="#contact">Contact</a>
+			</link-list>
+		</div>
+	</sticky-header>
+
+	<sidebar-fixed
+		main_title="Nothing"
+		class="right"
+	>
+	<div></div>
+	</sidebar-fixed>
+
+	<!--
+	<popup>
+		<div style="width: 100px; height: 100px; background-color: brown; position: absolute; left: 50%; top: 50%;"></div>
+	</popup>
+	-->
+	
+	<main-container>
+		<!--<header class="top"></header>-->
+		<section id="title-card">
+			<title-card>			
+				<div class="card">
+					<h1>Title</h1>
+					<img src="../tools/media/images/title_screen/placeholder_title_background.png" alt="title_screen">
+				</div>
+				<div class="card">
+					<h1>Title 2</h1>
+					<img src="../tools/media/images/title_screen/placeholder_title_background.png" alt="title_screen">
+				</div>
+				<div class="card">
+					<h1>Title 3</h1>
+					<img src="../tools/media/images/title_screen/placeholder_title_background.png" alt="title_screen">
+				</div>
+				<div class="card">
+					<h1>Title 4</h1>
+					<img src="../tools/media/images/title_screen/placeholder_title_background.png" alt="title_screen">
+				</div>
+			</title-card>
+		</section>
+
+		<separator></separator>
+		<section id="text-column">
+			<custom_center>
+				<div style="width: 50vw; height: 60vh; background-color: gray;">
+
+					<text-column class="scrollable" title="Title">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis.
+						$
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						$
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						Excepturi quo repellat consequatur nisi.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+						Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
+						Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
+						Excepturi quo repellat consequatur nisi.
+					</text-column>
+				</div>
+			</custom_center>
+		</section>
+		<separator></separator>
+
+		<section id="cards">
+			<custom_center>
+				<row>
+
+					<card-img title="Something" image="../tools/media/images/header/placeholder_logo.png" class="right">
+						Something over here. Propably something very important
+					</card-img>
+
+					<card-img title="Something else" image="../tools/media/images/header/placeholder_logo.png">
+						Something else over here. Propably something even more important.
+					</card-img>
+
+					<card-img title="Something" image="../tools/media/images/header/placeholder_logo.png" class="horizontal right">
+						Something over here. Propably something very important
+					</card-img>
+
+					<card-img title="Jotain">Jotain tosi tärkeää.</card-img>
+				</row>
+			</custom_center>
+		</section>
+		<separator></separator>
+		<section id="media-displayers">
+			<custom_center>
+				<grid-generator height="20vh" width="fit-content">
+					<media-displayer image="true" media="../tools/media/images/image rack/rack_1.png" class="vertical" family="grid"></media-displayer>
+					<media-displayer image="true" media="../tools/media/images/image rack/rack_2.png" class="vertical" family="grid"></media-displayer>
+					<media-displayer image="true" media="../tools/media/images/image rack/rack_3.png" class="vertical" family="grid"></media-displayer>
+					<media-displayer image="true" media="../tools/media/images/image rack/rack_4.png" class="vertical" family="grid"></media-displayer>
+					<media-displayer image="true" media="../tools/media/images/image rack/rack_5.png" class="vertical" family="grid"></media-displayer>
+				</grid-generator>
+			</custom_center>
+		</section>
+		<separator></separator>
+		<!--<section>
+			<custom_center>
+				<contact-form 
+					title="Ota yhteyttä" 
+					name_label="Nimi" 
+					subject_label="Aihe" 
+					message_label="Viesti" 
+					submit_label="Lähetä"></contact-form>
+			</custom_center>
+		</section>-->
+		<separator></separator>
+		<footer id="contact">
+			<custom_center>
+				<simple-contact email="panu.ohraaho@gmail.com" subject="I need a website">Need a website? &#8594;</simple-contact>
+			</custom_center>
+			<copyright>
+				<p>Copyright No-one. All rights reserved.</p>
+			</copyright>
+		</footer>
+	</main-container>
+</body>
+
+<template id="ham-icon-template">
+	<ham-icon-temp>
+		<div></div>
+		<div></div>
+		<div></div>
+	</ham-icon-temp>
+</template>
+</html>

@@ -1,0 +1,8 @@
+main-container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100vh;
+}/*# sourceMappingURL=main_container.css.map */

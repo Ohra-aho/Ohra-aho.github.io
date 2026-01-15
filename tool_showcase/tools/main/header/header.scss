@@ -1,0 +1,64 @@
+@use "../../utils.scss" as *;
+
+@mixin header_base() {
+	top: 0;
+	width: 100vw;
+	height: fit-content;
+	min-height: 7vh;
+	background-color: black;
+	color: white;
+	z-index: 2;
+	padding-bottom: 5px;
+}
+
+header {
+	position: fixed;
+	@include header_base();
+}
+
+header.top {
+	position: relative;
+}
+
+sticky-header {
+	display: block;
+	position: sticky;
+	transition: top 1s;
+	@include header_base();
+
+	#header-open {
+		position: absolute;
+		left: 49%;
+		bottom: -20px;
+		width: 2%;
+		height: 20px;
+		min-width: 40px;
+
+		background-color: rgba(black, 0.5);
+		border: none;
+		outline: none;
+		border-radius: 0 0 5px 5px;
+
+		color: white;
+	}
+}
+
+sticky-header.open {
+	top: 0;
+	transition: top 1s;
+}
+
+//narrow screen
+@media screen and (max-width: $narrow) {
+	
+}
+
+//medium screen
+@media screen and (min-width: $narrow) and (max-width: $medium) {
+
+}
+
+//wide screen
+@media screen and (min-width: $medium) and (max-width: $wide) {
+
+}

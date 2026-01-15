@@ -1,0 +1,23 @@
+footer {
+  position: relative;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 10vh;
+  background-color: black;
+  color: white;
+}
+footer copyright {
+  position: absolute;
+  bottom: 0;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 100%;
+}
+footer copyright p {
+  border-top: 1px solid white;
+  width: 100%;
+  margin: 0;
+  padding: 5px 0 5px 0;
+  text-align: center;
+}/*# sourceMappingURL=footer.css.map */

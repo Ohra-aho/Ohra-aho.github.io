@@ -1,0 +1,16 @@
+text-column {
+  display: block;
+  width: 98%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0 1% 0 1%;
+}
+
+text-column.scrollable {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+text-column.scrollable::-webkit-scrollbar {
+  display: none;
+}/*# sourceMappingURL=text_column.css.map */

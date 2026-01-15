@@ -65,6 +65,16 @@ body {
 					grid-template-columns: repeat(3, 300px);
 					grid-template-rows: repeat(1, 550px);
 				}
+
+				#MM {
+					width: 30%; 
+					margin-right: 10%;
+				}
+
+				a {
+					text-decoration: none;
+					color: black;
+				}
 			}
 		}
 
@@ -143,6 +153,11 @@ body {
 					#WoN {
 						grid-template-columns: repeat(1, 300px);
 						grid-template-rows: repeat(3, 550px);
+					}
+
+					#MM {
+						width: 80%;
+						margin-left: 10%;
 					}
 				}
 			}

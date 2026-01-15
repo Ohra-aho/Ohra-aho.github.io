@@ -184,7 +184,7 @@ body #main #footer {
   width: 100vw;
   height: 10vh;
   max-height: 60px;
-  position: absolute;
+  position: relative;
   bottom: -10vh;
   margin-top: 10vh;
   display: flex;
@@ -321,7 +321,7 @@ body #main #footer {
     width: 100vw;
     height: 10vh;
     max-height: 60px;
-    position: absolute;
+    position: relative;
     bottom: -10vh;
     margin-top: 10vh;
     display: flex;
@@ -468,7 +468,7 @@ body #main #footer {
     width: 100vw;
     height: 10vh;
     max-height: 60px;
-    position: absolute;
+    position: relative;
     bottom: -10vh;
     margin-top: 10vh;
     display: flex;
@@ -589,7 +589,7 @@ body #main #footer {
     width: 100vw;
     height: 10vh;
     max-height: 60px;
-    position: absolute;
+    position: relative;
     bottom: -10vh;
     margin-top: 10vh;
     display: flex;
@@ -742,7 +742,7 @@ body #main #footer {
     width: 100vw;
     height: 10vh;
     max-height: 60px;
-    position: absolute;
+    position: relative;
     bottom: -10vh;
     margin-top: 10vh;
     display: flex;
@@ -869,7 +869,7 @@ body #main #footer {
     width: 100vw;
     height: 10vh;
     max-height: 60px;
-    position: absolute;
+    position: relative;
     bottom: -10vh;
     margin-top: 10vh;
     display: flex;

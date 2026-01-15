@@ -1,0 +1,9 @@
+@use "../../utils.scss" as *;
+
+main-container {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: fit-content;
+	min-height: 100vh;
+}

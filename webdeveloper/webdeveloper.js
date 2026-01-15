@@ -75,13 +75,32 @@ const english_content = [
 	"&#8592 Back",
 	"Web developer",
 	"I made this site. Html+JavaScript+scss. Below can be seen my other creations outside these tools.",
+
+	[
+		"Website tools",
+		`
+		Tools based on web components, made with purpose to make website creation easier.
+		This is my personal project, which end goal is to provide websites quickly and cheaply.
+		I strive to make these tools easy to edit, so even people without coding knowledge can edit the content of the site.
+		Development is still in progress, but behind the link below you can see what I have made already.
+		`,
+		"Tool showcase &#8594;"
+	],
 	[
 		"Amma: ColS web site",
-		"My last project using PHP was a web site for Joinplay Games Studios. They needed site for advertising their upcomming game. (Amma: Chronicles of lost Stars) My job included sites visual expression and functionalities. Later I implemented contacting system and loading system for sites content to make editing easier.",
+		`
+		My last project using PHP was a web site for Joinplay Games Studios. 
+		They needed site for advertising their upcomming game. (Amma: Chronicles of lost Stars) 
+		My job included sites visual expression and functionalities. 
+		Later I implemented contacting system and loading system for sites content to make editing easier.
+		`,
 	],
 	[
 		"Weather or Not",
-		"Fully functional weather app, which I made for one of my courses. Not exactly a web app, but it utilizes data from certain web site. It can give weather info according to users location, either in real time or for the seven upcomming days. More detailed information of those days can also be inspected." 
+		`Fully functional weather app, which I made for one of my courses. 
+		Not exactly a web app, but it utilizes data from certain web site. 
+		It can give weather info according to users location, either in real time or for the seven upcomming days. 
+		More detailed information of those days can also be inspected.`
 	]
 ];
 
@@ -89,6 +108,16 @@ const finnish_content = [
 	"&#8592 Takaisin",
 	"Web-kehittäjä",
 	"Tämä sivusto on minun tekemäni. Html+JavaScrip+scss. Alla esimerkkejä siitä, mitä olen tehnyt näiden ulkopuolella.",
+
+	[
+		"Nettisivutyökalut",
+		`
+		Web component:teihin perustuvia työkaluja nettisivujen luomisen helpottamiseksi. 
+		Henkilökohtainen projektini, jonka lopullinen tarkoitus on tarjota nopeasti tuotettuja ja siten halpoja nettisivuja.
+		Pyrin myös tekemään niistä helposti muokattavia, jotta kuka tahansa voi päivittää sivujen sisältöä ilman ohjelmointitaustaa.
+		Kehitystyö on vielä kesken, mutta alla olevasta linkistä voi tarkastella, mitä olen jo luonut.`,
+		"Työkaluesittely &#8594;"
+	],
 
 	[
 		"Amma: ColS nettisivut",
@@ -123,5 +152,8 @@ function ShowContent() {
 	for(let i = 0; i < sections.length; i++) {
 		sections[i].children[0].children[0].innerHTML = temp[i+3][0];
 		sections[i].children[0].children[1].innerHTML = temp[i+3][1];
+		if(i == 0) {
+			sections[i].children[0].children[2].innerHTML = temp[i+3][2];
+		}
 	}
 }

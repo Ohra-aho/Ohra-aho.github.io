@@ -1,0 +1,53 @@
+sticky-header {
+  border-bottom: 2px dashed white;
+}
+sticky-header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+sticky-header div link-list {
+  margin-right: 20px;
+}
+sticky-header div link-list a {
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  border-radius: 5px;
+  padding: 0 5px 0 5px;
+}
+sticky-header div #title {
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+}
+sticky-header div a {
+  margin-left: 10px;
+  text-decoration: none;
+}
+sticky-header div a h1 {
+  width: -moz-fit-content;
+  width: fit-content;
+  color: white;
+}
+
+title-card .card {
+  position: relative;
+  flex: 0 0 100%;
+}
+title-card .card img {
+  width: 100%;
+  height: auto;
+}
+title-card .card h1 {
+  color: white;
+  position: absolute;
+  width: 40%;
+  left: 30%;
+  top: 40%;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+}
+
+footer simple-contact a {
+  font-size: xx-large;
+}/*# sourceMappingURL=header.css.map */

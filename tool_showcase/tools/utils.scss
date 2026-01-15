@@ -1,0 +1,49 @@
+$narrow: 500px;
+$medium: 1030px;
+$wide: 1500px;
+
+
+@mixin symmetric_padding($padding: 5px, $direction: "x") {
+	@if($direction == "x") {
+		padding: 0 $padding 0 $padding;
+	}
+	@else if($direction == "y"){
+		padding: $padding 0 $padding 0;
+	}
+}
+
+@mixin symmetric_margin($margin: 5px, $direction: "x") {
+	@if($direction == "x") {
+		margin: 0 $margin 0 $margin;
+	}
+	@else if($direction == "y"){
+		margin: $margin 0 $margin 0;
+	}
+}
+
+@mixin grid_creator($cell_x: 30%, $cell_y: 30%, $rows: 3, $columns: 3) {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat($columns, $cell_x);
+	grid-template-rows: repeat($rows, $cell_y);
+}
+
+@mixin font_controller($bf: 1.1em, $nf: 1em, $mf: 1em, $wf: 1em) {
+
+	font-size: $bf;
+
+	//narrow screen
+	@media screen and (max-width: $narrow) {
+		font-size: $nf;
+	}
+
+	//medium screen
+	@media screen and (min-width: $narrow) and (max-width: $medium) {
+		font-size: $mf;
+	}
+
+	//wide screen
+	@media screen and (min-width: $medium) and (max-width: $wide) {
+		font-size: $wf;
+	}
+}

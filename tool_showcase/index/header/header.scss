@@ -1,0 +1,68 @@
+@use "../../../utils/utils" as *;
+
+sticky-header {
+	border-bottom: 2px dashed white;
+
+	div {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		link-list {
+			margin-right: 20px;
+			a {
+				border-left: 2px solid white;
+				border-right: 2px solid white;
+				border-radius: 5px;
+				padding: 0 5px 0 5px;
+			}
+		}
+
+		#title {
+			position: absolute;
+			width: 100vw;
+			text-align: center;
+		}
+
+		a {
+			margin-left: 10px;
+			text-decoration: none;
+			h1 {
+				width: fit-content;
+				color: white;
+			}
+		}
+	}
+}
+
+title-card {
+	.card {
+		position: relative;
+		flex: 0 0 100%;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+
+		h1 {
+			color: white;
+			position: absolute;
+			width: 40%;
+			left: 30%;
+			top: 40%;
+			background-color: rgba(black, 0.7);
+			text-align: center;
+		}
+	}
+}
+
+footer {
+	
+	simple-contact {
+		a {
+			font-size: xx-large;
+		}
+	}
+	
+}
