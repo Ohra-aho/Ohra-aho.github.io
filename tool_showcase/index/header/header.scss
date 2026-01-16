@@ -16,6 +16,12 @@ section-title {
 	padding-bottom: 2px;
 }
 
+sidebar-fixed {
+	media-displayer {
+		width: 100%;
+	}
+}
+
 sticky-header {
 	border-bottom: 2px dashed white;
 
@@ -292,6 +298,13 @@ $radius: 20px;
 
 	#media-displayers {
 		text-column { width: 80%; }
+	}
+
+	sidebar-fixed {
+		media-displayer.vertical {
+			width: 100%;
+			border: none;
+		}
 	}
 }
 

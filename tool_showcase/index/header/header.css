@@ -15,6 +15,10 @@ section-title {
   padding-bottom: 2px;
 }
 
+sidebar-fixed media-displayer {
+  width: 100%;
+}
+
 sticky-header {
   border-bottom: 2px dashed white;
 }
@@ -242,6 +246,10 @@ footer simple-contact a {
   #media-displayers text-column {
     width: 80%;
   }
+  sidebar-fixed media-displayer.vertical {
+    width: 100%;
+    border: none;
+  }
 }
 @media screen and (min-width: 500px) and (max-width: 1030px) {
   sticky-header div {
@@ -302,5 +310,9 @@ footer simple-contact a {
   }
   #media-displayers text-column {
     width: 80%;
+  }
+  sidebar-fixed media-displayer.vertical {
+    width: 100%;
+    border: none;
   }
 }/*# sourceMappingURL=header.css.map */
