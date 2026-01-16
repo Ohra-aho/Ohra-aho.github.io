@@ -19,6 +19,7 @@ sticky-header {
   border-bottom: 2px dashed white;
 }
 sticky-header div {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -179,4 +180,127 @@ footer simple-contact a {
 #media-displayers .red {
   border-style: dashed;
   position: relative;
+}
+
+@media screen and (max-width: 500px) {
+  sticky-header div {
+    justify-content: center;
+  }
+  sticky-header div #title {
+    display: none;
+  }
+  sticky-header div link-list {
+    display: none;
+  }
+  sticky-header div a {
+    position: relative;
+    right: 25%;
+    margin: 0;
+  }
+  sticky-header div a h1 {
+    margin: 0;
+  }
+  title-card .card h1 {
+    width: 70%;
+    left: 15%;
+    top: 10%;
+  }
+  title-card .card p {
+    width: 50%;
+    left: 25%;
+    top: 40%;
+  }
+  #text-column row text-column {
+    width: 85%;
+    max-height: 100vh;
+  }
+  #text-column row text-column:first-child {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  #text-column row text-column:last-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  #text-column row column {
+    width: 85%;
+  }
+  #text-column row column #c_text_1 {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  #cards custom_center row column card-img:last-child card {
+    width: 150px;
+    height: 300px;
+  }
+  #media-displayers text-column {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1030px) {
+  sticky-header div {
+    justify-content: center;
+  }
+  sticky-header div #title {
+    display: none;
+  }
+  sticky-header div link-list {
+    display: none;
+  }
+  sticky-header div a {
+    position: relative;
+    right: 25%;
+    margin: 0;
+  }
+  sticky-header div a h1 {
+    margin: 0;
+  }
+  title-card .card h1 {
+    width: 70%;
+    left: 15%;
+    top: 10%;
+  }
+  title-card .card p {
+    width: 50%;
+    left: 25%;
+    top: 40%;
+  }
+  #text-column row text-column {
+    width: 85%;
+    max-height: 100vh;
+  }
+  #text-column row text-column:first-child {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  #text-column row text-column:last-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  #text-column row column {
+    width: 85%;
+  }
+  #text-column row column #c_text_1 {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+  #cards custom_center row column card-img:last-child card {
+    width: 150px;
+    height: 300px;
+  }
+  #media-displayers text-column {
+    width: 80%;
+  }
 }/*# sourceMappingURL=header.css.map */

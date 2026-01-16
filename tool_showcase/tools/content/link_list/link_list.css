@@ -6,7 +6,6 @@ link-list {
   width: -moz-fit-content;
   width: fit-content;
   height: 100%;
-  background-color: black;
 }
 link-list a {
   text-decoration: none;
@@ -18,13 +17,13 @@ link-list button {
 }
 link-list ham-list {
   display: block;
-  position: absolute;
+  position: fixed;
   background-color: black;
   width: 100vw;
   height: -moz-fit-content;
   height: fit-content;
   transition: top 1s;
-  z-index: -1;
+  z-index: -2;
 }
 
 /*link-list.open {
