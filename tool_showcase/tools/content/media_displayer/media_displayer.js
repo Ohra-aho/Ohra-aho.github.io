@@ -57,7 +57,7 @@ class MediaDisplayer extends HTMLElement {
 				) {
 					this.family.push(proto_family[i].getAttribute("media"));
 					if(proto_family[i] == this) {
-						this.index = i;
+						this.index = this.family.length-1;
 					}
 				}
 			}
@@ -126,6 +126,7 @@ class FullScreenMedia extends HTMLElement {
 				}
 				break;
 		}
+		console.log(parent.current_index);
 		this.parentElement.children[1].children[0].src = parent.family[parent.current_index];
 	}
 }

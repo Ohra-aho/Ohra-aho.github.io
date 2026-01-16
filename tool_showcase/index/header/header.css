@@ -1,3 +1,20 @@
+section {
+  background-color: transparent;
+}
+
+section-title {
+  display: block;
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: 2em;
+  text-align: center;
+  color: white;
+  border-bottom: 2px dashed white;
+  margin-bottom: 20px;
+  padding-bottom: 2px;
+}
+
 sticky-header {
   border-bottom: 2px dashed white;
 }
@@ -14,8 +31,10 @@ sticky-header div link-list a {
   border-right: 2px solid white;
   border-radius: 5px;
   padding: 0 5px 0 5px;
+  font-size: large;
 }
 sticky-header div #title {
+  pointer-events: none;
   position: absolute;
   width: 100vw;
   text-align: center;
@@ -46,8 +65,118 @@ title-card .card h1 {
   top: 40%;
   background-color: rgba(0, 0, 0, 0.7);
   text-align: center;
+  padding: 5px;
+}
+title-card .card p {
+  position: absolute;
+  color: white;
+  width: 35%;
+  left: 32.5%;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.9);
+  text-align: center;
+  padding: 5px;
+  font-size: large;
 }
 
 footer simple-contact a {
   font-size: xx-large;
+}
+
+#text-column row {
+  width: 100%;
+}
+#text-column row text-column {
+  background-color: white;
+  margin: 5px;
+  width: 30%;
+  max-height: 50vh;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+#text-column row text-column h1 {
+  border-bottom: 2px solid black;
+}
+#text-column row text-column:last-child {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+#text-column row column {
+  margin: 5px;
+  width: 20%;
+}
+#text-column row column text-column {
+  width: 100%;
+  max-height: 60vh;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  padding: 5px;
+}
+#text-column row column text-column:last-child {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#cards custom_center row column card {
+  background-color: transparent;
+}
+#cards custom_center row column card content {
+  position: relative;
+  background-color: transparent;
+  background-image: linear-gradient(to left, transparent, white 10% 90%, transparent);
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#cards custom_center row column card content h3 {
+  width: 80%;
+}
+#cards custom_center row column card content p {
+  width: 80%;
+}
+#cards custom_center row column card-img:last-child card {
+  width: 300px;
+  height: 150px;
+  background-color: gray;
+}
+#cards custom_center row column card-img:last-child card content {
+  background-color: white;
+  background-image: none;
+  display: block;
+  height: 90%;
+}
+#cards custom_center row column card-img:last-child card content h3 {
+  width: 100%;
+}
+#cards custom_center row column card-img:last-child card content p {
+  width: 100%;
+}
+
+#media-displayers text-column {
+  color: white;
+  width: 50%;
+  font-size: 1.5em;
+}
+#media-displayers div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#media-displayers div media-displayer {
+  min-width: 300px;
+}
+#media-displayers div media-displayer:hover {
+  cursor: pointer;
+}
+#media-displayers .red {
+  border-style: dashed;
+  position: relative;
 }/*# sourceMappingURL=header.css.map */

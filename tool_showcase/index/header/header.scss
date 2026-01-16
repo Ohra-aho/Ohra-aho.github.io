@@ -1,5 +1,21 @@
 @use "../../../utils/utils" as *;
 
+section {
+	background-color: transparent;
+}
+
+section-title {
+	display: block;
+	width: 100vw;
+	height: fit-content;
+	font-size: 2em;
+	text-align: center;
+	color: white;
+	border-bottom: 2px dashed white;
+	margin-bottom: 20px;
+	padding-bottom: 2px;
+}
+
 sticky-header {
 	border-bottom: 2px dashed white;
 
@@ -15,10 +31,12 @@ sticky-header {
 				border-right: 2px solid white;
 				border-radius: 5px;
 				padding: 0 5px 0 5px;
+				font-size: large;
 			}
 		}
 
 		#title {
+			pointer-events: none;
 			position: absolute;
 			width: 100vw;
 			text-align: center;
@@ -53,16 +71,139 @@ title-card {
 			top: 40%;
 			background-color: rgba(black, 0.7);
 			text-align: center;
+			padding: 5px;
+		}
+
+		p {
+			position: absolute;
+			color: white;
+			width: 35%;
+			left: 32.5%;
+			top: 50%;
+			background-color: rgba(black, 0.9);
+			text-align: center;
+			padding: 5px;
+			font-size: large;
 		}
 	}
 }
 
 footer {
-	
 	simple-contact {
 		a {
 			font-size: xx-large;
 		}
 	}
-	
+}
+
+
+$radius: 20px;
+#text-column {
+	row {
+		width: 100%;
+
+		text-column {
+			background-color: white;
+			margin: 5px;
+			width: 30%;
+			max-height: 50vh;
+			border-top-left-radius: $radius;
+			border-bottom-left-radius: $radius;
+
+			h1 {
+				border-bottom: 2px solid black;
+			}
+		}
+
+		text-column:last-child {
+			border-top-right-radius: $radius;
+			border-bottom-right-radius: $radius;
+			border-top-left-radius: 0px;
+			border-bottom-left-radius: 0px;
+		}
+
+		column {
+			margin: 5px;
+			width: 20%;
+			text-column {
+				width: 100%;
+				max-height: 60vh;
+				border-top-left-radius: $radius;
+				border-top-right-radius: $radius;
+				border-bottom-left-radius: 0px;
+				border-bottom-right-radius: 0px;
+				padding: 5px;
+			}
+			text-column:last-child {
+				border-top-left-radius: 0px;
+				border-top-right-radius: 0px;
+				border-bottom-left-radius: $radius;
+				border-bottom-right-radius: $radius;
+			}
+		}
+	}
+}
+
+
+#cards {
+	custom_center {
+		row {
+			column {
+				card {
+					background-color: transparent;
+					content {
+						position: relative;
+						background-color: transparent;
+						background-image: linear-gradient(to left, transparent, white 10% 90%, transparent);
+						height: 70%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						h3 { width: 80%; }
+						p { width: 80%; }
+					}
+				}
+				card-img:last-child {
+					card {
+						width: 300px;
+						height: 150px;
+						background-color: gray;
+						content {
+							background-color: white;
+							background-image: none;
+							display: block;
+							height: 90%;
+							h3 { width: 100%; }
+							p { width: 100%; }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#media-displayers {
+	text-column {
+		color: white;
+		width: 50%;
+		font-size: 1.5em;
+	}
+
+	div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		media-displayer {
+			min-width: 300px;
+		}
+		media-displayer:hover {
+			cursor: pointer;
+		}
+	};
+	.red {
+		border-style: dashed;
+		position: relative;
+	}
 }
