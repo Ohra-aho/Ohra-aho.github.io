@@ -317,9 +317,90 @@ $radius: 20px;
 @media screen and (min-width: $narrow) and (max-width: $medium) {
 	@include narrowScreen();
 
+	#cards {
+		custom_center {
+			row {
+				column {
+					card-img:last-child {
+						card {
+							width: 300px;
+							height: 150px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	footer {
+		height: 20vh;
+		simple-contact {
+			a {
+				font-size: x-large;
+			}
+		}
+	}
 }
 
 //wide screen
 @media screen and (min-width: $medium) and (max-width: $wide) {
-	
+	#cards {
+		custom_center {
+			row {
+				flex-direction: column;
+			}
+		}
+	}
+
+	sticky-header {
+		div {
+			#title {
+				display: none;
+			}
+		}
+	}
+
+	#text-column {
+		row {
+			text-column {
+				background-color: white;
+				margin: 5px;
+				width: 30%;
+				max-height: 50vh;
+				border-top-left-radius: $radius;
+				border-bottom-left-radius: $radius;
+
+				h1 {
+					border-bottom: 2px solid black;
+				}
+			}
+
+			text-column:last-child {
+				border-top-right-radius: $radius;
+				border-bottom-right-radius: $radius;
+				border-top-left-radius: 0px;
+				border-bottom-left-radius: 0px;
+			}
+
+			column {
+				margin: 5px;
+				width: 30%;
+				text-column {
+					width: 100%;
+					max-height: 60vh;
+					border-top-left-radius: $radius;
+					border-top-right-radius: $radius;
+					border-bottom-left-radius: 0px;
+					border-bottom-right-radius: 0px;
+					padding: 5px;
+				}
+				text-column:last-child {
+					border-top-left-radius: 0px;
+					border-top-right-radius: 0px;
+					border-bottom-left-radius: $radius;
+					border-bottom-right-radius: $radius;
+				}
+			}
+		}
+	}
 }

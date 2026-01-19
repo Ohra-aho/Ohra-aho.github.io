@@ -315,4 +315,58 @@ footer simple-contact a {
     width: 100%;
     border: none;
   }
+  #cards custom_center row column card-img:last-child card {
+    width: 300px;
+    height: 150px;
+  }
+  footer {
+    height: 20vh;
+  }
+  footer simple-contact a {
+    font-size: x-large;
+  }
+}
+@media screen and (min-width: 1030px) and (max-width: 1500px) {
+  #cards custom_center row {
+    flex-direction: column;
+  }
+  sticky-header div #title {
+    display: none;
+  }
+  #text-column row text-column {
+    background-color: white;
+    margin: 5px;
+    width: 30%;
+    max-height: 50vh;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  #text-column row text-column h1 {
+    border-bottom: 2px solid black;
+  }
+  #text-column row text-column:last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  #text-column row column {
+    margin: 5px;
+    width: 30%;
+  }
+  #text-column row column text-column {
+    width: 100%;
+    max-height: 60vh;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    padding: 5px;
+  }
+  #text-column row column text-column:last-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
 }/*# sourceMappingURL=header.css.map */
