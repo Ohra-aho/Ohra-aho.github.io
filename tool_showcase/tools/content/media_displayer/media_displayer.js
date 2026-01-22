@@ -28,12 +28,43 @@ class MediaDisplayer extends HTMLElement {
 			this.children[0].remove();
 		}
 
+		let content = null;
 		if(image) {
-			let content = document.createElement("img");
-			content.setAttribute("src", media);
-			content.setAttribute("alt", "media");
-			this.appendChild(content);
-			this.onclick = this.OnClick;
+			content = document.createElement("img");
+		} else {
+			content = document.createElement("video");
+			let video = document.createElement("source");
+			let split_media = "video/"+media.split(".");
+			video.src = media;
+			video.type = "video/" + split_media[split_media.length - 1];
+			content.controls = true;
+			content.appendChild(video);
+		}
+
+		content.setAttribute("src", media);
+		content.setAttribute("alt", "media");
+		this.appendChild(content);
+		if(image) { this.onclick = this.OnClick; }
+
+		if(!image) {
+			this.classList.add("horizontal");
+		}
+
+		//change class to fit the image
+		if(this.children[0].complete) {
+			if(this.children[0].offsetHeight < this.children[0].offsetWidth) {
+				this.classList.add("horizontal");
+			} else {
+				this.classList.add("vertical");
+			}
+		} else {
+			this.children[0].onload = () => {
+				if(this.children[0].offsetHeight < this.children[0].offsetWidth) {
+					this.classList.add("horizontal");
+				} else {
+					this.classList.add("vertical");
+				}
+			}
 		}
 	}
 
@@ -50,14 +81,17 @@ class MediaDisplayer extends HTMLElement {
 		if(this.getAttribute("family") != null) {
 			let proto_family = document.getElementsByTagName("media-displayer");
 
-			for(let i = 0; i < proto_family.length; i++) {
-				if(
-					proto_family[i].getAttribute("family") != null && 
-					proto_family[i].getAttribute("family") == this.getAttribute("family")
-				) {
-					this.family.push(proto_family[i].getAttribute("media"));
-					if(proto_family[i] == this) {
-						this.index = this.family.length-1;
+			if(this.querySelector("video") == null) {
+				for(let i = 0; i < proto_family.length; i++) {
+					if(
+						proto_family[i].getAttribute("family") != null && 
+						proto_family[i].getAttribute("family") == this.getAttribute("family") &&
+						proto_family[i].querySelector("video") == null
+					) {
+						this.family.push(proto_family[i].getAttribute("media"));
+						if(proto_family[i] == this) {
+							this.index = this.family.length-1;
+						}
 					}
 				}
 			}
@@ -77,13 +111,19 @@ class FullScreenMedia extends HTMLElement {
 		this.appendChild(fc_media_template.content.cloneNode(true));
 		const media = this.getAttribute("media");
 		const image = this.getAttribute("image"); //If media is image or not
+
+		let content = null;
+		if(image) {
+			content = document.createElement("img");
+		}
+
 		if(image) {
 			let content = document.createElement("img");
 			content.setAttribute("src", media);
 			content.setAttribute("alt", "media");
 			this.children[0].children[1].appendChild(content);
 			this.children[0].children[0].onclick = this.Close;
-		}
+		} 
 
 		if(this.family.length > 0) {
 			this.AdjustForFamily();
@@ -126,7 +166,6 @@ class FullScreenMedia extends HTMLElement {
 				}
 				break;
 		}
-		console.log(parent.current_index);
 		this.parentElement.children[1].children[0].src = parent.family[parent.current_index];
 	}
 }

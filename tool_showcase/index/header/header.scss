@@ -155,26 +155,36 @@ $radius: 20px;
 #cards {
 	custom_center {
 		row {
+			card-img {
+				width: 300px;
+				height: 500px;
+				margin: 10px;
+			}
 			column {
-				card {
-					background-color: transparent;
-					content {
-						position: relative;
+				justify-items: center;
+				card-img {
+					width: 500px;
+					height: 300px;
+					card {
 						background-color: transparent;
-						background-image: linear-gradient(to left, transparent, white 10% 90%, transparent);
-						height: 70%;
-						display: flex;
-						flex-direction: column;
-						justify-content: center;
-						align-items: center;
-						h3 { width: 80%; }
-						p { width: 80%; }
+						content {
+							position: relative;
+							background-color: transparent;
+							background-image: linear-gradient(to left, transparent, white 10% 90%, transparent);
+							height: 70%;
+							display: flex;
+							flex-direction: column;
+							justify-content: center;
+							align-items: center;
+							h3 { width: 80%; }
+							p { width: 80%; }
+						}
 					}
 				}
 				card-img:last-child {
+					width: 300px;
+					height: 150px;
 					card {
-						width: 300px;
-						height: 150px;
 						background-color: gray;
 						content {
 							background-color: white;
@@ -198,17 +208,20 @@ $radius: 20px;
 		font-size: 1.5em;
 	}
 
-	div {
-		display: flex;
+	//display: flex;
+	//justify-content: center;
+	//align-items: center;
+	grid-generator {
 		justify-content: center;
-		align-items: center;
-		media-displayer {
-			min-width: 300px;
-		}
-		media-displayer:hover {
-			cursor: pointer;
-		}
-	};
+		gap: 10px;
+	}
+	media-displayer {
+		width: 500px;
+		height: 300px;
+	}
+	media-displayer:hover {
+		cursor: pointer;
+	}
 	.red {
 		border-style: dashed;
 		position: relative;
@@ -284,18 +297,19 @@ $radius: 20px;
 	#cards {
 		custom_center {
 			row {
+				justify-content: center;
 				card-img {
-					card {
+					width: 80vw;
+					height: 80vh;
+				}
+				column {
+					card-img {
 						width: 80vw;
 						height: 80vh;
 					}
-				}
-				column {
 					card-img:last-child {
-						card {
-							width: 150px;
-							height: 300px;
-						}
+						width: 150px;
+						height: 300px;
 					}
 				}
 			}
@@ -304,6 +318,13 @@ $radius: 20px;
 
 	#media-displayers {
 		text-column { width: 80%; }
+		grid-generator {
+			align-items: center;
+		}
+		media-displayer {
+			width: 90vw;
+			max-height: fit-content;
+		}
 	}
 
 	sidebar-fixed {
@@ -326,22 +347,14 @@ $radius: 20px;
 	#cards {
 		custom_center {
 			row {
-				card-img {
-					card {
-						height: 500px;
-						width: 300px;
-					}
+				card-img {					
+					height: 500px;
+					width: 300px;
 				}
 				column {
-					card {
-						height: 300px;
-						width: 500px;
-					}
 					card-img:last-child {
-						card {
-							width: 300px;
-							height: 150px;
-						}
+						width: 300px;
+						height: 150px;
 					}
 				}
 			}
@@ -356,6 +369,12 @@ $radius: 20px;
 			}
 		}
 	}
+
+	#media-displayers {
+		media-displayer {
+			width: 500px;
+		}
+	}
 }
 
 //wide screen
@@ -363,7 +382,17 @@ $radius: 20px;
 	#cards {
 		custom_center {
 			row {
-				flex-direction: column;
+				card-img {
+					width: 250px;
+					height: 400px;
+				}
+				column {
+					card-img {
+						width: 400px;
+						height: 250;
+					}
+				}
+				//flex-direction: column;
 			}
 		}
 	}
@@ -417,6 +446,12 @@ $radius: 20px;
 					border-bottom-right-radius: $radius;
 				}
 			}
+		}
+	}
+
+	#media-displayers {
+		media-displayer {
+			width: 500px;
 		}
 	}
 }

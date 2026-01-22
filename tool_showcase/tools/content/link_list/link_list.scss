@@ -7,7 +7,7 @@ link-list {
 	position: relative;
 	width: fit-content;
 	height: 100%;
-	//background-color: black;
+	background-color: black;
 
 	a {
 		text-decoration: none;
@@ -22,11 +22,25 @@ link-list {
 	ham-list {
 		display: block;
 		position: fixed;
+		top: 0;
 		background-color: black;
 		width: 100vw;
-		height: fit-content;
-		transition: top 1s;
-		z-index: -2;
+		height: 100vh;
+		z-index: 1;
+		
+		div {
+			width: 100%;
+			height: fit-content;
+			display: flex;
+			align-items: center;
+			justify-content: end;
+			button {
+				color: white;
+				font-weight: bold;
+				font-size: large;
+				margin: 10px;				
+			}
+		}
 	}
 }
 
@@ -37,7 +51,7 @@ link-list {
 
 @mixin narrow_screen() {
 	link-list {
-		justify-content: center;
+		justify-content: end;
 		width: 100%;
 
 		a {
@@ -58,9 +72,7 @@ link-list {
 			display: block;
 			background-color: transparent;
 			border: none;
-			position: absolute;
-			right: 10px;
-			top: 25%;
+			margin-right: 10px;
 		}
 	}
 }
