@@ -24,6 +24,8 @@
 	<link rel="stylesheet" href="../tools/popups/popups.css">
 
 	<link rel="stylesheet" href="../tools/icons/icons.css">
+	<link rel="stylesheet" href="../tools/language/language_toggler.css">
+
 
 	<script defer src="../tools/main/container/main_container.js"></script>
 	<script defer src="../tools/main/footer/footer.js"></script>
@@ -42,6 +44,8 @@
 	<script defer src="../tools/adjusting/grid.js"></script>
 
 	<script defer src="../tools/icons/icons.js"></script>
+	<script defer src="../tools/language/language.js"></script>
+	<script defer src="../tools/language/language_toggler.js"></script>
 
 
 	<!--main links-->
@@ -69,14 +73,34 @@
 		<div style="width: 100%; height: 7vh">
 			<a href="../../webdeveloper/index.html">
 				<h1>&#8592 Takaisin</h1>
+				<language-changer>
+					<language name="englanti">&#8592 Back</language>
+				</language-changer>
 			</a>
+			<language-toggler languages="suomi englanti"></language-toggler>
+
 			<h1 id="title">Työkaluesittely</h1>
 			<link-list>
 				<a href="#title-card">Päägalleria</a>
+				<language-changer>
+					<language name="englanti">Opening gallery</language>
+				</language-changer>
 				<a href="#text-column">Tekstipalsta</a>
+				<language-changer>
+					<language name="englanti">Text column</language>
+				</language-changer>
 				<a href="#cards">Kortit</a>
+				<language-changer>
+					<language name="englanti">Cards</language>
+				</language-changer>
 				<a href="#media-displayers">Kuvagalleria</a>
+				<language-changer>
+					<language name="englanti">Image gallery</language>
+				</language-changer>
 				<a href="#contact">Ota yhteyttä</a>
+				<language-changer>
+					<language name="englanti">Contact</language>
+				</language-changer>
 			</link-list>
 		</div>
 	</sticky-header>
@@ -89,6 +113,9 @@
 	<text-column title="Sivupalkki">
 		Vaikka uutisia tai yhteystietoja varten.
 	</text-column>
+	<language-changer>
+		<language name="englanti" title="Sidebar">Maybe for news or contact info.</language>
+	</language-changer>
 	</sidebar-fixed>
 
 	<!--
@@ -104,19 +131,34 @@
 			<title-card>			
 				<div class="card">
 					<h1>Päägalleria</h1>
+					<language-changer>
+						<language name="englanti">Opening gallery</language>
+					</language-changer>
 					<p>Voi sisältää mitä tahansa ja rullaa sisällön läpi</p>
+					<language-changer>
+						<language name="englanti">Can contain anything and cycle throught the content</language>
+					</language-changer>
 					<img src="../tools/media/images/title_screen/placeholder_title_background.png" alt="title_screen">
 				</div>
 				<div class="card">
 					<h1>Iskulauseita</h1>
+					<language-changer>
+						<language name="englanti">Catchphrases</language>
+					</language-changer>
 					<img src="../tools/media/images/title_screen/placeholder_title_background.png" alt="title_screen">
 				</div>
 				<div class="card">
 					<h1>Informaatiota</h1>
+					<language-changer>
+						<language name="englanti">Information</language>
+					</language-changer>
 					<img src="../tools/media/images/title_screen/placeholder_title_background.png" alt="title_screen">
 				</div>
 				<div class="card">
 					<h1>Mainoskuvia</h1>
+					<language-changer>
+						<language name="englanti">Advertisements</language>
+					</language-changer>
 					<img src="../tools/media/images/title_screen/placeholder_title_background.png" alt="title_screen">
 				</div>
 			</title-card>
@@ -159,6 +201,9 @@
 					Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
 					Saepe, consectetur vitae?
 				</text-column>
+				<language-changer>
+						<language name="englanti" title="Text column"></language>
+				</language-changer>
 
 				<column>
 					<text-column class="scrollable" title="Yksinkertainen" id="c_text_1">
@@ -182,6 +227,9 @@
 						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
 						Saepe, consectetur vitae?
 					</text-column>
+					<language-changer>
+						<language name="englanti" title="Simple"></language>
+					</language-changer>
 					<text-column class="scrollable" title="Sopii minne tahansa" id="c_text_1">
 						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
 						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
@@ -200,9 +248,11 @@
 						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
 						Saepe, consectetur vitae?
 					</text-column>
+					<language-changer>
+							<language name="englanti" title="Fits anywhere"></language>
+					</language-changer>
 				</column>
 				
-
 				<text-column class="scrollable" title="Helposti muokattavissa">
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 					$
@@ -254,6 +304,9 @@
 					Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
 					Saepe, consectetur vitae?
 				</text-column>
+				<language-changer>
+					<language name="englanti" title="Easily edited"></language>
+				</language-changer>
 			</row>
 		</section>
 		<separator></separator>
@@ -267,6 +320,9 @@
 						Saepe, consectetur vitae?
 						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
 					</card-img>
+					<language-changer>
+							<language name="englanti" title="Cards"></language>
+					</language-changer>
 
 					<card-img title="Paljon pienessä paketissa" image="../tools/media/images/header/placeholder_logo.png">
 						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
@@ -274,15 +330,25 @@
 						Saepe, consectetur vitae?
 						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
 					</card-img>
-
+					<language-changer>
+						<language name="englanti" title="A lot in small package"></language>
+					</language-changer>
 					<column>
+
 						<card-img title="Kaiken näköisiä" image="../../media/images/MM_logo1.png" class="horizontal right">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
 							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
 						</card-img>
+						<language-changer>
+							<language name="englanti" title="Various styles"></language>
+						</language-changer>
+
 						<card-img title="Ja kokoisia" image="../tools/media/images/header/placeholder_logo.png" class="horizontal">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
 						</card-img>
+						<language-changer>
+							<language name="englanti" title="And sizes"></language>
+						</language-changer>
 					</column>
 
 					<card-img title="Kuvalla tai ilman">
@@ -299,12 +365,19 @@
 						Saepe, consectetur vitae?
 						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
 					</card-img>
+					<language-changer>
+						<language name="englanti" title="With or without images"></language>
+					</language-changer>
 				</row>
 			</custom_center>
 		</section>
 		<separator></separator>
 		<section id="media-displayers">
 			<section-title>Kuvagalleria</section-title>
+			<language-changer>
+				<language name="englanti">Image gallery</language>
+			</language-changer>
+
 			<custom_center>
 				<text-column title="">
 					Mistä tahansa kuvista voi tehdä kuvagallerian.
@@ -312,7 +385,16 @@
 					Olivat ne missä tahansa, jos niillä on sama "perhe", niitä voi selata yhdessä.
 					Alla on kuvia kahdesta eri "perheestä".
 				</text-column>
+				<language-changer>
+					<language name="englanti">
+						Any images can be made into an image gallery.
+						Images in gallery can be inspected by clicking them.
+						No matter where images are, if they are in the same "family", they can be inspected together.
+						There are images from two different "families" below.
+					</language>
+				</language-changer>
 			</custom_center>
+
 			<custom_center>
 				<grid-generator height="20vh" width="fit-content">
 					<media-displayer image="true" media="../../media/images/it engineer.png" class="vertical red" family="red"></media-displayer>
@@ -341,9 +423,15 @@
 		<footer id="contact">
 			<custom_center>
 				<simple-contact email="panu.ohraaho@gmail.com" subject="Tarvitsen nettisivut">Tarvitsetko sivuja? &#8594;</simple-contact>
+				<language-changer>
+					<language name="englanti">Need a site?</language>
+				</language-changer>
 			</custom_center>
 			<copyright>
 				<p>Jutellaan</p>
+				<language-changer>
+					<language name="englanti">Let's talk</language>
+				</language-changer>
 			</copyright>
 		</footer>
 	</main-container>
