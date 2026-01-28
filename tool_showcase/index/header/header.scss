@@ -122,7 +122,7 @@ $radius: 20px;
 			}
 		}
 
-		text-column:last-child {
+		text-column:last-of-type {
 			border-top-right-radius: $radius;
 			border-bottom-right-radius: $radius;
 			border-top-left-radius: 0px;
@@ -141,7 +141,7 @@ $radius: 20px;
 				border-bottom-right-radius: 0px;
 				padding: 5px;
 			}
-			text-column:last-child {
+			text-column:last-of-type {
 				border-top-left-radius: 0px;
 				border-top-right-radius: 0px;
 				border-bottom-left-radius: $radius;
@@ -165,35 +165,32 @@ $radius: 20px;
 				card-img {
 					width: 500px;
 					height: 300px;
-					card {
+					
+					background-color: transparent;
+					content {
+						position: relative;
 						background-color: transparent;
-						content {
-							position: relative;
-							background-color: transparent;
-							background-image: linear-gradient(to left, transparent, white 10% 90%, transparent);
-							height: 70%;
-							display: flex;
-							flex-direction: column;
-							justify-content: center;
-							align-items: center;
-							h3 { width: 80%; }
-							p { width: 80%; }
-						}
+						background-image: linear-gradient(to left, transparent, white 10% 90%, transparent);
+						height: 70%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						h3 { width: 80%; }
+						p { width: 80%; }
 					}
 				}
-				card-img:last-child {
+				card-img:last-of-type {
 					width: 300px;
 					height: 150px;
-					card {
-						background-color: gray;
-						content {
-							background-color: white;
-							background-image: none;
-							display: block;
-							height: 90%;
-							h3 { width: 100%; }
-							p { width: 100%; }
-						}
+					background-color: gray;
+					content {
+						background-color: white;
+						background-image: none;
+						display: block;
+						height: 90%;
+						h3 { width: 100%; }
+						p { width: 100%; }
 					}
 				}
 			}
@@ -275,7 +272,7 @@ $radius: 20px;
 				border-bottom-right-radius: 0px;
 			}
 
-			text-column:last-child {
+			text-column:last-of-type {
 				border-top-left-radius: 0;
 				border-top-right-radius: 0;
 				border-bottom-left-radius: $radius;
@@ -307,7 +304,7 @@ $radius: 20px;
 						width: 80vw;
 						height: 80vh;
 					}
-					card-img:last-child {
+					card-img:last-of-type {
 						width: 150px;
 						height: 300px;
 					}
@@ -352,7 +349,7 @@ $radius: 20px;
 					width: 300px;
 				}
 				column {
-					card-img:last-child {
+					card-img:last-of-type {
 						width: 300px;
 						height: 150px;
 					}
@@ -420,7 +417,7 @@ $radius: 20px;
 				}
 			}
 
-			text-column:last-child {
+			text-column:last-of-type {
 				border-top-right-radius: $radius;
 				border-bottom-right-radius: $radius;
 				border-top-left-radius: 0px;
@@ -439,7 +436,7 @@ $radius: 20px;
 					border-bottom-right-radius: 0px;
 					padding: 5px;
 				}
-				text-column:last-child {
+				text-column:last-of-type {
 					border-top-left-radius: 0px;
 					border-top-right-radius: 0px;
 					border-bottom-left-radius: $radius;

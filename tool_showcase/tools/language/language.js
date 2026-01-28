@@ -22,10 +22,10 @@ class Language extends HTMLElement {
 		this.FindTargetElement();
 		this.current_language = this.getAttribute("default_language");
 
-		if(!this.target_element.getAttribute("custom", "Y")) {
+		if(!this.target_element.getAttribute("custom")) {
 			this.text.push(
 				new LanguageOption(
-					this.getAttribute("default_language"), 
+					document.querySelector("languages").getAttribute("languages").split(" ")[0],
 					this.target_element.innerHTML, 
 					this.target_element.getAttribute("title")
 				)
@@ -35,7 +35,7 @@ class Language extends HTMLElement {
 			const target_content = this.target_element.GiveBaseLanguage();
 			this.text.push(
 				new LanguageOption(
-					this.getAttribute("default_language"),
+					document.querySelector("languages").getAttribute("languages").split(" ")[0],
 					target_content[1] ?? "",
 					target_content[0] ?? ""
 				)
@@ -59,16 +59,11 @@ class Language extends HTMLElement {
 	ChangeLanguage(language) {
 		this.current_language = language;
 
-		if(this.target_element.getAttribute("custom") != "Y") {
+		if(this.target_element.getAttribute("custom") == null) {
 			for(let i = 0; i < this.text.length; i++) {
+				
 				if(this.current_language == this.text[i].name) {
 					
-					/* I believe this part if useless
-					if(this.target_element.getAttribute("title") && this.text[i].title != null) { 
-						this.target_element.setAttribute("title", this.text[i].title)
-					}
-					*/
-
 					this.target_element.innerText = this.text[i].text;
 					break;
 				}

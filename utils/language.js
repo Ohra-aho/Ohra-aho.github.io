@@ -3,7 +3,6 @@ var current_language = "suomi";
 function LoadLanguage() {
 	let saved_language = window.sessionStorage.getItem("language");
 	if(saved_language != null || saved_language != undefined) {
-		console.log(saved_language);
 		current_language = saved_language;
 	}
 }

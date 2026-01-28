@@ -102,7 +102,7 @@ footer simple-contact a {
 #text-column row text-column h1 {
   border-bottom: 2px solid black;
 }
-#text-column row text-column:last-child {
+#text-column row text-column:last-of-type {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border-top-left-radius: 0px;
@@ -121,7 +121,7 @@ footer simple-contact a {
   border-bottom-right-radius: 0px;
   padding: 5px;
 }
-#text-column row column text-column:last-child {
+#text-column row column text-column:last-of-type {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 20px;
@@ -139,11 +139,9 @@ footer simple-contact a {
 #cards custom_center row column card-img {
   width: 500px;
   height: 300px;
-}
-#cards custom_center row column card-img card {
   background-color: transparent;
 }
-#cards custom_center row column card-img card content {
+#cards custom_center row column card-img content {
   position: relative;
   background-color: transparent;
   background-image: linear-gradient(to left, transparent, white 10% 90%, transparent);
@@ -153,29 +151,27 @@ footer simple-contact a {
   justify-content: center;
   align-items: center;
 }
-#cards custom_center row column card-img card content h3 {
+#cards custom_center row column card-img content h3 {
   width: 80%;
 }
-#cards custom_center row column card-img card content p {
+#cards custom_center row column card-img content p {
   width: 80%;
 }
-#cards custom_center row column card-img:last-child {
+#cards custom_center row column card-img:last-of-type {
   width: 300px;
   height: 150px;
-}
-#cards custom_center row column card-img:last-child card {
   background-color: gray;
 }
-#cards custom_center row column card-img:last-child card content {
+#cards custom_center row column card-img:last-of-type content {
   background-color: white;
   background-image: none;
   display: block;
   height: 90%;
 }
-#cards custom_center row column card-img:last-child card content h3 {
+#cards custom_center row column card-img:last-of-type content h3 {
   width: 100%;
 }
-#cards custom_center row column card-img:last-child card content p {
+#cards custom_center row column card-img:last-of-type content p {
   width: 100%;
 }
 
@@ -238,7 +234,7 @@ footer simple-contact a {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
-  #text-column row text-column:last-child {
+  #text-column row text-column:last-of-type {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 20px;
@@ -264,7 +260,7 @@ footer simple-contact a {
     width: 80vw;
     height: 80vh;
   }
-  #cards custom_center row column card-img:last-child {
+  #cards custom_center row column card-img:last-of-type {
     width: 150px;
     height: 300px;
   }
@@ -322,7 +318,7 @@ footer simple-contact a {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
-  #text-column row text-column:last-child {
+  #text-column row text-column:last-of-type {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-left-radius: 20px;
@@ -348,7 +344,7 @@ footer simple-contact a {
     width: 80vw;
     height: 80vh;
   }
-  #cards custom_center row column card-img:last-child {
+  #cards custom_center row column card-img:last-of-type {
     width: 150px;
     height: 300px;
   }
@@ -371,7 +367,7 @@ footer simple-contact a {
     height: 500px;
     width: 300px;
   }
-  #cards custom_center row column card-img:last-child {
+  #cards custom_center row column card-img:last-of-type {
     width: 300px;
     height: 150px;
   }
@@ -408,7 +404,7 @@ footer simple-contact a {
   #text-column row text-column h1 {
     border-bottom: 2px solid black;
   }
-  #text-column row text-column:last-child {
+  #text-column row text-column:last-of-type {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-top-left-radius: 0px;
@@ -427,7 +423,7 @@ footer simple-contact a {
     border-bottom-right-radius: 0px;
     padding: 5px;
   }
-  #text-column row column text-column:last-child {
+  #text-column row column text-column:last-of-type {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 20px;
