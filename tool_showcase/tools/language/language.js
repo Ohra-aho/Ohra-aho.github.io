@@ -20,19 +20,29 @@ class Language extends HTMLElement {
 
 	connectedCallback() {
 		this.FindTargetElement();
-		const toggler = document.querySelector("language-toggler");
-		if(toggler != null) {
-			this.setAttribute("default_language", toggler.getAttribute("languages").split(" ")[0])
-			this.current_language = toggler.getAttribute("default_language");
+		this.current_language = this.getAttribute("default_language");
+
+		if(!this.target_element.getAttribute("custom", "Y")) {
+			this.text.push(
+				new LanguageOption(
+					this.getAttribute("default_language"), 
+					this.target_element.innerHTML, 
+					this.target_element.getAttribute("title")
+				)
+			);
+		} else {
+			//GiveBaseLanguage needs to exist in all custom elements
+			const target_content = this.target_element.GiveBaseLanguage();
+			this.text.push(
+				new LanguageOption(
+					this.getAttribute("default_language"),
+					target_content[1] ?? "",
+					target_content[0] ?? ""
+				)
+
+			) 
 		}
 
-		this.text.push(
-			new LanguageOption(
-				this.getAttribute("default_language"), 
-				this.target_element.innerHTML, 
-				this.target_element.getAttribute("title")
-			)
-		);
 		for(let i = 0; i < this.children.length; i++) {
 			this.text.push(
 				new LanguageOption(
@@ -48,14 +58,27 @@ class Language extends HTMLElement {
 
 	ChangeLanguage(language) {
 		this.current_language = language;
-		for(let i = 0; i < this.text.length; i++) {
-			if(this.current_language == this.text[i].name) {
-				if(this.target_element.getAttribute("title") && this.text[i].title != null) { 
-					this.target_element.setAttribute("title", this.text[i].title)
-				}
 
-				this.target_element.innerText = this.text[i].text;
-				break;
+		if(this.target_element.getAttribute("custom") != "Y") {
+			for(let i = 0; i < this.text.length; i++) {
+				if(this.current_language == this.text[i].name) {
+					
+					/* I believe this part if useless
+					if(this.target_element.getAttribute("title") && this.text[i].title != null) { 
+						this.target_element.setAttribute("title", this.text[i].title)
+					}
+					*/
+
+					this.target_element.innerText = this.text[i].text;
+					break;
+				}
+			}
+		} else {
+			for(let i = 0; i < this.text.length; i++) {
+				if(this.current_language == this.text[i].name) {
+					this.target_element.ChangeLanguage(this.text[i].title, this.text[i].text)
+					break;
+				}
 			}
 		}
 	}

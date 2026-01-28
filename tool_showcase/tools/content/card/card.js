@@ -1,27 +1,20 @@
 const card_template = document.createElement("template");
 card_template.innerHTML = 
 `
-<card>
 	<img src="./media/images/header/placeholder_logo.png" alt="image">
 	<content>
-		<h3>Title</h3>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-			Nobis soluta pariatur, magni rem laudantium officiis earum incidunt. 
-			Sequi veritatis dolorum, libero explicabo nulla itaque officiis. 
-			Excepturi quo repellat consequatur nisi.
-		</p>
+		<h3></h3>
+		<p></p>
 	</content>
-</card>
 `
 
 class Card extends HTMLElement { 
+	og_content
 	constructor() {
 		super();
 	}
 
 	connectedCallback() { 
-		//const template = document.getElementById("card-template");
 		let card = card_template.content.cloneNode(true);
 
 		//Get content
@@ -30,31 +23,45 @@ class Card extends HTMLElement {
 		const horizontal = Array.from(this.classList).includes("horizontal");
 		const right = Array.from(this.classList).includes("right");
 
-		const content = this.innerText;
+		this.og_content = this.innerText;
 		this.innerText = "";
 
 		//Place content
-		card.querySelector("p").innerText = content ?? "Placeholder text";
+		card.querySelector("p").innerText = this.og_content ?? "Placeholder text";
 		card.querySelector("h3").innerText = title ?? "Title";
 
 		if(image != null) { 
 			card.querySelector("img").setAttribute("src", image);
 		} else {
 			card.querySelector("img").remove();
-			card.firstElementChild.classList.add("text");
+			this.classList.add("text");
 		}
 
 		if(horizontal) {
-			card.firstElementChild.classList.add("horizontal");
+			this.classList.add("horizontal");
 		}
 		
 		if(right) {
-			card.firstElementChild.appendChild(card.querySelector("img"));
+			card.appendChild(card.querySelector("img"));
 		}
 
 		this.appendChild(card);
+
+		this.setAttribute("custom", "Y");
 	}
 
+
+	ChangeLanguage(title, content) {
+		this.querySelector("p").innerText = content;
+		this.querySelector("h3").innerText = title;
+	}
+
+	GiveBaseLanguage() {
+		return [
+			this.getAttribute("title"),
+			this.og_content
+		]
+	}
 }
 
 customElements.define("card-img", Card);
