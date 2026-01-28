@@ -26,7 +26,7 @@ class Language extends HTMLElement {
 			this.text.push(
 				new LanguageOption(
 					document.querySelector("languages").getAttribute("languages").split(" ")[0],
-					this.target_element.innerHTML, 
+					this.target_element.innerText, 
 					this.target_element.getAttribute("title")
 				)
 			);
@@ -47,7 +47,7 @@ class Language extends HTMLElement {
 			this.text.push(
 				new LanguageOption(
 					this.children[i].getAttribute("name"), 
-					this.children[i].innerHTML, 
+					this.children[i].innerText, 
 					this.children[i].getAttribute("title")
 				)
 			);
