@@ -7,13 +7,27 @@
 
 	<link rel="stylesheet" href="../engineer/index.css">
 	<script src="engineer.js"></script>
+
+	<link rel="stylesheet" href="../tool_showcase/tools/language/language_toggler.css">
+	<script defer src="../tool_showcase/tools/language/language.js"></script>
+	<script defer src="../tool_showcase/tools/language/language_toggler.js"></script>
+
 </head>
-<body onload="DisplayGridContent(content); ShowIntro(); ShowJobs()">
+<body onload="DisplayGridContent(content);">
+	<languages languages="suomi englanti"></languages>
+
 	<div id="header">
 		<a href="../index.html">
 			<h1>&#8592 Takaisin</h1>
+			<language-changer>
+				<language name="englanti">&#8592 Back</language>
+			</language-changer>
 		</a>
+
 		<h1>IT-insinööri</h1>
+		<language-changer>
+			<language name="englanti">IT engineer</language>
+		</language-changer>
 	</div>
 	<div id="main">
 		
@@ -23,25 +37,40 @@
 				<img src="../media/images/it engineer.png" alt="">
 				<div id="text_box">
 					<h2>Mediatekniikan insinööri</h2>
+					<language-changer>
+						<language name="englanti">Engineer of media technology</language>
+					</language-changer>
 					<p>
 						Valitsin mediatekniikan koska haaveilen urasta pelialalla ja siellä niitä kursseja oli. Peliohjelmointia ja niin edelleen. 
-						Niiden lisäksi tuli myös opeteltua kaikenlaista muutakin, kunten ohjelmointia aivan liian monella kielellä ja työkalulla, 
-						kuvan ja äänen käsittelyä, 3D-mallinnusta, ohjelmistokehityksen teoriaa ja yleisia toimisto-ohjelmia kuten Excel:iä.
+						Niiden lisäksi tuli myös opeteltua ohjelmointia aivan liian monella kielellä ja työkalulla, 
+						kuvan ja äänen käsittelyä, 3D-mallinnusta, ohjelmistokehityksen teoriaa ja yleisiä toimisto-ohjelmia.
 						Jos minä jotain opin niin sen miten omaksua uusia ohjelmia ja alani osa-alueita.
 					</p>
+					<language-changer>
+						<language name="englanti">
+							I chose this, because I dream of a career in game development and there were the courses. 
+							Game programming and such. 
+							In addition I studied programming in too many languages and tools, 
+							photo and audio editing, 3D-modeling, software development theory and common office programs. 
+							If I learned anything, then how to adapt to new tools and tasks.
+						</language>
+					</language-changer>
 				</div>
 			</div>
 
 			<div id="left">
-				<div id="section">
+				<!--<div id="section">
 					<a href="https://lab.fi/fi" target="_blank">
 						<h2>LAB University of Applied Sciences</h2>
 						<img src="../media/images/lab logo.png" alt="logo">
 					</a>
-				</div>
+				</div>-->
 				<div id="section">
 					<a href="https://urn.fi/URN:NBN:fi:amk-2024111428198" target="_blank">
 						<h2>Opinnäytetyö</h2>
+						<language-changer>
+							<language name="englanti">Thesis</language>
+						</language-changer>
 					</a>
 				</div>
 			</div>
@@ -49,6 +78,9 @@
 
 		<div id="grid_container">
 			<h2>Mitä osaan</h2>
+			<language-changer>
+				<language name="englanti">What I know</language>
+			</language-changer>
 			<div id="skill_grid">
 				
 			</div>
@@ -57,58 +89,119 @@
 		<div id="work_history">
 			<div class="job">
 				<h2>Web kehittäjä</h2>
+				<language-changer>
+					<language name="englanti">Web developer</language>
+				</language-changer>
 				<div>
 					<h3>Työnantaja</h3>
+					<language-changer>
+						<language name="englanti">Employer</language>
+					</language-changer>
 					<p>Joinplay games</p>
 				</div>
 				<div>
 					<h3>Ajanjakso</h3>
+					<language-changer>
+						<language name="englanti">Duration</language>
+					</language-changer>
 					<p>06.2025 - 08.2025</p>
 				</div>
 
 				<h3>Työtehtävät</h3>
+				<language-changer>
+					<language name="englanti">Tasks</language>
+				</language-changer>
 				<p>
 					Suunnittelin ja ohjelmoin nettisivuja työnantajani uuden tuotteen mainostamista varten. 
 					Vastuullani oli sivujen visuaalinen ilme ja toiminnallisuudet. Työkaluina olivat PHP, scss ja JavaScript.
 				</p>
+				<language-changer>
+					<language name="englanti">
+						I designed and developed a website for advertising my employer’s upcoming game. 
+						I made everything from the visual arrangements to functionalities. 
+						Tools used were PHP, scss and JavaScript.
+					</language>
+				</language-changer>
 			</div>
 
 			<div class="job">
 				<h2>Flutter kehittäjä</h2>
+				<language-changer>
+					<language name="englanti">Flutter developer</language>
+				</language-changer>
+				
 				<div>
 					<h3>Työnantaja</h3>
+					<language-changer>
+						<language name="englanti">Employer</language>
+					</language-changer>
 					<p>Casamedia Ky</p>
 				</div>
 				<div>
 					<h3>Ajanjakso</h3>
+					<language-changer>
+						<language name="englanti">Duration</language>
+					</language-changer>
 					<p>05.2024 - 08.2024</p>
 				</div>
 
 				<h3>Työtehtävät</h3>
+				<language-changer>
+					<language name="englanti">Tasks</language>
+				</language-changer>
 				<p>
 					Suunnittelin ja kehitin käyttöliittymään uusia komponentteja ja toiminnallisuuksia. 
 					Yhdistin tuotokseni taustajärjestelmään ja suoritin testauksia ja virheen korjauksia. 
 					Käytössä olleet teknologiat olivat Flutter, ja NodeJS. Ohjelmointikielinä Dart ja JavaScript. Tietokannassa käytettiin MongoDB:tä.
 				</p>
+				<language-changer>
+					<language name="englanti">
+						I desingend and programmed new components and functionalities for the UI. 
+						I connected my creations to the Back End and performed testing and bug fixes.
+					</language>
+				</language-changer>
 			</div>
 
 			<div class="job">
 				<h2>Pelinkehittäjä</h2>
+				<language-changer>
+					<language name="englanti">Game developer</language>
+				</language-changer>
 				<div>
 					<h3>Työnantaja</h3>
+					<language-changer>
+						<language name="englanti">Employer</language>
+					</language-changer>
 					<p>Minä, kevytyrittäjänä</p>
+					<language-changer>
+						<language name="englanti">Self employed</language>
+					</language-changer>
 				</div>
 				<div>
 					<h3>Ajanjakso</h3>
+					<language-changer>
+						<language name="englanti">Duration</language>
+					</language-changer>
 					<p>05.2023 - 10.2023</p>
 				</div>
 
 				<h3>Työtehtävät</h3>
+				<language-changer>
+					<language name="englanti">Tasks</language>
+				</language-changer>
 				<p>
 					Suunnittelin, ohjelmoin ja julkaisin oman pelidemon. 
 					Vastasin kaikesta mekaniikkojen suunnittelusta äänisuunnitteluun. 
 					Pelimoottorina toimi Unity, kielenä C#. Audiovisuaalinen puoli hoidettiin Audacitylla ja Kritalla.
 				</p>
+				<language-changer>
+					<language name="englanti">
+						I designed, programmed and published my own game demo. 
+						I answered in everything from mechanics to sound design. 
+						I used Unity as the game engine and C# as the language. 
+						Audiovisual side was achieved with Audacity and Krita.
+					</language>
+				</language-changer>
 			</div>
 			
 		</div>

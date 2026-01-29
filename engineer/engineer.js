@@ -39,7 +39,7 @@ const english_content = [
 	["React", "One of my favourite UI tools after Flutter. Altho haven't got an opportunity to use it outside studies."],
 ];
 
-const finnish_intro = [
+/*const finnish_intro = [
 	"Mediatekniikan insinööri",
 	"Valitsin mediatekniikan koska haaveilen urasta pelialalla ja siellä niitä kursseja oli. Peliohjelmointia ja niin edelleen. Niiden lisäksi tuli myös opeteltua kaikenlaista muutakin, kunten ohjelmointia aivan liian monella kielellä ja työkalulla, kuvan ja äänen käsittelyä, 3D-mallinnusta, ohjelmistokehityksen teoriaa ja yleisiä toimisto-ohjelmia kuten Excel:iä. Jos minä jotain opin niin sen miten omaksua uusia ohjelmia ja alani osa-alueita.",
 	"Opinnäytetyö",
@@ -55,7 +55,7 @@ const english_intro = [
 	"What I know",
 	"IT engineer",
 	"&#8592 Back"
-];
+];*/
 
 const finnish_job_template = [
 	"Työnantaja",
@@ -151,60 +151,5 @@ function DisplayGridContent() {
 		skill.appendChild(info);
 
 		grid.appendChild(skill);
-	}
-}
-
-function ShowIntro() {
-	let intro_text = document.getElementById("text_box");
-	let left = document.getElementById("left");
-	let grid_container = document.getElementById("grid_container");
-	let header = document.getElementById("header");
-
-	let current_language = window.sessionStorage.getItem("language");
-	let temp = [];
-	if(current_language == undefined || current_language == null) {
-		current_language = "suomi";
-	}
-	switch(current_language) {
-		case "englanti": temp = english_intro; break;
-		case "suomi": temp = finnish_intro; break;
-	}
-
-	intro_text.children[0].innerHTML = temp[0];
-	intro_text.children[1].innerHTML = temp[1];
-	left.children[1].children[0].children[0].innerHTML = temp[2];
-	grid_container.children[0].innerHTML = temp[3];
-	header.children[1].innerHTML = temp[4];
-	header.children[0].children[0].innerHTML = temp[5];
-}
-
-function ShowJobs() {
-	let current_language = window.sessionStorage.getItem("language");
-	let temp_template = [];
-	let temp = [];
-	if(current_language == undefined || current_language == null) {
-		current_language = "suomi";
-	}
-	switch(current_language) {
-		case "englanti": 
-			temp_template = english_job_template;
-			temp = english_jobs;
-			break;
-		case "suomi": 
-			temp_template = finnish_job_template; 
-			temp = finnish_jobs;
-			break;
-	}
-
-	let jobs = document.getElementsByClassName("job");
-	
-	for(let i = 0; i < jobs.length; i++) {
-		jobs[i].children[0].innerHTML = temp[i][0];
-		jobs[i].children[1].children[1].innerHTML = temp[i][1];
-		jobs[i].children[4].innerHTML = temp[i][2];
-
-		jobs[i].children[1].children[0].innerHTML = temp_template[0];
-		jobs[i].children[2].children[0].innerHTML = temp_template[1];
-		jobs[i].children[3].innerHTML = temp_template[2];
 	}
 }

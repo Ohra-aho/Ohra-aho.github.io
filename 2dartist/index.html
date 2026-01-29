@@ -7,13 +7,25 @@
 
 	<link rel="stylesheet" href="index.css">
 	<script src="artist.js"></script>
+
+	<link rel="stylesheet" href="../tool_showcase/tools/language/language_toggler.css">
+	<script defer src="../tool_showcase/tools/language/language.js"></script>
+	<script defer src="../tool_showcase/tools/language/language_toggler.js"></script>
 </head>
-<body onload="ShowContent()">
+<body>
+	<languages languages="suomi englanti"></languages>
+
 	<div id="header">
 		<a href="../index.html">
 			<h1>&#8592 Takaisin</h1>
+			<language-changer>
+				<language name="englanti">&#8592 Back</language>
+			</language-changer>
 		</a>
 		<h1>2D artisti</h1>
+		<language-changer>
+			<language name="englanti">2D artist</language>
+		</language-changer>
 	</div>
 	<div id="main">
 		
@@ -21,6 +33,11 @@
 			<p>
 				Piirtelen epäsäännöllisesti. Pääasiassa sarjakuvamaisella tyylillä ja ilman värejä, mutta joskus innostun tekemään väritöitäkin.
 			</p>
+			<language-changer>
+				<language name="englanti">
+					I draw from time to time. Mostly black and white cartoonish style, but sometimes I make colored works.
+				</language>
+			</language-changer>
 		</div>
 
 		<div id="art">

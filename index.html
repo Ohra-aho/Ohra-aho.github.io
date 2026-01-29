@@ -6,23 +6,41 @@
 	<title>Ohra-aho</title>
 
 	<link rel="stylesheet" href="index.css">
-	<script src="./utils/language.js"></script>
-	<script src="home.js"></script>
+
+	<link rel="stylesheet" href="./tool_showcase/tools/language/language_toggler.css">
+	<script defer src="./tool_showcase/tools/language/language.js"></script>
+	<script defer src="./tool_showcase/tools/language/language_toggler.js"></script>
 </head>
-<body onload="LoadLanguage(); ChangeLanguage()">
-	
+
+<body>
+	<languages languages="suomi englanti"></languages>
+
+
 	<div class="header">
 		<div id="link_holder">
 			<div class="header_links">
 				<a href="./engineer/index.html">IT-insinööri</a>
+				<language-changer>
+					<language name="englanti">IT-engineer</language>
+				</language-changer>
 				<a href="./webdeveloper/index.html">Web-kehittäjä</a>
+				<language-changer>
+					<language name="englanti">Web developer</language>
+				</language-changer>
 			</div>
 			<div class="header_links">
 				<a href="./gamedeveloper/index.html">Pelinkehittäjä</a>
+				<language-changer>
+					<language name="englanti">Game developer</language>
+				</language-changer>
 				<a href="./2dartist/index.html">2D artisti</a>
+				<language-changer>
+					<language name="englanti">2D artist</language>
+				</language-changer>
 			</div>
 		</div>
-		<button onclick="SetNewLanguage(); ChangeLanguage()">Suomi</button>
+		<language-toggler>Suomi</language-toggler>
+		<!--<button onclick="SetNewLanguage(); ChangeLanguage()">Suomi</button>-->
 	</div>
 	
 	<div id="main">
@@ -36,9 +54,17 @@
 		<div id="intro">
 			<p>
 				Olen Panu Ohra-aho ja olen IT-insinööri. Kirjoitan koneella kummallista kieltä, joka saa koneet tekemään mitä haluan. 
-				Ainakin toisinaan kone ja minä ymmärrämme toisiamme, mutta toisinaan emme. Tämän sivuston kohdalla kone ymmärsi mitä tarkoitin. 
-				Sivut ovat olemassa kertoakseen, millainen insinööri minä olen. Tervetuloa. 
+				Ainakin toisinaan kone ja minä ymmärrämme toisiamme. Tämän sivuston kohdalla kone ymmärsi mitä tarkoitin. 
+				Sivut ovat olemassa kertoakseen, millainen insinööri minä olen. Tervetuloa.
 			</p>
+			<language-changer>
+				<language name="englanti">
+					I am Panu Ohra-aho, and IT-engineer. I write strange language with a machine, that gets that machine to do what I want. 
+					At least sometimes that machine and and I understand each other. 
+					When it came to this site, machine understood me. 
+					This site exists to tell, what kind of engineer I am. Welcome.
+				</language>
+			</language-changer>
 		</div>
 
 		<div id="snippet_holder">
@@ -58,12 +84,25 @@
 					<img src="./media/images/it engineer.png" alt="image" id="image">
 					<div class="info">
 						<h2>IT-insinööri</h2>
+						<language-changer>
+							<language name="englanti">IT engineer</language>
+						</language-changer>
 						<p>
-							Tarkemmalta suuntautumiseltani olen mediatekniikan insinööri LAB amk:sta. 
-							Web kehitystä, pelinkehitystä, mobiilikehitystä, jonkun verran AR teknologiaa ja audiovisuaalista suunnittelua. 
+							Tarkemmalta suuntautumiseltani olen mediatekniikan insinööri. 
+							Web kehitystä, pelinkehitystä, mobiilikehitystä ja audiovisuaalista suunnittelua. 
 							Parhaiten pärjään käyttöliittymien puolella, mutta taustajärjestelmät ovat myös tulleet tutuiksi.
 						</p>
+						<language-changer>
+							<language name="englanti">
+								My specialisation is mediatechnology. 
+								Web development, game development, mobile development and audiovisual design. 
+								I am most skilled with user interfaces, but I am also familiar with back end.
+							</language>
+						</language-changer>
 						<a href="./engineer/index.html">Lisää &#8594;</a>
+						<language-changer>
+							<language name="englanti">More &#8594;</language>
+						</language-changer>
 					</div>
 				</div>
 			</div>
@@ -82,11 +121,29 @@
 					<img src="./media/images/section b.png" alt="" id="back">
 					<div class="info">
 						<h2>Web-kehittäjä</h2>
+						<language-changer>
+							<language name="englanti">Web developer</language>
+						</language-changer>
+
 						<p>
-							Tähän opintoni painottuivat ja tätä olen eniten päässyt tekemään. Työkaluja on hyvässä muistissa muutama, mutta käyttänyt olen aika monia muitakin. 
-							Perus html totta kai, mukana PHP hitusen React:ia ja Angular:ia ja Flutter:ia. PHP:n lisäksi taustajärjestelmissä on käytetty Node.js:sää.
+							Tähän opintoni painottuivat ja tätä olen eniten päässyt tekemään. 
+							Työkaluja on hyvässä muistissa muutama, mutta käyttänyt olen aika monia muitakin. 
+							Perus html totta kai, mukana PHP ja Flutter:ia. 
+							PHP:n lisäksi taustajärjestelmissä on käytetty Node.js:sää.
 						</p>
+						<language-changer>
+							<language name="englanti">
+								My studies focused to this and I have done it the most professionally. 
+								I have few toolsets in memory, but I have also worked with many others. 
+								I know html of course, but there is some PHP and Flutter. 
+								What comes to back end, I know Node.js as well as PHP.
+							</language>
+						</language-changer>
+
 						<a href="./webdeveloper/index.html">Lisää &#8594;</a>
+						<language-changer>
+							<language name="englanti">More &#8594;</language>
+						</language-changer>
 					</div>
 					<img src="./media/images/web developer.png" alt="image" id="image">
 				</div>
@@ -107,12 +164,29 @@
 					<img src="./media/images/game developer.png" alt="image" id="image">
 					<div class="info">
 						<h2>Pelinkehittäjä</h2>
+						<language-changer>
+							<language name="englanti">Game developer</language>
+						</language-changer>
+
 						<p>
 							Tämä on rakkaimpia harrastuksiani. Lapsena lauta- ja korttipelejä ja nykyään videopelejä. 
-							Yksi demo valmiina ja toinen kokonainen peli tulossa. Tämä harrastus on tuonut mielestäni parhaiten kaiken osaamiseni kokoon. 
+							Yksi demo valmiina ja toinen kokonainen peli tulossa. Tämä harrastus on tuonut parhaiten kaiken osaamiseni kokoon. 
 							Visuaalinen puoli yhdistyy käyttöliittymäkehitykseen ja muuhun geneerisempää koodaamiseen.
 						</p>
+						<language-changer>
+							<language name="englanti">
+								This is one of my dearest hobbies. 
+								As a child I made board- and card games and nowadays video games. 
+								One demo is done and another full game is comming. 
+								This hobby has brought together all of my skills. 
+								Visual side combines with UI design and with more generic coding.
+							</language>
+						</language-changer>
+
 						<a href="./gamedeveloper/index.html">Lisää &#8594;</a>
+						<language-changer>
+							<language name="englanti">More &#8594;</language>
+						</language-changer>
 					</div>
 				</div>
 			</div>
@@ -131,11 +205,26 @@
 					<img src="./media/images/section b.png" alt="" id="back">
 					<div class="info">
 						<h2>2D artisti</h2>
+						<language-changer>
+							<language name="englanti">2D artist</language>
+						</language-changer>
+
 						<p>
 							Piirrän aina toisinaan. Olen siinä melko hyvä, mitä tulee sarjakuvamaisiin hirviöihin tai muihin karikatyyrihahmoihin. 
 							Tarkimmat työni yleensä säätän pelejäni varten, mutta tulee myös tehtyä suurempia projekteja ihan vain tekemisen ilosta.
 						</p>
+						<language-changer>
+							<language name="englanti">
+								I graw some times. 
+								I am quite good at it, what comes to cartoonish monsters or other exaturated characters. 
+								I put most effort to pieces meant for my games, but sometimes I make bigger projects just to make them.
+							</language>
+						</language-changer>
+
 						<a href="./2dartist/index.html">Lisää &#8594;</a>
+						<language-changer>
+							<language name="englanti">More &#8594;</language>
+						</language-changer>
 					</div>
 					<img src="./media/images/artist.png" alt="image" id="image">
 				</div>

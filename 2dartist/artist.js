@@ -51,34 +51,3 @@ function ChangeImage(forward) {
 		DisplayImage(i);
 	}
 }
-
-const english_content = [
-	"&#8592 Back",
-	"2D artist",
-	"I draw from time to time. Mostly black and white cartoonish style, but sometimes I make colored works."
-];
-
-const finnish_content = [
-	"&#8592 Takaisin",
-	"2D-artisti",
-	"Piirtelen epäsäännöllisesti. Pääasiassa sarjakuvamaisella tyylillä ja ilman värejä, mutta joskus innostun tekemään väritöitäkin."
-];
-
-function ShowContent() {
-	let current_language = window.sessionStorage.getItem("language");
-	let temp = [];
-	if(current_language == undefined || current_language == null) {
-		current_language = "suomi";
-	}
-	switch(current_language) {
-		case "englanti": temp = english_content; break;
-		case "suomi": temp = finnish_content; break;
-	}
-
-	let header = document.getElementById("header");
-	let intro = document.getElementById("intro");
-
-	header.children[0].children[0].innerHTML = temp[0];
-	header.children[1].innerHTML = temp[1];
-	intro.children[0].innerHTML = temp[2];
-}
