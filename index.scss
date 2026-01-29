@@ -269,8 +269,6 @@ body {
 
 						.info {
 							width: 100%;
-							//h2 { font-size: max($small_title, 1.5em); }
-							//p { font-size: max($small_font, 1.3em); }
 							h2 { font-size: $small_title; }
 							p { font-size: $small_font; }
 							a { font-size: 1.1em; }
@@ -317,7 +315,7 @@ body {
 
 	body {
 		.header { 
-			height: 11vh;
+			height: fit-content;
 			max-height: 50px;
 			a {
 				font-size: 1em;

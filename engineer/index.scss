@@ -162,10 +162,10 @@ body {
 				.skill:nth-of-type(11) { @include skill_cordinates(7, 2, 2); }
 				.skill:nth-of-type(12) { @include skill_cordinates(3, 2, 2); }
 				.skill:nth-of-type(13) { @include skill_cordinates(8, 10, 2); }
-				.skill:nth-of-type(14) { @include skill_cordinates(7, 6, 2); }
-				.skill:nth-of-type(15) { @include skill_cordinates(1, 4, 2); }
-				.skill:nth-of-type(16) { @include skill_cordinates(3, 8, 2); }
-				.skill:nth-of-type(17) { @include skill_cordinates(9, 5, 2); }
+				.skill:nth-of-type(14) { @include skill_cordinates(8, 7, 2); }
+				.skill:nth-of-type(15) { @include skill_cordinates(1, 4, 3); }
+				//.skill:nth-of-type(16) { @include skill_cordinates(3, 8, 2); }
+				//.skill:nth-of-type(17) { @include skill_cordinates(9, 5, 2); }
 			}
 		}
 
@@ -177,7 +177,6 @@ body {
 			align-items: center;
 			justify-content: center;
 			margin-top: 5vh;
-			//@include top_displacement(35vh);
 
 			.job {
 				border: 2px dashed rgba(white, 0.5);

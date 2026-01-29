@@ -23,7 +23,8 @@ $small_font: 1em;
 
 @mixin header() {
 	width: 100vw;
-	height: 6vh;
+	height: fit-content;
+	min-height: 6vh;
 	background-color: black;
 	margin: 0;
 	position: fixed;

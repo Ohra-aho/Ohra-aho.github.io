@@ -6,7 +6,9 @@ body {
 }
 body .header {
   width: 100vw;
-  height: 6vh;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 6vh;
   background-color: black;
   margin: 0;
   position: fixed;
@@ -237,7 +239,9 @@ body #main #footer a:hover {
   }
   body .header {
     width: 100vw;
-    height: 6vh;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 6vh;
     background-color: black;
     margin: 0;
     position: fixed;
@@ -249,7 +253,6 @@ body #main #footer a:hover {
     margin-bottom: 10px;
     top: 0;
     animation: none;
-    height: -moz-fit-content;
     height: fit-content;
   }
   body .header #link_holder {
@@ -408,7 +411,9 @@ body #main #footer a:hover {
   }
   body .header {
     width: 100vw;
-    height: 6vh;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 6vh;
     background-color: black;
     margin: 0;
     position: fixed;
@@ -420,7 +425,6 @@ body #main #footer a:hover {
     margin-bottom: 10px;
     top: 0;
     animation: none;
-    height: -moz-fit-content;
     height: fit-content;
   }
   body .header #link_holder {
@@ -570,7 +574,8 @@ body #main #footer a:hover {
     padding: 2%;
   }
   body .header {
-    height: 11vh;
+    height: -moz-fit-content;
+    height: fit-content;
     max-height: 50px;
   }
   body .header a {
