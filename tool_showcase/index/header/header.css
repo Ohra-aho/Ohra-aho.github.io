@@ -15,12 +15,33 @@ section-title {
   padding-bottom: 2px;
 }
 
+sidebar-fixed {
+  background-color: black;
+  color: white;
+}
+sidebar-fixed button {
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+}
 sidebar-fixed media-displayer {
   width: 100%;
+}
+sidebar-fixed text-column h1 {
+  border-bottom: 2px solid white;
 }
 
 sticky-header {
   border-bottom: 2px dashed white;
+}
+sticky-header language-toggler button {
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
 }
 sticky-header div {
   position: relative;
@@ -85,7 +106,7 @@ title-card .card p {
 }
 
 footer simple-contact a {
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 #text-column row {
@@ -208,7 +229,7 @@ footer simple-contact a {
   }
   sticky-header div a {
     position: relative;
-    right: 25%;
+    right: 20%;
     margin: 0;
   }
   sticky-header div a h1 {
@@ -266,6 +287,8 @@ footer simple-contact a {
   }
   #media-displayers text-column {
     width: 80%;
+    font-size: 1.1em;
+    text-align: center;
   }
   #media-displayers grid-generator {
     align-items: center;
@@ -278,6 +301,9 @@ footer simple-contact a {
   sidebar-fixed media-displayer.vertical {
     width: 100%;
     border: none;
+  }
+  footer simple-contact a {
+    font-size: large;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 1030px) {
@@ -292,7 +318,7 @@ footer simple-contact a {
   }
   sticky-header div a {
     position: relative;
-    right: 25%;
+    right: 20%;
     margin: 0;
   }
   sticky-header div a h1 {
@@ -350,6 +376,8 @@ footer simple-contact a {
   }
   #media-displayers text-column {
     width: 80%;
+    font-size: 1.1em;
+    text-align: center;
   }
   #media-displayers grid-generator {
     align-items: center;
@@ -363,6 +391,9 @@ footer simple-contact a {
     width: 100%;
     border: none;
   }
+  footer simple-contact a {
+    font-size: large;
+  }
   #cards custom_center row card-img {
     height: 500px;
     width: 300px;
@@ -373,9 +404,6 @@ footer simple-contact a {
   }
   footer {
     height: 20vh;
-  }
-  footer simple-contact a {
-    font-size: x-large;
   }
   #media-displayers media-displayer {
     width: 500px;

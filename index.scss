@@ -17,10 +17,12 @@ body {
 		animation-range-start: 30%;
 		animation-range-end: 50%;
 		animation-fill-mode: forwards;
+
 		#link_holder {
 			width: 90%;
 			display: flex;
 			justify-content: space-between;
+
 			.header_links {
 				display: flex;
 				justify-content: space-evenly;
@@ -56,6 +58,7 @@ body {
 		}
 	}
 
+
 	#main {
 		@include main();
 		width: 100vw;
@@ -63,10 +66,10 @@ body {
 		margin: 0;
 
 		h1 {
-			font-size: 9em;
+			font-size: 9vh;
 			color: white;
 			position: fixed;
-			width: 100%;
+			width: 100vw;
 			text-align: center;
 			margin: 0;
 			z-index: 1;
@@ -101,27 +104,23 @@ body {
 			.narrow_image { display: none; }
 
 			.snippet {
-				width: 100%;
+				width: 40%;
 				height: fit-content;
-				margin-top: 20px;
-				margin-bottom: 20px;
 				position: relative;
-				//padding-bottom: 20px; 
+
+				#back {
+					position: absolute;
+					z-index: -1;
+					width: 110%;
+					height: 120%;
+					top: -10%;
+				}
 
 				.container {
-					width: 48%;
+					width: 100%;
 					height: fit-content;
 					display: flex;
 					position: relative;
-
-					#back {
-						position: absolute;
-						z-index: -1;
-						width: 100%;
-						height: 110%;
-						bottom: 0;
-						left: 0;
-					}
 
 					.info {
 						width: 60%;
@@ -163,19 +162,13 @@ body {
 
 			.left {
 				position: relative;
-				left: 50%;
-				right: 0;
+				left: 60%;
 
-				.container  {
-					left: 6%;
-					#back {
-						-webkit-transform: scaleX(-1); 
-						transform: scaleX(-1);
-						margin-left: 0;
-						width: 100%;
-						height: 110%;
-						left: -10%;
-					}
+				#back {
+					-webkit-transform: scaleX(-1); 
+					transform: scaleX(-1);
+					margin-left: 0;
+					left: -10%;
 				}
 			}
 		}
@@ -187,7 +180,7 @@ body {
 @keyframes move_title {
 	to { 
 		top: 0;
-		font-size: 3em;
+		font-size: 6vh;
 	}
 }
 
@@ -209,7 +202,7 @@ body {
 			animation: none;
 			height: fit-content;
 			#link_holder {
-				justify-content: space-around;
+				width: 70%;
 
 				.header_links {
 					width: 100%;
@@ -248,10 +241,6 @@ body {
 					position: relative;
 					#back {
 						display: none;
-						position: absolute;
-						z-index: -1;
-						width: 100%;
-						height: 30vh;
 					}
 					#image {
 						height: 35vh;
@@ -263,7 +252,14 @@ body {
 					width: 100%;
 					margin-top: 5vh;
 					margin-bottom: 10vh;
-
+					
+					#back {
+						top: 0;
+						width: 100%;
+						height: 120%;
+						-webkit-transform: scaleX(1); 
+						transform: scaleX(1);
+					}
 					.container {
 						width: 90%;
 
@@ -275,25 +271,17 @@ body {
 						}
 
 						#image { display: none; }
-
-						#back {
-							top: 0;
-							width: 110%;
-							height: 120%;
-							-webkit-transform: scaleX(1); 
-							transform: scaleX(1);
-						}
 					}
 				}
 
 				.left {
 					left: 0;
+					#back { 
+						left: 0;
+						width: 100%;
+					}
 					.container {
 						left: 0;
-						#back { 
-							left: 0;
-							width: 110%;
-						}
 					}
 				}
 			}
@@ -316,11 +304,26 @@ body {
 	body {
 		.header { 
 			height: fit-content;
-			max-height: 50px;
-			a {
-				font-size: 1em;
+			flex-direction: column;
+			padding-bottom: 5px;
+			language-toggler {
+				position: relative;
+				left: 40%;
+			}
+			#link_holder {
+				width: 100%;
+
+				.header_links {
+					width: 50%;
+					flex-direction: row;
+					a {
+						min-width: 40%;
+						font-size: 1em;
+					}
+				}
 			}
 		}
+
 		#main {
 			top: 50px;
 			h1 { top: 50px; }
@@ -338,14 +341,14 @@ body {
 					width: 100vw;
 					margin-top: 50px;
 					padding-bottom: 50px;
-
+					#back {
+						height: 100%;
+						top: -2%;
+					}
 					.container {
 						width: 90vw;
 						align-items: center;
-						#back {
-							height: 120%;
-							top: -2%;
-						}
+						
 						#image {
 							display: inline-block;
 							width: 50vw;
@@ -373,5 +376,19 @@ body {
 
 //wide screen
 @media screen and (min-width: $medium) and (max-width: $wide) {
-	
+	body {
+		#main {
+			#snippet_holder {
+				.snippet {
+					width: 90%;
+					margin-top: 10%;
+					margin-bottom: 10%;
+				}
+
+				.left {
+					left: 10%;
+				}
+			}
+		}
+	}
 }

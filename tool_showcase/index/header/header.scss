@@ -17,13 +17,37 @@ section-title {
 }
 
 sidebar-fixed {
+	background-color: black;
+	color: white;
+	button {
+		background-color: black;
+		border: 2px solid white;
+		border-radius: 5px;
+		color: white;
+		padding: 5px;
+	}
 	media-displayer {
 		width: 100%;
+	}
+	text-column {
+		h1 {
+			border-bottom: 2px solid white;
+		}
 	}
 }
 
 sticky-header {
 	border-bottom: 2px dashed white;
+
+	language-toggler {
+		button {
+			background-color: black;
+			border: 2px solid white;
+			border-radius: 5px;
+			color: white;
+			padding: 5px;
+		}
+	}
 
 	div {
 		position: relative;
@@ -98,7 +122,7 @@ title-card {
 footer {
 	simple-contact {
 		a {
-			font-size: xx-large;
+			font-size: x-large;
 		}
 	}
 }
@@ -235,7 +259,7 @@ $radius: 20px;
 
 			a {
 				position: relative;
-				right: 25%;
+				right: 20%;
 				margin: 0;
 				h1 { margin: 0; }
 			}
@@ -314,7 +338,11 @@ $radius: 20px;
 	}
 
 	#media-displayers {
-		text-column { width: 80%; }
+		text-column { 
+			width: 80%;
+			font-size: 1.1em;
+			text-align: center;
+		}
 		grid-generator {
 			align-items: center;
 		}
@@ -328,6 +356,14 @@ $radius: 20px;
 		media-displayer.vertical {
 			width: 100%;
 			border: none;
+		}
+	}
+
+	footer {
+		simple-contact {
+			a {
+				font-size: large;
+			}
 		}
 	}
 }
@@ -360,11 +396,6 @@ $radius: 20px;
 
 	footer {
 		height: 20vh;
-		simple-contact {
-			a {
-				font-size: x-large;
-			}
-		}
 	}
 
 	#media-displayers {

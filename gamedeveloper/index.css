@@ -6,7 +6,9 @@ body {
 }
 body #header {
   width: 100vw;
-  height: 6vh;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 6vh;
   background-color: black;
   margin: 0;
   position: fixed;
@@ -213,7 +215,9 @@ body #main #footer {
 @media screen and (max-width: 500px) {
   body #header {
     width: 100vw;
-    height: 6vh;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 6vh;
     background-color: black;
     margin: 0;
     position: fixed;
@@ -224,7 +228,8 @@ body #main #footer {
     top: 0;
     margin-bottom: 10px;
     width: 100vw;
-    height: 6vh;
+    height: fit-content;
+    min-height: 6vh;
     background-color: black;
     margin: 0;
     position: fixed;
@@ -360,7 +365,9 @@ body #main #footer {
 @media screen and (min-width: 500px) and (max-width: 1030px) {
   body #header {
     width: 100vw;
-    height: 6vh;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 6vh;
     background-color: black;
     margin: 0;
     position: fixed;
@@ -371,7 +378,8 @@ body #main #footer {
     top: 0;
     margin-bottom: 10px;
     width: 100vw;
-    height: 6vh;
+    height: fit-content;
+    min-height: 6vh;
     background-color: black;
     margin: 0;
     position: fixed;
@@ -505,7 +513,9 @@ body #main #footer {
   }
   body #header {
     width: 100vw;
-    height: 6vh;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 6vh;
     background-color: black;
     margin: 0;
     position: fixed;
@@ -516,7 +526,8 @@ body #main #footer {
     top: 0;
     margin-bottom: 10px;
     width: 100vw;
-    height: 6vh;
+    height: fit-content;
+    min-height: 6vh;
     background-color: black;
     margin: 0;
     position: fixed;
@@ -634,7 +645,9 @@ body #main #footer {
 @media screen and (min-width: 1030px) and (max-width: 1500px) {
   body #header {
     width: 100vw;
-    height: 6vh;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 6vh;
     background-color: black;
     margin: 0;
     position: fixed;
@@ -645,7 +658,8 @@ body #main #footer {
     top: 0;
     margin-bottom: 10px;
     width: 100vw;
-    height: 6vh;
+    height: fit-content;
+    min-height: 6vh;
     background-color: black;
     margin: 0;
     position: fixed;
@@ -779,7 +793,9 @@ body #main #footer {
   }
   body #header {
     width: 100vw;
-    height: 6vh;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 6vh;
     background-color: black;
     margin: 0;
     position: fixed;
@@ -790,7 +806,8 @@ body #main #footer {
     top: 0;
     margin-bottom: 10px;
     width: 100vw;
-    height: 6vh;
+    height: fit-content;
+    min-height: 6vh;
     background-color: black;
     margin: 0;
     position: fixed;

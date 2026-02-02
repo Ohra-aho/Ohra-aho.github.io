@@ -74,10 +74,10 @@ body #main {
   margin: 0;
 }
 body #main h1 {
-  font-size: 9em;
+  font-size: 9vh;
   color: white;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   text-align: center;
   margin: 0;
   z-index: 1;
@@ -123,27 +123,24 @@ body #main #snippet_holder .narrow_image {
   display: none;
 }
 body #main #snippet_holder .snippet {
-  width: 100%;
+  width: 40%;
   height: -moz-fit-content;
   height: fit-content;
-  margin-top: 20px;
-  margin-bottom: 20px;
   position: relative;
 }
+body #main #snippet_holder .snippet #back {
+  position: absolute;
+  z-index: -1;
+  width: 110%;
+  height: 120%;
+  top: -10%;
+}
 body #main #snippet_holder .snippet .container {
-  width: 48%;
+  width: 100%;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
   position: relative;
-}
-body #main #snippet_holder .snippet .container #back {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 110%;
-  bottom: 0;
-  left: 0;
 }
 body #main #snippet_holder .snippet .container .info {
   width: 60%;
@@ -179,17 +176,11 @@ body #main #snippet_holder .snippet .container #image {
 }
 body #main #snippet_holder .left {
   position: relative;
-  left: 50%;
-  right: 0;
+  left: 60%;
 }
-body #main #snippet_holder .left .container {
-  left: 6%;
-}
-body #main #snippet_holder .left .container #back {
+body #main #snippet_holder .left #back {
   transform: scaleX(-1);
   margin-left: 0;
-  width: 100%;
-  height: 110%;
   left: -10%;
 }
 body #main #footer {
@@ -222,7 +213,7 @@ body #main #footer a:hover {
 @keyframes move_title {
   to {
     top: 0;
-    font-size: 3em;
+    font-size: 6vh;
   }
 }
 @keyframes grow_header {
@@ -256,7 +247,7 @@ body #main #footer a:hover {
     height: fit-content;
   }
   body .header #link_holder {
-    justify-content: space-around;
+    width: 70%;
   }
   body .header #link_holder .header_links {
     width: 100%;
@@ -301,8 +292,8 @@ body #main #footer a:hover {
   }
   body #main #intro p {
     width: 90vw;
-    line-height: 1.2em;
-    font-size: 1.2em;
+    line-height: 1em;
+    font-size: 1em;
   }
   body #main #snippet_holder {
     width: 100%;
@@ -314,10 +305,6 @@ body #main #footer a:hover {
   }
   body #main #snippet_holder .narrow_image #back {
     display: none;
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 30vh;
   }
   body #main #snippet_holder .narrow_image #image {
     height: 35vh;
@@ -327,6 +314,12 @@ body #main #footer a:hover {
     width: 100%;
     margin-top: 5vh;
     margin-bottom: 10vh;
+  }
+  body #main #snippet_holder .snippet #back {
+    top: 0;
+    width: 100%;
+    height: 120%;
+    transform: scaleX(1);
   }
   body #main #snippet_holder .snippet .container {
     width: 90%;
@@ -346,21 +339,15 @@ body #main #footer a:hover {
   body #main #snippet_holder .snippet .container #image {
     display: none;
   }
-  body #main #snippet_holder .snippet .container #back {
-    top: 0;
-    width: 110%;
-    height: 120%;
-    transform: scaleX(1);
-  }
   body #main #snippet_holder .left {
     left: 0;
   }
+  body #main #snippet_holder .left #back {
+    left: 0;
+    width: 100%;
+  }
   body #main #snippet_holder .left .container {
     left: 0;
-  }
-  body #main #snippet_holder .left .container #back {
-    left: 0;
-    width: 110%;
   }
   body #main #footer {
     width: 100vw;
@@ -428,7 +415,7 @@ body #main #footer a:hover {
     height: fit-content;
   }
   body .header #link_holder {
-    justify-content: space-around;
+    width: 70%;
   }
   body .header #link_holder .header_links {
     width: 100%;
@@ -473,8 +460,8 @@ body #main #footer a:hover {
   }
   body #main #intro p {
     width: 90vw;
-    line-height: 1.2em;
-    font-size: 1.2em;
+    line-height: 1em;
+    font-size: 1em;
   }
   body #main #snippet_holder {
     width: 100%;
@@ -486,10 +473,6 @@ body #main #footer a:hover {
   }
   body #main #snippet_holder .narrow_image #back {
     display: none;
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 30vh;
   }
   body #main #snippet_holder .narrow_image #image {
     height: 35vh;
@@ -499,6 +482,12 @@ body #main #footer a:hover {
     width: 100%;
     margin-top: 5vh;
     margin-bottom: 10vh;
+  }
+  body #main #snippet_holder .snippet #back {
+    top: 0;
+    width: 100%;
+    height: 120%;
+    transform: scaleX(1);
   }
   body #main #snippet_holder .snippet .container {
     width: 90%;
@@ -518,21 +507,15 @@ body #main #footer a:hover {
   body #main #snippet_holder .snippet .container #image {
     display: none;
   }
-  body #main #snippet_holder .snippet .container #back {
-    top: 0;
-    width: 110%;
-    height: 120%;
-    transform: scaleX(1);
-  }
   body #main #snippet_holder .left {
     left: 0;
   }
+  body #main #snippet_holder .left #back {
+    left: 0;
+    width: 100%;
+  }
   body #main #snippet_holder .left .container {
     left: 0;
-  }
-  body #main #snippet_holder .left .container #back {
-    left: 0;
-    width: 110%;
   }
   body #main #footer {
     width: 100vw;
@@ -576,9 +559,22 @@ body #main #footer a:hover {
   body .header {
     height: -moz-fit-content;
     height: fit-content;
-    max-height: 50px;
+    flex-direction: column;
+    padding-bottom: 5px;
   }
-  body .header a {
+  body .header language-toggler {
+    position: relative;
+    left: 40%;
+  }
+  body .header #link_holder {
+    width: 100%;
+  }
+  body .header #link_holder .header_links {
+    width: 50%;
+    flex-direction: row;
+  }
+  body .header #link_holder .header_links a {
+    min-width: 40%;
     font-size: 1em;
   }
   body #main {
@@ -607,8 +603,8 @@ body #main #footer a:hover {
   }
   body #main #intro p {
     width: 90vw;
-    line-height: 1.2em;
-    font-size: 1.2em;
+    line-height: 1em;
+    font-size: 1em;
   }
   body #main #snippet_holder {
     margin-top: 100px;
@@ -621,13 +617,13 @@ body #main #footer a:hover {
     margin-top: 50px;
     padding-bottom: 50px;
   }
+  body #main #snippet_holder .snippet #back {
+    height: 100%;
+    top: -2%;
+  }
   body #main #snippet_holder .snippet .container {
     width: 90vw;
     align-items: center;
-  }
-  body #main #snippet_holder .snippet .container #back {
-    height: 120%;
-    top: -2%;
   }
   body #main #snippet_holder .snippet .container #image {
     display: inline-block;
@@ -684,5 +680,15 @@ body #main #footer a:hover {
     height: fit-content;
     line-height: 1em;
     margin-top: 10px;
+  }
+}
+@media screen and (min-width: 1030px) and (max-width: 1500px) {
+  body #main #snippet_holder .snippet {
+    width: 90%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  body #main #snippet_holder .left {
+    left: 10%;
   }
 }/*# sourceMappingURL=index.css.map */

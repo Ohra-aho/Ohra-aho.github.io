@@ -1,5 +1,6 @@
 sidebar-fixed {
-  display: block;
+  display: flex;
+  justify-content: end;
   width: 20vw;
   height: 100vh;
   position: fixed;
@@ -23,7 +24,8 @@ sidebar-fixed button p {
 sidebar-fixed content {
   display: block;
   height: 100%;
-  width: 100%;
+  width: 85%;
+  margin: 10px;
   overflow-y: scroll;
 }
 
