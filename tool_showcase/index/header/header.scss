@@ -39,32 +39,11 @@ sidebar-fixed {
 sticky-header {
 	border-bottom: 2px dashed white;
 
-	language-toggler {
-		button {
-			background-color: black;
-			border: 2px solid white;
-			border-radius: 5px;
-			color: white;
-			padding: 5px;
-		}
-	}
-
 	div {
 		position: relative;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-
-		link-list {
-			margin-right: 20px;
-			a {
-				border-left: 2px solid white;
-				border-right: 2px solid white;
-				border-radius: 5px;
-				padding: 0 5px 0 5px;
-				font-size: large;
-			}
-		}
 
 		#title {
 			pointer-events: none;
@@ -72,6 +51,39 @@ sticky-header {
 			width: 100vw;
 			text-align: center;
 		}
+
+		ham-list {
+			min-width: 30%;
+			language-toggler {
+				margin-right: 10px;
+				button {
+					background-color: black;
+					border: 2px solid white;
+					border-radius: 5px;
+					color: white;
+					padding: 5px;
+				}
+			}
+
+			link-list {
+				margin-right: 20px;
+				a {
+					border-left: 2px solid white;
+					border-right: 2px solid white;
+					border-radius: 5px;
+					padding: 0 5px 0 5px;
+					font-size: large;
+				}
+			}
+
+			ham-menu {
+				link-list {
+					display: block;
+					width: 70%;
+				}
+			}
+		}
+
 
 		a {
 			margin-left: 10px;
@@ -255,13 +267,9 @@ $radius: 20px;
 		div {
 			justify-content: center;
 			#title { display: none; }
-			link-list { display: none; }
 
 			a {
-				position: relative;
-				right: 20%;
-				margin: 0;
-				h1 { margin: 0; }
+				white-space: nowrap;
 			}
 		}
 	}

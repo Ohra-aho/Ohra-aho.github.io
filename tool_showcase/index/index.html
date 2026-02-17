@@ -10,7 +10,9 @@
 	<link rel="stylesheet" href="../tools/main/container/main_container.css">
 	<link rel="stylesheet" href="../tools/main/footer/footer.css">
 	<link rel="stylesheet" href="../tools/main/header/header.css">
+	<link rel="stylesheet" href="../tools/main/header/ham-list/ham_list.css">
 	<link rel="stylesheet" href="../tools/main/container/section.css">
+	<link rel="stylesheet" href="../tools/main/text-editor/text_editor.css">
 
 	<link rel="stylesheet" href="../tools/adjusting/row_column.css">
 
@@ -30,6 +32,8 @@
 	<script defer src="../tools/main/container/main_container.js"></script>
 	<script defer src="../tools/main/footer/footer.js"></script>
 	<script defer src="../tools/main/header/header.js"></script>
+	<script defer src="../tools/main/header/ham-list/ham_list.js"></script>
+	<script defer src="../tools/main/text-editor/text_editor.js"></script>
 
 	<script defer src="../tools/popups/sidebar.js"></script>
 	
@@ -58,41 +62,44 @@
 	
 	<sticky-header>
 		<div style="width: 100%; height: 7vh">
-			<a href="../../webdeveloper/index.html">
+			<a href="../../webdeveloper/">
 				<h1>&#8592 Takaisin</h1>
 				<language-changer>
 					<language name="englanti">&#8592 Back</language>
 				</language-changer>
 			</a>
-			<language-toggler></language-toggler>
 
 			<h1 id="title">Työkaluesittely</h1>
 			<language-changer>
 				<language name="englanti">Tool showcase</language>
 			</language-changer>
 
-			<link-list>
-				<a href="#title-card">Päägalleria</a>
-				<language-changer>
-					<language name="englanti">Opening gallery</language>
-				</language-changer>
-				<a href="#text-column">Tekstipalsta</a>
-				<language-changer>
-					<language name="englanti">Text column</language>
-				</language-changer>
-				<a href="#cards">Kortit</a>
-				<language-changer>
-					<language name="englanti">Cards</language>
-				</language-changer>
-				<a href="#media-displayers">Kuvagalleria</a>
-				<language-changer>
-					<language name="englanti">Image gallery</language>
-				</language-changer>
-				<a href="#contact">Ota yhteyttä</a>
-				<language-changer>
-					<language name="englanti">Contact</language>
-				</language-changer>
-			</link-list>
+			<ham-list>
+				<language-toggler></language-toggler>
+				<link-list>
+					<a href="#title-card">Päägalleria</a>
+					<language-changer>
+						<language name="englanti">Opening gallery</language>
+					</language-changer>
+					<a href="#text-column">Tekstipalsta</a>
+					<language-changer>
+						<language name="englanti">Text column</language>
+					</language-changer>
+					<a href="#cards">Kortit</a>
+					<language-changer>
+						<language name="englanti">Cards</language>
+					</language-changer>
+					<a href="#media-displayers">Kuvagalleria</a>
+					<language-changer>
+						<language name="englanti">Image gallery</language>
+					</language-changer>
+					<a href="#contact">Ota yhteyttä</a>
+					<language-changer>
+						<language name="englanti">Contact</language>
+					</language-changer>
+				</link-list>
+			</ham-list>
+			
 		</div>
 	</sticky-header>
 
@@ -117,8 +124,6 @@
 		<section id="title-card">
 			<title-card>
 				
-				
-
 				<div class="card">
 					<h1>Päägalleria</h1>
 					
@@ -126,8 +131,6 @@
 					
 					<img src="../tools/media/images/title_screen/placeholder_title_background.png" alt="title_screen">
 				</div>
-
-
 
 				<div class="card">
 					<h1>Iskulauseita</h1>

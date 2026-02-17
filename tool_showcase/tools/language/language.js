@@ -23,7 +23,7 @@ class Language extends HTMLElement {
 		if(this.target_element.getAttribute("custom") != "Y") {
 			for(let i = 0; i < this.text.length; i++) {
 				if(this.current_language == this.text[i].name) {
-					this.target_element.innerText = this.text[i].text;
+					this.target_element.innerHTML = this.text[i].text;
 					break;
 				}
 			}

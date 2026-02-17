@@ -21,7 +21,6 @@ body #header {
   top: 0;
   left: 0;
   text-align: center;
-  text-align: center;
 }
 body #header a {
   text-decoration: none;
@@ -35,6 +34,9 @@ body #header h1 {
   line-height: 100%;
   display: inline;
   width: 80vw;
+}
+body #header {
+  text-align: center;
 }
 body #main {
   position: relative;

@@ -36,34 +36,44 @@ sidebar-fixed text-column h1 {
 sticky-header {
   border-bottom: 2px dashed white;
 }
-sticky-header language-toggler button {
-  background-color: black;
-  border: 2px solid white;
-  border-radius: 5px;
-  color: white;
-  padding: 5px;
-}
 sticky-header div {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-sticky-header div link-list {
+sticky-header div #title {
+  pointer-events: none;
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+}
+sticky-header div ham-list {
+  min-width: 30%;
+}
+sticky-header div ham-list language-toggler {
+  margin-right: 10px;
+}
+sticky-header div ham-list language-toggler button {
+  background-color: black;
+  border: 2px solid white;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+}
+sticky-header div ham-list link-list {
   margin-right: 20px;
 }
-sticky-header div link-list a {
+sticky-header div ham-list link-list a {
   border-left: 2px solid white;
   border-right: 2px solid white;
   border-radius: 5px;
   padding: 0 5px 0 5px;
   font-size: large;
 }
-sticky-header div #title {
-  pointer-events: none;
-  position: absolute;
-  width: 100vw;
-  text-align: center;
+sticky-header div ham-list ham-menu link-list {
+  display: block;
+  width: 70%;
 }
 sticky-header div a {
   margin-left: 10px;
@@ -224,16 +234,8 @@ footer simple-contact a {
   sticky-header div #title {
     display: none;
   }
-  sticky-header div link-list {
-    display: none;
-  }
   sticky-header div a {
-    position: relative;
-    right: 20%;
-    margin: 0;
-  }
-  sticky-header div a h1 {
-    margin: 0;
+    white-space: nowrap;
   }
   title-card .card h1 {
     width: 70%;
@@ -313,16 +315,8 @@ footer simple-contact a {
   sticky-header div #title {
     display: none;
   }
-  sticky-header div link-list {
-    display: none;
-  }
   sticky-header div a {
-    position: relative;
-    right: 20%;
-    margin: 0;
-  }
-  sticky-header div a h1 {
-    margin: 0;
+    white-space: nowrap;
   }
   title-card .card h1 {
     width: 70%;

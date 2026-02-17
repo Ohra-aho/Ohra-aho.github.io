@@ -592,7 +592,6 @@ body #main #footer a:hover {
     display: flex;
     justify-content: center;
     margin-top: 5vh;
-    margin-top: 50px;
   }
   body #main #intro p {
     width: 50vw;
@@ -606,11 +605,14 @@ body #main #footer a:hover {
     line-height: 1em;
     font-size: 1em;
   }
-  body #main #snippet_holder {
-    margin-top: 100px;
+  body #main #intro {
+    margin-top: 50px;
   }
   body #main #snippet_holder .narrow_image {
     display: none;
+  }
+  body #main #snippet_holder {
+    margin-top: 100px;
   }
   body #main #snippet_holder .snippet {
     width: 100vw;

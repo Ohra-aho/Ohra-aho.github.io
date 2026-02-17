@@ -242,7 +242,6 @@ body #main #footer {
     top: 0;
     left: 0;
     text-align: center;
-    max-height: 50px;
   }
   body #header a {
     text-decoration: none;
@@ -267,6 +266,9 @@ body #main #footer {
   body #header h1 {
     width: 65vw;
     font-size: 1.5em;
+  }
+  body #header {
+    max-height: 50px;
   }
   body #main {
     top: 10vh;
@@ -392,7 +394,6 @@ body #main #footer {
     top: 0;
     left: 0;
     text-align: center;
-    max-height: 50px;
   }
   body #header a {
     text-decoration: none;
@@ -417,6 +418,9 @@ body #main #footer {
   body #header h1 {
     width: 65vw;
     font-size: 1.5em;
+  }
+  body #header {
+    max-height: 50px;
   }
   body #main {
     top: 10vh;
@@ -540,7 +544,6 @@ body #main #footer {
     top: 0;
     left: 0;
     text-align: center;
-    height: 11vh;
   }
   body #header a {
     text-decoration: none;
@@ -565,6 +568,9 @@ body #main #footer {
   body #header h1 {
     width: 65vw;
     font-size: 1.5em;
+  }
+  body #header {
+    height: 11vh;
   }
   body #main #intro {
     height: -moz-fit-content;
@@ -672,7 +678,6 @@ body #main #footer {
     top: 0;
     left: 0;
     text-align: center;
-    max-height: 50px;
   }
   body #header a {
     text-decoration: none;
@@ -697,6 +702,9 @@ body #main #footer {
   body #header h1 {
     width: 65vw;
     font-size: 1.5em;
+  }
+  body #header {
+    max-height: 50px;
   }
   body #main {
     top: 10vh;
@@ -820,7 +828,6 @@ body #main #footer {
     top: 0;
     left: 0;
     text-align: center;
-    height: 11vh;
   }
   body #header a {
     text-decoration: none;
@@ -845,6 +852,9 @@ body #main #footer {
   body #header h1 {
     width: 65vw;
     font-size: 1.5em;
+  }
+  body #header {
+    height: 11vh;
   }
   body #main #intro {
     height: -moz-fit-content;
