@@ -8,6 +8,7 @@ footer {
   color: white;
 }
 footer copyright {
+  display: block;
   position: absolute;
   bottom: 0;
   height: -moz-fit-content;

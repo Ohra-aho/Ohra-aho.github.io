@@ -1,9 +1,17 @@
 language-toggler {
   display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 language-toggler button {
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+language-changer {
+  display: none;
 }/*# sourceMappingURL=language_toggler.css.map */

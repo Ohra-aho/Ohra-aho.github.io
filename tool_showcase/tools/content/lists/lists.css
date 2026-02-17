@@ -1,0 +1,13 @@
+item-list {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+item-list ul {
+  padding-left: 16px;
+}
+item-list ol {
+  padding-left: 16px;
+}/*# sourceMappingURL=lists.css.map */

@@ -1,56 +1,68 @@
 const link_list_template = document.createElement("template");
 link_list_template.innerHTML = 
 `
-<button>
-	<ham-icon></ham-icon>
-</button>
-`
-
-const ham_list_temp = document.createElement("template");
-ham_list_temp.innerHTML = 
-`
-<ham-list>
-	<div>
-		<button>&#x2715;</button>
-	</div>
-</ham-list>
+<div id="main-link">
+	<button>
+		&#8595;
+	</button>
+</div>
+<div id="sub-links">
+</div>
 `
 
 class LinkList extends HTMLElement { 
 	links = [];
-
 	constructor() {
 		super();
 	}
 
 	connectedCallback() { 
-		
-		for(let i = 0; i < this.children.length; i++) {
-			this.links.push(this.children[i]);
+		let list = link_list_template.content.cloneNode(true);
+
+		if(this.getAttribute("label")) {
+			this.GenerateIds(this.getAttribute("label"));
 		}
-		const template = link_list_template.content.cloneNode(true);
-		for(let i = 0; i < this.links.length; i++) {
-			template.appendChild(this.links[i]);
+
+		//Count for single links
+		if(this.children.length == 1) {
+			this.classList.add("single")
 		}
-		this.appendChild(template.cloneNode(true));
-		this.querySelector("button").onclick = this.OpenList;
+
+		list.children[0].insertBefore(this.children[0], list.children[0].children[0])
+
+		if(this.children[0] != undefined) {
+			if(this.children[0].nodeName == "LANGUAGE-CHANGER") {
+				list.children[0].insertBefore(this.children[0], list.children[0].children[1])
+				if(this.children.length == 0) {
+					this.classList.add("single")
+				}
+			}
+		}
+		const child_count = this.children.length;
+		for(let i = 0; i < child_count; i++) {
+			this.links.push(this.children[0]);
+			list.children[1].appendChild(this.children[0]);
+		}
+		list.querySelector("button").addEventListener("click", () => {
+			 this.OpenList()
+		});
+		this.appendChild(list);
+
 	}
 
 	OpenList() {
-		this.parentElement.classList.toggle("open");
-
-		if(this.parentElement.classList.contains("open")) {
-			const temp = ham_list_temp.content.cloneNode(true);
-			temp.children[0].addEventListener("click", function () {
-				this.parentElement.classList.toggle("open");
-				this.parentElement.querySelector("ham-list").remove();
-			});
-			this.parentElement.appendChild(temp);
-			for(let i = 0; i < this.parentElement.links.length; i++) {
-				this.parentElement.querySelector("ham-list").appendChild(this.parentElement.links[i].cloneNode(true));
-			}
+		this.children[1].classList.toggle("open");
+		if(Array.from(this.children[1].classList).includes("open")) {
+			this.querySelector("button").innerHTML = "&#8593";
 		} else {
-			this.parentElement.querySelector("ham-list").remove();
+			this.querySelector("button").innerHTML = "&#8595";
+		}
+	}
+
+	GenerateIds(label) {
+		const links = this.querySelectorAll("a")
+		for(let i = 1; i < links.length; i++) {
+			links[i].href += "#"+label+"_"+i;
 		}
 	}
 }

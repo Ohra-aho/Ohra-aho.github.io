@@ -1,0 +1,82 @@
+@use "../../../utils.scss" as *;
+
+ham-list {
+	display: flex;
+	position: relative;
+	width: fit-content;
+	height: 100%;
+
+	#ham-button {
+		display: none;
+	}
+
+	ham-list-content {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: fit-content;
+		height: 100%;
+	}
+
+	ham-menu {
+		display: block;
+		position: fixed;
+		top: 0;
+		background-color: black;
+		width: 100vw;
+		height: 100vh;
+		z-index: 1;
+		
+		div {
+			width: 100%;
+			height: fit-content;
+			display: flex;
+			align-items: center;
+			justify-content: end;
+			#close {
+				color: white;
+				font-weight: bold;
+				font-size: large;
+				margin: 10px;				
+			}
+		}
+	}
+}
+
+/*link-list.open {
+	ham-list {
+	}
+}*/
+
+@mixin narrow_screen() {
+	ham-list {
+		justify-content: end;
+		width: 100%;
+
+		ham-list-content {
+			display: none;
+		}
+
+		#ham-button {
+			display: block;
+			background-color: transparent;
+			border: none;
+			margin-right: 10px;
+		}
+	}
+}
+
+//narrow screen
+@media screen and (max-width: $narrow) {
+	@include narrow_screen();
+}
+
+//medium screen
+@media screen and (min-width: $narrow) and (max-width: $medium) {
+	@include narrow_screen();
+}
+
+//wide screen
+@media screen and (min-width: $medium) and (max-width: $wide) {
+
+}

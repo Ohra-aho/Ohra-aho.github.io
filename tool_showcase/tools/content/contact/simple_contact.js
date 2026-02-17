@@ -48,16 +48,15 @@ class SimpleContact extends HTMLElement {
 		this.children[0].setAttribute("href", `${original_href}?subject=${complete_string}`)
 	}
 
-	ChangeLanguage(title, content) {
-		this.children[0].innerHTML = content;
-		this.SetSubject(title);
+	ChangeLanguage(LC) {
+		this.children[0].innerHTML = LC.text;
+		this.SetSubject(LC.attributes.get("subject"));
 	}
 
 	GiveBaseLanguage() {
-		return [
-			this.getAttribute("subject"),
-			this.children[0].innerHTML
-		]
+		let language = new LanguageOption("", this.children[0].innerHTML);
+		language.attributes.set("subject", this.getAttribute("subject"))
+		return language;
 	}
 }
 

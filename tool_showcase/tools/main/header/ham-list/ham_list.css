@@ -1,0 +1,76 @@
+ham-list {
+  display: flex;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+}
+ham-list #ham-button {
+  display: none;
+}
+ham-list ham-list-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 100%;
+}
+ham-list ham-menu {
+  display: block;
+  position: fixed;
+  top: 0;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+ham-list ham-menu div {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+ham-list ham-menu div #close {
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  margin: 10px;
+}
+
+/*link-list.open {
+	ham-list {
+	}
+}*/
+@media screen and (max-width: 500px) {
+  ham-list {
+    justify-content: end;
+    width: 100%;
+  }
+  ham-list ham-list-content {
+    display: none;
+  }
+  ham-list #ham-button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1030px) {
+  ham-list {
+    justify-content: end;
+    width: 100%;
+  }
+  ham-list ham-list-content {
+    display: none;
+  }
+  ham-list #ham-button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+  }
+}/*# sourceMappingURL=ham_list.css.map */

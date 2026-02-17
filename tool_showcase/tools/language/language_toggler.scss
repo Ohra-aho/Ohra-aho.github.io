@@ -1,8 +1,13 @@
 language-toggler {
 	display: block;
+	width: fit-content;
+	height: fit-content;
 	button {
 		width: fit-content;
 		height: fit-content;
-		
 	}
+}
+
+language-changer {
+	display: none;
 }

@@ -1,0 +1,59 @@
+event-summary {
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin-top: 10px;
+}
+event-summary row {
+  gap: 10px;
+}
+event-summary row h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+event-summary event-content {
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 70%;
+  width: 100%;
+  overflow-y: scroll;
+}
+event-summary event-content::-webkit-scrollbar {
+  display: none;
+}
+event-summary full-event {
+  display: none;
+}
+
+full-event-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+full-event-content img {
+  width: 60%;
+  height: auto;
+  margin-bottom: 5px;
+}
+full-event-content row {
+  width: 10%;
+  justify-content: space-between;
+  background-color: turquoise;
+  padding: 0 5% 0 5%;
+  margin-bottom: 10px;
+}
+full-event-content text-column {
+  width: 40%;
+}
+full-event-content text-column h1 {
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+full-event-content text-column p {
+  text-align: justify;
+}/*# sourceMappingURL=event.css.map */

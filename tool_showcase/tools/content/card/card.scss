@@ -14,29 +14,43 @@ card-img {
 	height: 100%;
 	width: 100%;
 
-	img {
+
+	img-frame {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		height: 50%;
-		width: auto;
+		width: 90%;
 		margin: 5px;
+		overflow: hidden;
+		img {
+			height: 100%;
+			width: auto;
+		}
 	}
+	
 
 	content {
 		width: 90%;
 		height: 45%;
-		background-color: white;
 		border-radius: 5px;
-		padding: 5px;
-
+		padding: 1%;
 		h3 {
 			border-bottom: 2px solid gray;
 			margin-bottom: 0;
+			margin-top: 0;
 		}
+	}
+}
 
+.normal-card {
+	content {
+		overflow-y: scroll;
 		p {
-			height: 75%;
-			overflow-y: scroll;
+			height: fit-content;
 			margin-top: 10px;
 		}
+
 		p::-webkit-scrollbar {
 			display: none;
 		}
@@ -44,23 +58,34 @@ card-img {
 }
 
 card-img.text {
+	img-frame {
+		display: none;
+	}
 	content {
-		height: 100%;
+		height: 95%;
 		width: 95%;
+		p {
+			height: 85%;
+		}
 	}
 }
 
 card-img.horizontal {
 	flex-direction: row;
-
-	img {
-		height: auto;
+	
+	img-frame {
+		height: 90%;
 		width: 50%;
+		img {
+			height: auto;
+			width: 100%;
+		}
 	}
 
 	content {
 		width: 45%;
 		height: 90%;
+		padding: 1%;
 	}
 }
 
@@ -70,12 +95,14 @@ card-img.horizontal {
 @media screen and (max-width: $narrow) {
 	card-img.horizontal {
 		flex-direction: column;
-
-		img {
+		img-frame {
 			height: 50%;
-			width: auto;
+			width: 90%;
+			img {
+				height: 100%;
+				width: auto;
+			}
 		}
-
 		content {
 			width: 90%;
 			height: 45%;

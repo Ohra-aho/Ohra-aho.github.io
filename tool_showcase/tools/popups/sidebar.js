@@ -41,15 +41,14 @@ class SideBar extends HTMLElement {
 		this.classList.toggle("open");
 	}
 
-	ChangeLanguage(title, content) {
-		this.querySelector("button").innerHTML = this.MakeButtonName(title);
+	ChangeLanguage(LC) {
+		this.querySelector("button").innerHTML = this.MakeButtonName(LC.attributes.get("title"));
 	}
 
 	GiveBaseLanguage() {
-		return [
-			this.getAttribute("title") ?? "",
-			""
-		]
+		let language = new LanguageOption("", "");
+		language.attributes.set("title", this.getAttribute("title") ?? "")
+		return language;
 	}
 }
 

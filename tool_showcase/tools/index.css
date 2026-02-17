@@ -1,0 +1,138 @@
+body background img {
+  display: none;
+}
+
+text-column {
+  background-color: antiquewhite;
+  width: 50vw;
+}
+
+mirror-editor {
+  display: block;
+  background-color: black;
+  color: rgb(73, 73, 255);
+  width: 40vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-left: 5vw;
+}
+mirror-editor input {
+  background-color: rgb(44, 44, 44);
+  border: none;
+  width: 50px;
+  color: rgb(73, 73, 255);
+}
+mirror-editor input::-moz-placeholder {
+  color: white;
+}
+mirror-editor input::placeholder {
+  color: white;
+}
+mirror-editor textarea {
+  background-color: rgb(44, 44, 44);
+  border: none;
+  min-width: 200px;
+  min-height: 200px;
+  color: white;
+  border-radius: 0;
+}
+mirror-editor textarea::-webkit-scrollbar {
+  display: none;
+}
+
+card-img {
+  height: 500px;
+  width: 300px;
+  margin: 10px;
+}
+
+card-img.horizontal {
+  height: 300px;
+  width: 500px;
+}
+
+#text-card {
+  width: 150px;
+  height: 250px;
+}
+
+#text {
+  width: 50vw;
+  height: 60vh;
+  background-color: gray;
+}
+
+#grid {
+  width: 100%;
+  height: 100%;
+}
+#grid grid-generator {
+  justify-content: center;
+  gap: 5px;
+  padding: 5px;
+}
+#grid grid-generator media-displayer {
+  width: 500px;
+  height: 300px;
+}
+
+title-card div {
+  position: relative;
+  flex: 0 0 100%;
+}
+title-card div img {
+  width: 100%;
+  height: auto;
+}
+title-card div h1 {
+  width: 40%;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 30%;
+  top: 40%;
+  text-align: center;
+  color: white;
+}
+
+#list {
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+}
+#list .sub {
+  margin: 5px;
+  border: 1px solid white;
+}
+
+@media screen and (max-width: 500px) {
+  card-img.horizontal {
+    height: 500px;
+    width: 300px;
+  }
+  #text {
+    width: 80vw;
+  }
+  #grid {
+    width: 100%;
+    height: 100%;
+  }
+  #grid grid-generator {
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+  }
+  #grid grid-generator media-displayer {
+    width: 80vw;
+    height: 30vh;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 1030px) {
+  #text {
+    width: 80vw;
+    height: 90vh;
+  }
+}/*# sourceMappingURL=index.css.map */
