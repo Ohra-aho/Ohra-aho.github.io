@@ -23,6 +23,7 @@
 	<link rel="stylesheet" href="./tools/content/link_list/link_list.css">
 	<link rel="stylesheet" href="./tools/content/title_card/title_card.css">
 	<link rel="stylesheet" href="./tools/content/contact/contact.css">
+	<link rel="stylesheet" href="./tools/content/lists/lists.css">
 
 	<link rel="stylesheet" href="./tools/popups/popups.css">
 
@@ -30,7 +31,8 @@
 	<link rel="stylesheet" href="./tools/language/language_toggler.css">
 
 		
-	
+	<script defer src="./tools/base.js"></script>
+
 	<script defer src="./tools/adjusting/grid.js"></script>
 	<script defer src="./tools/adjusting/full_screen/full_screen.js"></script>
 
@@ -50,6 +52,7 @@
 	<script defer src="./tools/content/title_card/title_card.js"></script>
 	<script defer src="./tools/content/contact/contact.js"></script>
 	<script defer src="./tools/content/contact/simple_contact.js"></script>
+	<script defer src="./tools/content/lists/list.js"></script>
 
 	<script defer src="./tools/icons/icons.js"></script>
 	<script defer src="./tools/language/language.js"></script>
@@ -306,23 +309,22 @@
 						- Eipä oikeastaan mitään
 
 						<full-screen>
-							<card-img title="Jotain" image="./tools/media/images/header/placeholder_logo.png" class="left">
-								Jotain tosi jännää täällä
-								$
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-								Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-								Saepe, consectetur vitae?
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+							<card-img title="Jotain" image="./tools/media/images/header/placeholder_logo.png" class="left" custom-card="#">
+								<!--Tämä ei saa manual attribuuttia-->
+								<item-list>
+									- kkkkkk
+									- llllll
+									- hhhhhhh
+								</item-list>
+								<item-list type="number">
+									- kkkkkk
+									- llllll
+									- hhhhhhh
+								</item-list>
+								
 							</card-img>
 							<language-changer>
-								<language name="englanti" title="Something">
-									Something exiting here.
-									$
-									Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-									Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-									Saepe, consectetur vitae?
-									Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-								</language>
+								<language name="englanti" title="Something"></language>
 							</language-changer>
 						</full-screen>
 

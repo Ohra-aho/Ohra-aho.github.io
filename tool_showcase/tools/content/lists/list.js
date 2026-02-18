@@ -1,10 +1,17 @@
 
-class ItemList extends HTMLElement { 
+class ItemList extends BaseClass { 
 	constructor() {
 		super();
+		this.Inisisate = this.Inisiate;
 	}
 
 	connectedCallback() { 
+		this.Base();
+	}
+
+	Inisiate() {
+		this.StartInit();
+
 		const type = this.getAttribute("type");
 		let list = null;
 		if(type == "number") {
@@ -13,7 +20,6 @@ class ItemList extends HTMLElement {
 			list = document.createElement("ul");
 		}
 		
-
 		const og_content = this.innerHTML;
 		this.innerHTML = "";
 		const split_content = og_content.split("-")
@@ -25,7 +31,7 @@ class ItemList extends HTMLElement {
 
 		this.appendChild(list);
 
-		this.setAttribute("custom", "Y");
+		this.EndInit();
 	}
 
 	ChangeLanguage(title, content) {

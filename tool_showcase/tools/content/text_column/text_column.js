@@ -1,21 +1,19 @@
 //Requires text editor
 
-class TextColumn extends HTMLElement { 
+class TextColumn extends BaseClass { 
 	splitter
 	original_content
 	constructor() {
 		super();
+		this.Inisiate = this.Inisiate;
 	}
 
 	connectedCallback() {
-		const manual = this.getAttribute("manual");
-		if(manual == null) this.Inisiate();
-		this.setAttribute("custom", "Y");
+		this.Base();
 	}
 
 	Inisiate() {
-		const full_screen_content = this.querySelector("full-screen");
-		if(full_screen_content != null) this.querySelector("full-screen").remove();
+		this.StartInit();
 
 		this.original_content = this.innerHTML;
 		this.innerText = "";
@@ -40,10 +38,7 @@ class TextColumn extends HTMLElement {
 		if(this.title != "") this.children[1].Inisiate();
 		else this.children[0].Inisiate();
 
-		if(full_screen_content != null) {
-			this.appendChild(full_screen_content);
-			full_screen_content.Inisiate();
-		}
+		this.EndInit();
 	}
 
 	ChangeLanguage(LC) {

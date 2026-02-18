@@ -11,21 +11,22 @@ card_template.innerHTML =
 	</content>
 `
 
-class Card extends HTMLElement { 
+class Card extends BaseClass { 
 	og_content
 	splitter
 	constructor() {
 		super();
+		this.Inisiate = this.Inisiate;
 	}
 
 	connectedCallback() { 
-		if(this.getAttribute("manual") == null) this.Inisiate();
-		this.setAttribute("custom", "Y");
+		//if(this.getAttribute("manual") == null) this.Inisiate();
+		//this.setAttribute("custom", "Y");
+		this.Base();
 	}
 
 	Inisiate() {
-		const full_screen_content = this.querySelector("full-screen");
-		if(full_screen_content != null) this.querySelector("full-screen").remove();
+		this.StartInit();
 
 		let card = card_template.content.cloneNode(true);
 
@@ -78,10 +79,7 @@ class Card extends HTMLElement {
 			this.querySelector("text-editor").Inisiate();
 		}
 
-		if(full_screen_content != null) {
-			this.appendChild(full_screen_content);
-			full_screen_content.Inisiate();
-		}
+		this.EndInit();
 	}
 
 	ChangeLanguage(LO) { //LanguageOption
