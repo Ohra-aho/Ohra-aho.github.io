@@ -49,25 +49,30 @@ class TextColumn extends HTMLElement {
 	ChangeLanguage(LC) {
 		const title = LC.attributes.get("title") ?? "";
 		const content = LC.text;
-		if(title != "") {
-			let h1 = this.children[0]
+		let h1 = this.querySelector("h1")
+		if(h1 != null) {
 			h1.innerText = title;
 		}
 	
 		//Remove the old
 		let prev_content = this.querySelector("text-editor")
-		prev_content.remove();
-		//Add the new
-		let text_editor = document.createElement("text-editor");
-		text_editor.innerText = content;
-		text_editor.splitter = this.splitter;
-		this.appendChild(text_editor);
+		if(prev_content != null) {
+			prev_content.remove();
+			//Add the new
+			let text_editor = document.createElement("text-editor");
+			text_editor.innerHTML = content;
+			text_editor.splitter = this.splitter;
+			this.appendChild(text_editor);
 
-		this.querySelector("text-editor").Inisiate();
+			this.querySelector("text-editor").Inisiate();
+		} else {
+			this.innerHTML = LC.text;
+			this.setAttribute("title", LC.attributes.get("title"));
+		}
 	}
 
 	GiveBaseLanguage() {
-		let language = new LanguageOption("", this.original_content);
+		let language = new LanguageOption("", this.original_content ?? this.innerHTML);
 		language.attributes.set("title", this.getAttribute("title") ?? "")
 		return language;
 	}

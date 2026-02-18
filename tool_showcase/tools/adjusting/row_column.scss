@@ -22,10 +22,6 @@ column {
 	justify-content: center;
 }
 
-grid {
-	//@include grid_creator($cell_y: fit-content);
-}
-
 grid-generator {
 	width: 100%;
 	height: 100%;

@@ -1,3 +1,4 @@
+@import url("../../tools/colors.css");
 section {
   background-color: transparent;
 }
@@ -9,8 +10,8 @@ section-title {
   height: fit-content;
   font-size: 2em;
   text-align: center;
-  color: white;
-  border-bottom: 2px dashed white;
+  color: var(--secondary-color);
+  border-bottom: 2px dashed var(--secondary-color);
   margin-bottom: 20px;
   padding-bottom: 2px;
 }
@@ -119,44 +120,16 @@ footer simple-contact a {
   font-size: x-large;
 }
 
-#text-column row {
-  width: 100%;
-}
-#text-column row text-column {
-  background-color: white;
+#text-column custom_center text-column {
+  background-color: var(--secondary-color);
   margin: 5px;
   width: 30%;
   max-height: 50vh;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+  border-radius: 20px;
+  padding: 10px;
 }
-#text-column row text-column h1 {
-  border-bottom: 2px solid black;
-}
-#text-column row text-column:last-of-type {
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-}
-#text-column row column {
-  margin: 5px;
-  width: 20%;
-}
-#text-column row column text-column {
-  width: 100%;
-  max-height: 60vh;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  padding: 5px;
-}
-#text-column row column text-column:last-of-type {
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+#text-column custom_center text-column h1 {
+  border-bottom: 2px solid var(--primary-color);
 }
 
 #cards custom_center row card-img {
@@ -175,7 +148,7 @@ footer simple-contact a {
 #cards custom_center row column card-img content {
   position: relative;
   background-color: transparent;
-  background-image: linear-gradient(to left, transparent, white 10% 90%, transparent);
+  background-image: linear-gradient(to left, transparent, var(--secondary-color) 10% 90%, transparent);
   height: 70%;
   display: flex;
   flex-direction: column;
