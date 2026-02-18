@@ -17,6 +17,7 @@ class FullScreen extends HTMLElement {
 			this.parentElement.addEventListener("click", () => {
 				this.OpenFullScreen();
 			});
+			this.parentElement.style.cursor = "pointer"; 
 		}
 	}
 

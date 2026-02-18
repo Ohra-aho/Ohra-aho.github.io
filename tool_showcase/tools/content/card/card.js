@@ -86,19 +86,24 @@ class Card extends HTMLElement {
 
 	ChangeLanguage(LO) { //LanguageOption
 		if(!this.getAttribute("custom-card")) {
-			this.querySelector("text-editor").remove();
-			let text_editor = document.createElement("text-editor");
-			if(LO.text.length != 0) text_editor.innerHTML = LO.text;
-			else text_editor.innerHTML = this.og_content
-			text_editor.splitter = this.splitter;
-			this.children[1].appendChild(text_editor);
-		}
+			if(this.querySelector("text-editor") != null) {
+				this.querySelector("text-editor").remove();
+				let text_editor = document.createElement("text-editor");
+				if(LO.text.length != 0) text_editor.innerHTML = LO.text;
+				else text_editor.innerHTML = this.og_content
+				text_editor.splitter = this.splitter;
+				this.querySelector("content").appendChild(text_editor);
+			} else {
+				this.innerHTML = LO.text
+			}
+		} 
 		let title = this.querySelector("h3");
 		if(title != null) title.innerText = LO.attributes.get("title");
+		else this.setAttribute("title", LO.attributes.get("title"));
 	}
 
 	GiveBaseLanguage() {
-		let language = new LanguageOption("", this.og_content);
+		let language = new LanguageOption("", this.og_content ?? this.innerHTML);
 		language.attributes.set("title", this.getAttribute("title"))
 		return language;
 	}
