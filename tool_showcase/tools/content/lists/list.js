@@ -18,7 +18,7 @@ class ItemList extends HTMLElement {
 		this.innerHTML = "";
 		const split_content = og_content.split("-")
 		for(let i = 1; i < split_content.length; i++) {
-			let item = document.createElement("li");;
+			let item = document.createElement("li");
 			item.innerHTML= split_content[i];
 			list.appendChild(item);
 		}

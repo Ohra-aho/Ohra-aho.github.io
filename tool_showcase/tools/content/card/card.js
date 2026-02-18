@@ -19,6 +19,14 @@ class Card extends HTMLElement {
 	}
 
 	connectedCallback() { 
+		if(this.getAttribute("manual") == null) this.Inisiate();
+		this.setAttribute("custom", "Y");
+	}
+
+	Inisiate() {
+		const full_screen_content = this.querySelector("full-screen");
+		if(full_screen_content != null) this.querySelector("full-screen").remove();
+
 		let card = card_template.content.cloneNode(true);
 
 		//Get content
@@ -70,9 +78,11 @@ class Card extends HTMLElement {
 			this.querySelector("text-editor").Inisiate();
 		}
 
-		this.setAttribute("custom", "Y");
+		if(full_screen_content != null) {
+			this.appendChild(full_screen_content);
+			full_screen_content.Inisiate();
+		}
 	}
-
 
 	ChangeLanguage(LO) { //LanguageOption
 		if(!this.getAttribute("custom-card")) {
