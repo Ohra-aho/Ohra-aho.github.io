@@ -15,6 +15,7 @@
 	<link rel="stylesheet" href="../tools/main/text-editor/text_editor.css">
 
 	<link rel="stylesheet" href="../tools/adjusting/row_column.css">
+	<link rel="stylesheet" href="../tools/adjusting/full_screen/full_screen.css">
 
 	<link rel="stylesheet" href="../tools/content/text_column/text_column.css">
 	<link rel="stylesheet" href="../tools/content/card/card.css">
@@ -28,6 +29,10 @@
 	<link rel="stylesheet" href="../tools/icons/icons.css">
 	<link rel="stylesheet" href="../tools/language/language_toggler.css">
 
+		
+	
+	<script defer src="../tools/adjusting/grid.js"></script>
+	<script defer src="../tools/adjusting/full_screen/full_screen.js"></script>
 
 	<script defer src="../tools/main/container/main_container.js"></script>
 	<script defer src="../tools/main/footer/footer.js"></script>
@@ -36,6 +41,7 @@
 	<script defer src="../tools/main/text-editor/text_editor.js"></script>
 
 	<script defer src="../tools/popups/sidebar.js"></script>
+	<script defer src="../tools/popups/popup.js"></script>
 	
 	<script defer src="../tools/content/text_column/text_column.js"></script>
 	<script defer src="../tools/content/card/card.js"></script>
@@ -44,8 +50,6 @@
 	<script defer src="../tools/content/title_card/title_card.js"></script>
 	<script defer src="../tools/content/contact/contact.js"></script>
 	<script defer src="../tools/content/contact/simple_contact.js"></script>
-	
-	<script defer src="../tools/adjusting/grid.js"></script>
 
 	<script defer src="../tools/icons/icons.js"></script>
 	<script defer src="../tools/language/language.js"></script>
@@ -114,6 +118,7 @@
 		<language-changer>
 			<language name="englanti" title="Sidebar">Maybe for news or contact info.</language>
 		</language-changer>
+
 	</sidebar-fixed>
 	<language-changer>
 		<language name="englanti" title="Sidebar"></language>
@@ -129,6 +134,7 @@
 					<language-changer>
 						<language name="englanti">Main gallery</language>
 					</language-changer>
+
 					<p>Voi sisältää mitä tahansa ja rullaa sisällön läpi</p>
 					<language-changer>
 						<language name="englanti">Can contain anything and cycle through it</language>
@@ -143,6 +149,7 @@
 					</language-changer>
 					<img src="../tools/media/images/title_screen/placeholder_title_background.png" alt="title_screen">
 				</div>
+
 				<div class="card">
 					<h1>Informaatiota</h1>
 					<language-changer>
@@ -150,6 +157,7 @@
 					</language-changer>
 					<img src="../tools/media/images/title_screen/placeholder_title_background.png" alt="title_screen">
 				</div>
+
 				<div class="card">
 					<h1>Mainoskuvia</h1>
 					<language-changer>
@@ -196,8 +204,46 @@
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
 					Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
 					Saepe, consectetur vitae?
+					<full-screen>
+						<text-column class="scrollable" title="Tekstipalsta">
+							Full screen
+							$
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
+							Saepe, consectetur vitae?
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
+							Saepe, consectetur vitae?
+							$
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
+							Saepe, consectetur vitae?
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
+							Saepe, consectetur vitae?
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
+							Saepe, consectetur vitae?
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
+							Saepe, consectetur vitae?
+							$
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
+							Saepe, consectetur vitae?
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
+							Saepe, consectetur vitae?
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
+							Saepe, consectetur vitae?
+							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
+							Saepe, consectetur vitae?
+						</text-column>
+					</full-screen>
 				</text-column>
-				<language-changer>
+				<!--<language-changer>
 						<language name="englanti" title="Text column">
 							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
 							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
@@ -232,7 +278,7 @@
 							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
 							Saepe, consectetur vitae?
 						</language>
-				</language-changer>
+				</language-changer>-->
 
 				<column>
 					<text-column class="scrollable" title="Yksinkertainen" id="c_text_1">

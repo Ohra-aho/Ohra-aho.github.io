@@ -47,7 +47,6 @@ class LinkList extends HTMLElement {
 			 this.OpenList()
 		});
 
-		console.log(list.children[1].children.length);
 		for(let i = 0; i < list.children[1].children.length; i++) {
 			list.children[1].children[i].addEventListener("click", () => {
 				this.children[1].classList.toggle("open");

@@ -1,0 +1,17 @@
+full-screen-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+full-screen-summary button {
+  border: none;
+}
+
+full-screen {
+  display: none;
+}/*# sourceMappingURL=full_screen.css.map */

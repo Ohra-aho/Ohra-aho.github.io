@@ -1,0 +1,16 @@
+full-screen-summary {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: fit-content;
+	width: fit-content;
+
+	button {
+		border: none;
+	}
+}
+
+full-screen {
+	display: none;
+}

@@ -8,12 +8,15 @@ class TextColumn extends HTMLElement {
 	}
 
 	connectedCallback() {
-		
-		this.Inisiate();
+		const manual = this.getAttribute("manual");
+		if(manual == null) this.Inisiate();
 		this.setAttribute("custom", "Y");
 	}
 
 	Inisiate() {
+		const full_screen_content = this.querySelector("full-screen");
+		if(full_screen_content != null) this.querySelector("full-screen").remove();
+
 		this.original_content = this.innerHTML;
 		this.innerText = "";
 		this.splitter = this.getAttribute("splitter") ?? "$";
@@ -26,6 +29,7 @@ class TextColumn extends HTMLElement {
 			h1.innerText = title;
 			this.appendChild(h1);
 		}
+
 		//Add text editor
 		let prev_text_editor = this.querySelector("text-editor");
 		if(prev_text_editor != null) prev_text_editor.remove();
@@ -35,6 +39,11 @@ class TextColumn extends HTMLElement {
 		this.appendChild(text_editor);
 		if(this.title != "") this.children[1].Inisiate();
 		else this.children[0].Inisiate();
+
+		if(full_screen_content != null) {
+			this.appendChild(full_screen_content);
+			full_screen_content.Inisiate();
+		}
 	}
 
 	ChangeLanguage(LC) {
@@ -62,7 +71,6 @@ class TextColumn extends HTMLElement {
 		language.attributes.set("title", this.getAttribute("title") ?? "")
 		return language;
 	}
-
 }
 
 customElements.define("text-column", TextColumn);
