@@ -28,7 +28,7 @@ class TextEditor extends HTMLElement {
 			let list_split = text.split("- ");
 			for(let i = 1; i < list_split.length; i++) {
 				let item = document.createElement("li");
-				item.innerText = list_split[i];
+				item.innerHTML = list_split[i];
 				list.appendChild(item);
 			}
 			this.appendChild(list);

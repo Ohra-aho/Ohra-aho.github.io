@@ -85,7 +85,7 @@ class Card extends HTMLElement {
 	}
 
 	ChangeLanguage(LO) { //LanguageOption
-		if(!this.getAttribute("custom-card")) {
+		if(this.getAttribute("custom-card") == null) {
 			if(this.querySelector("text-editor") != null) {
 				this.querySelector("text-editor").remove();
 				let text_editor = document.createElement("text-editor");
@@ -93,6 +93,7 @@ class Card extends HTMLElement {
 				else text_editor.innerHTML = this.og_content
 				text_editor.splitter = this.splitter;
 				this.querySelector("content").appendChild(text_editor);
+				this.querySelector("text-editor").Inisiate();
 			} else {
 				this.innerHTML = LO.text
 			}
