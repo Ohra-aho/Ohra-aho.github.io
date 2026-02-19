@@ -40,7 +40,7 @@ content::-webkit-scrollbar {
   display: none;
 }
 
-.right {
+.on-right {
 	right: -20vw;
 	transition: right 1s;
 
@@ -53,7 +53,7 @@ content::-webkit-scrollbar {
 	}
 }
 
-.left {
+.on-left {
 	left: -20vw;
 	transition: left 1s;
 
@@ -62,12 +62,12 @@ content::-webkit-scrollbar {
 	}
 }
 
-.right.open {
+.on-right.open {
 	right: 0;
 	transition: right 1s;
 }
 
-.left.open {
+.on-left.open {
 	left: 0;
 	transition: left 1s;
 }
@@ -98,13 +98,13 @@ full-screen-popup {
 	sidebar-fixed {
 		width: 100vw;
 	}
-	.right { 
+	.on-right { 
 		right: -100vw; 
 		button {
 			transition: left 1s;
 		}
 	}
-	.left { 
+	.on-left { 
 		left: -100vw; 
 		button {
 			right: -25px;
@@ -112,14 +112,14 @@ full-screen-popup {
 		}
 	}
 
-	.right.open {
+	.on-right.open {
 		button {
 			left: 0;
 			transition: left 1s;
 		}
 	}
 
-	.left.open {
+	.on-left.open {
 		button {
 			right: 0;
 			transition: right 1s;
@@ -132,13 +132,13 @@ full-screen-popup {
 	sidebar-fixed {
 		width: 100vw;
 	}
-	.right { 
+	.on-right { 
 		right: -100vw; 
 		button {
 			transition: left 1s;
 		}
 	}
-	.left { 
+	.on-left { 
 		left: -100vw; 
 		button {
 			right: 25px;
@@ -146,14 +146,14 @@ full-screen-popup {
 		}
 	}
 
-	.right.open {
+	.on-right.open {
 		button {
 			left: 0;
 			transition: left 1s;
 		}
 	}
 
-	.left.open {
+	.on-left.open {
 		button {
 			right: 0;
 			transition: right 1s;
@@ -166,13 +166,13 @@ full-screen-popup {
 	sidebar-fixed {
 		width: 30vw;
 	}
-	.right { 
+	.on-right { 
 		right: -30vw; 
 		button {
 			transition: left 1s;
 		}
 	}
-	.left { 
+	.on-left { 
 		left: -30vw; 
 		button {
 			right: 25px;

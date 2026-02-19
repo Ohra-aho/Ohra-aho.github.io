@@ -14,10 +14,14 @@ class FullScreen extends HTMLElement {
 	Inisiate() {
 		this.og_content = this.innerHTML;
 		if(this.getAttribute("add-button") == null) {
-			this.parentElement.addEventListener("click", () => {
-				this.OpenFullScreen();
-			});
+			this.parentElement.addEventListener("click", () => {this.OpenFullScreen()});
 			this.parentElement.style.cursor = "pointer";
+		} else {
+			let button = document.createElement("button");
+			button.addEventListener("click", () => {this.OpenFullScreen()})
+			button.innerHTML = this.getAttribute("add-button");
+			button.classList.add("full-screen-open");
+			this.parentElement.appendChild(button);
 		}
 	}
 
