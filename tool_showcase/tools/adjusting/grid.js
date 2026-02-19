@@ -12,43 +12,27 @@ class GridGenerator extends HTMLElement {
 	}
 
 	connectedCallback() {
+		//this.CreateCells();
+		window.addEventListener("DOMContentLoaded", () => {this.CreateCells()})
+		window.addEventListener("resize", () => {
+			this.CreateCells();
+		});
+
+	}
+
+	CreateCells() {
 		this.cell_width = this.children[0].offsetWidth;
 		this.cell_height = this.children[0].offsetHeight;
 		const parent_width = this.parentElement.offsetWidth;
 		const columns = Math.floor(parent_width / this.cell_width);
 		const rows = Math.floor(this.CalculateTrueChildCount() / columns);
+		
 
 		this.style = 
 		`
 			grid-template-rows: repeat(${rows}, ${this.cell_height}px);
 			grid-template-columns: repeat(${columns}, ${this.cell_width}px);
 		`;
-
-		window.addEventListener("resize", () => {
-			this.cell_width = this.children[0].offsetWidth;
-			this.cell_height = this.children[0].offsetHeight;
-			const parent_width = this.parentElement.offsetWidth;
-			const columns = Math.floor(parent_width / this.cell_width);
-			const rows = Math.floor(this.CalculateTrueChildCount() / columns);
-
-			this.style = 
-			`
-				grid-template-rows: repeat(${rows}, ${this.cell_height}px);
-				grid-template-columns: repeat(${columns}, ${this.cell_width}px);
-			`;
-		});
-
-	}
-
-	AdjustForScreenWidth(width, height) {
-		const window_width = window.innerWidth;
-		
-		if(window_width <= this.medium && window_width > this.narrow) {
-			const cell_width = this.children[0].offsetWidth;
-			if(cell_width < window_width / 2) {
-
-			}
-		}
 	}
 
 	CalculateTrueChildCount() {

@@ -5,15 +5,15 @@ class TextColumn extends BaseClass {
 	original_content
 	constructor() {
 		super();
-		this.Inisiate = this.Inisiate;
+		this.AddedInit = this.Activate;
 	}
 
 	connectedCallback() {
 		this.Base();
 	}
 
-	Inisiate() {
-		this.StartInit();
+	Activate() {
+		//this.StartInit();
 
 		this.original_content = this.innerHTML;
 		this.innerText = "";
@@ -38,7 +38,7 @@ class TextColumn extends BaseClass {
 		if(this.title != "") this.children[1].Inisiate();
 		else this.children[0].Inisiate();
 
-		this.EndInit();
+		//this.EndInit();
 	}
 
 	ChangeLanguage(LC) {

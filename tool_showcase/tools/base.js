@@ -1,5 +1,6 @@
 class BaseClass extends HTMLElement { 
 	full_screen_content;
+	AddedInit
 	constructor() {
 		super();
 	}
@@ -45,6 +46,10 @@ class BaseClass extends HTMLElement {
 	}
 
 	Inisiate() {
-		console.log("Inisiate");
+		this.StartInit();
+
+		this.AddedInit();
+
+		this.EndInit();
 	}
 }

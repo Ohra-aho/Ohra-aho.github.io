@@ -16,18 +16,14 @@ class Card extends BaseClass {
 	splitter
 	constructor() {
 		super();
-		this.Inisiate = this.Inisiate;
+		this.AddedInit = this.Activate;
 	}
 
 	connectedCallback() { 
-		//if(this.getAttribute("manual") == null) this.Inisiate();
-		//this.setAttribute("custom", "Y");
 		this.Base();
 	}
 
-	Inisiate() {
-		this.StartInit();
-
+	Activate() {
 		let card = card_template.content.cloneNode(true);
 
 		//Get content
@@ -79,7 +75,6 @@ class Card extends BaseClass {
 			this.querySelector("text-editor").Inisiate();
 		}
 
-		this.EndInit();
 	}
 
 	ChangeLanguage(LO) { //LanguageOption
