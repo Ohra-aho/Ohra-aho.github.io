@@ -120,7 +120,7 @@ footer simple-contact a {
   font-size: x-large;
 }
 
-#text-column custom_center text-column {
+#text-column row text-column {
   background-color: var(--secondary-color);
   margin: 5px;
   width: 30%;
@@ -128,8 +128,12 @@ footer simple-contact a {
   border-radius: 20px;
   padding: 10px;
 }
-#text-column custom_center text-column h1 {
+#text-column row text-column h1 {
   border-bottom: 2px solid var(--primary-color);
+}
+#text-column row #testing {
+  width: 500px;
+  height: 300px;
 }
 
 #cards custom_center row card-img {
@@ -231,26 +235,9 @@ footer simple-contact a {
     width: 80%;
     max-height: 100vh;
   }
-  #text-column row text-column:first-child {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
-  #text-column row text-column:last-of-type {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-  #text-column row column {
-    width: 80%;
-  }
-  #text-column row column #c_text_1 {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  #text-column row #testing {
+    width: 300px;
+    height: 300px;
   }
   #cards custom_center row {
     justify-content: center;
@@ -312,26 +299,9 @@ footer simple-contact a {
     width: 80%;
     max-height: 100vh;
   }
-  #text-column row text-column:first-child {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
-  #text-column row text-column:last-of-type {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-  }
-  #text-column row column {
-    width: 80%;
-  }
-  #text-column row column #c_text_1 {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+  #text-column row #testing {
+    width: 300px;
+    height: 300px;
   }
   #cards custom_center row {
     justify-content: center;
@@ -396,40 +366,12 @@ footer simple-contact a {
     display: none;
   }
   #text-column row text-column {
-    background-color: white;
     margin: 5px;
     width: 30%;
     max-height: 50vh;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
   }
   #text-column row text-column h1 {
     border-bottom: 2px solid black;
-  }
-  #text-column row text-column:last-of-type {
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-  }
-  #text-column row column {
-    margin: 5px;
-    width: 30%;
-  }
-  #text-column row column text-column {
-    width: 100%;
-    max-height: 60vh;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    padding: 5px;
-  }
-  #text-column row column text-column:last-of-type {
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
   }
   #media-displayers media-displayer {
     width: 500px;

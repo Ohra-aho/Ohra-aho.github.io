@@ -12,7 +12,6 @@ class GridGenerator extends HTMLElement {
 	}
 
 	connectedCallback() {
-		//this.CreateCells();
 		window.addEventListener("DOMContentLoaded", () => {this.CreateCells()})
 		window.addEventListener("resize", () => {
 			this.CreateCells();
