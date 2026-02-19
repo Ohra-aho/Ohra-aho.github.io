@@ -1,3 +1,12 @@
+const ham_icon_template = document.createElement("template");
+ham_icon_template.innerHTML = 
+`
+	<ham-icon-temp>
+		<div></div>
+		<div></div>
+		<div></div>
+	</ham-icon-temp>
+`
 
 class Hamburger extends HTMLElement { 
 
@@ -6,8 +15,7 @@ class Hamburger extends HTMLElement {
 	}
 
 	connectedCallback() { 
-		const template = document.getElementById("ham-icon-template");
-		this.appendChild(template.content.cloneNode(true));
+		this.appendChild(ham_icon_template.content.cloneNode(true));
 	}
 }
 

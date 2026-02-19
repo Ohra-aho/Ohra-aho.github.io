@@ -6,6 +6,7 @@ class BaseClass extends HTMLElement {
 	}
 
 	connectedCallback() {
+		this.Base();
 	}
 
 	Base() {

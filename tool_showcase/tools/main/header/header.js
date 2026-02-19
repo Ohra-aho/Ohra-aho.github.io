@@ -6,7 +6,6 @@ sticky_header_template.innerHTML =
 
 `
 
-
 class StickyHeader extends HTMLElement {
 
 	constructor() {

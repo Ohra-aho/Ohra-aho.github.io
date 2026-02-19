@@ -10,21 +10,14 @@ link_list_template.innerHTML =
 </div>
 `
 
-class LinkList extends HTMLElement { 
+class LinkList extends BaseClass { 
 	links = [];
 	constructor() {
 		super();
+		this.AddedInit = this.Activate;
 	}
 
-	connectedCallback() { 
-		if(this.getAttribute("manual") == null) this.Inisiate();
-		this.setAttribute("custom", "#");
-	}
-
-	Inisiate() {
-		const full_screen_content = this.querySelector("full-screen");
-		if(full_screen_content != null) this.querySelector("full-screen").remove();
-
+	Activate() {
 		let list = link_list_template.content.cloneNode(true);
 
 		if(this.getAttribute("label")) {
@@ -62,11 +55,6 @@ class LinkList extends HTMLElement {
 		}
 
 		this.appendChild(list);
-
-		if(full_screen_content != null) {
-			this.appendChild(full_screen_content);
-			full_screen_content.Inisiate();
-		}
 	}
 
 	OpenList() {

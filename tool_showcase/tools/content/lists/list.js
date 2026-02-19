@@ -2,16 +2,10 @@
 class ItemList extends BaseClass { 
 	constructor() {
 		super();
-		this.Inisisate = this.Inisiate;
+		this.AddedInit = this.Activate;
 	}
 
-	connectedCallback() { 
-		this.Base();
-	}
-
-	Inisiate() {
-		this.StartInit();
-
+	Activate() {
 		const type = this.getAttribute("type");
 		let list = null;
 		if(type == "number") {
@@ -30,8 +24,6 @@ class ItemList extends BaseClass {
 		}
 
 		this.appendChild(list);
-
-		this.EndInit();
 	}
 
 	ChangeLanguage(title, content) {

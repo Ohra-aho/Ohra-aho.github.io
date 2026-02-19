@@ -10,10 +10,9 @@ event_template.innerHTML =
 	<event-content>
 		<text-editor></text-editor>
 	</event-content>
-	<button></button>
 `
 
-class Event extends HTMLElement { 
+class Event extends BaseClass { 
 	og_content
 	image
 	title //Jotain täytyy keksiä tähän
@@ -21,15 +20,11 @@ class Event extends HTMLElement {
 	splitter
 	constructor() {
 		super();
+		this.AddedInit = this.Activate;
 	}
 
-	connectedCallback() { 
+	Activate() {
 		let event = event_template.content.cloneNode(true);
-		let full_event = this.querySelector("full-event");
-		if(full_event != null) {
-			this.full_content = full_event.innerText;
-			full_event.remove();
-		}
 		const language_changer = this.querySelector("language-changer");
 		if(language_changer != null) language_changer.remove();
 
@@ -45,12 +40,6 @@ class Event extends HTMLElement {
 		this.innerHTML = "";
 
 		//Place content
-
-		let link = event.children[1];
-		link.addEventListener("click", () => {
-			this.DisplayFullEvent();
-		});
-		link.innerHTML = this.getAttribute("button-label") ?? "Lisää &#8594;";
 
 		if(custom) {
 			event.querySelector("p").remove();
@@ -87,17 +76,12 @@ class Event extends HTMLElement {
 		}
 
 		this.appendChild(event);
-		this.appendChild(full_event)
+		//this.appendChild(full_event)
 		if(language_changer != null) this.appendChild(language_changer);
-
-		this.querySelector("full-event").setAttribute("title", this.title);
-	
-		//this.querySelector("language-changer").Inisiate();
 
 		let text_editor = this.querySelector("text-editor");
 		text_editor.splitter = this.splitter;
 		text_editor.Inisiate();
-		this.setAttribute("custom", "Y");
 	}
 
 	DisplayFullEvent() {
@@ -166,7 +150,7 @@ full_event_template.innerHTML =
 </full-event-content>
 `
 
-class FullEvent extends HTMLElement { 
+class FullEvent extends BaseClass { 
 	og_content
 	media
 	date

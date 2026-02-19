@@ -13,8 +13,6 @@ class TextColumn extends BaseClass {
 	}
 
 	Activate() {
-		//this.StartInit();
-
 		this.original_content = this.innerHTML;
 		this.innerText = "";
 		this.splitter = this.getAttribute("splitter") ?? "$";
@@ -37,8 +35,6 @@ class TextColumn extends BaseClass {
 		this.appendChild(text_editor);
 		if(this.title != "") this.children[1].Inisiate();
 		else this.children[0].Inisiate();
-
-		//this.EndInit();
 	}
 
 	ChangeLanguage(LC) {

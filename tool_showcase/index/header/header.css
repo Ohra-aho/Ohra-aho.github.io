@@ -120,6 +120,9 @@ footer simple-contact a {
   font-size: x-large;
 }
 
+#text-column event-summary {
+  background-color: white;
+}
 #text-column row text-column {
   background-color: var(--secondary-color);
   margin: 5px;

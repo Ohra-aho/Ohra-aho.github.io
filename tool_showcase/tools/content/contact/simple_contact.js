@@ -4,13 +4,14 @@ simple_contact_template.innerHTML =
 <a href="mailto:">Contact</a>
 `
 
-class SimpleContact extends HTMLElement { 
+class SimpleContact extends BaseClass { 
 	links = [];
 	constructor() {
 		super();
+		this.AddedInit = this.Activate;
 	}
 
-	connectedCallback() { 
+	Activate() {
 		const name = this.innerHTML;
 		this.innerHTML = "";
 		const subject = this.getAttribute("subject");
@@ -29,8 +30,6 @@ class SimpleContact extends HTMLElement {
 		if(subject != null) {
 			this.SetSubject(subject)
 		}
-
-		this.setAttribute("custom", "Y")
 	}
 
 	SetSubject(base_string) {

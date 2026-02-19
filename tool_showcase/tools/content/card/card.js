@@ -19,10 +19,6 @@ class Card extends BaseClass {
 		this.AddedInit = this.Activate;
 	}
 
-	connectedCallback() { 
-		this.Base();
-	}
-
 	Activate() {
 		let card = card_template.content.cloneNode(true);
 

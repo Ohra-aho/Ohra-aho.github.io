@@ -9,14 +9,15 @@ title_card_template.innerHTML =
 const bubble_teplate = document.createElement("template");
 bubble_teplate.innerHTML = `<bubble></bubble>`
 
-class TitileCard extends HTMLElement { 
+class TitileCard extends BaseClass { 
 	content = [];
 	index = 0;
 	constructor() {
 		super();
+		this.AddedInit = this.Activate;
 	}
 
-	connectedCallback() { 
+	Activate() {
 		//Instanciate template
 		for(let i = 0; i < this.children.length; i++) {
 			this.content.push(this.children[i]);

@@ -26,6 +26,7 @@
 	<link rel="stylesheet" href="./tools/content/title_card/title_card.css">
 	<link rel="stylesheet" href="./tools/content/contact/contact.css">
 	<link rel="stylesheet" href="./tools/content/lists/lists.css">
+	<link rel="stylesheet" href="./tools/content/event/event.css">
 
 	<link rel="stylesheet" href="./tools/popups/popups.css">
 
@@ -56,6 +57,7 @@
 	<script defer src="./tools/content/contact/contact.js"></script>
 	<script defer src="./tools/content/contact/simple_contact.js"></script>
 	<script defer src="./tools/content/lists/list.js"></script>
+	<script defer src="./tools/content/event/event.js"></script>
 
 	<script defer src="./tools/icons/icons.js"></script>
 	<script defer src="./tools/language/language.js"></script>
@@ -180,6 +182,13 @@
 
 		<separator></separator>
 		<section id="text-column">
+			<!--<event-summary title="Jotain" date="1. 1." time="12:30">
+				Jotain tänne juu.
+				$
+				- Mitähän
+				- Tänne
+				- Jotain
+			</event-summary>-->
 			<row>
 				<text-column class="scrollable" title="Tekstipalsta">
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
@@ -217,49 +226,6 @@
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
 					Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
 					Saepe, consectetur vitae?
-					<full-screen>
-						<text-column class="scrollable" title="Tekstipalsta">
-							Full screen
-							$
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							$
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							$
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-						</text-column>
-						<language-changer>
-							<language name="englanti" title="Text column">
-								Something over here
-							</language>
-						</language-changer>
-					</full-screen>
 				</text-column>
 				<language-changer>
 						<language name="englanti" title="Text column">
@@ -502,11 +468,4 @@
 	<language-controller></language-controller>
 </body>
 
-<template id="ham-icon-template">
-	<ham-icon-temp>
-		<div></div>
-		<div></div>
-		<div></div>
-	</ham-icon-temp>
-</template>
 </html>

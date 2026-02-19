@@ -143,6 +143,9 @@ footer {
 
 $radius: 20px;
 #text-column {
+	event-summary {
+		background-color: white;
+	}
 	row {
 		text-column {
 			background-color: var(--secondary-color);

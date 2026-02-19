@@ -8,15 +8,15 @@ fc_media_template.innerHTML =
 </fc-media>
 `
 
-
-class MediaDisplayer extends HTMLElement { 
+class MediaDisplayer extends BaseClass { 
 	family = [];
 	index = 0;
 	constructor() {
 		super();
+		this.AddedInit = this.Activate;
 	}
 
-	connectedCallback() {
+	Activate() {
 		if(this.family.length == 0) {
 			this.CollectFamily();
 		}
