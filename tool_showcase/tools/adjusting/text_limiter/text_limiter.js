@@ -32,8 +32,8 @@ class LimitedText extends HTMLElement {
 	}
 
 	CalculateCharLimit() {
-		var style = window.getComputedStyle(this, null).getPropertyValue('font-size');	
-		this.char_limit = (this.parentElement.offsetHeight * this.parentElement.offsetWidth / (parseFloat(style)*parseFloat(style)));
+		var style = window.getComputedStyle(this, null).getPropertyValue('font-size');
+		this.char_limit = (this.parentElement.offsetHeight * this.parentElement.offsetWidth / (parseFloat(style)*((parseFloat(style)*0.5))));
 	}
 }
 

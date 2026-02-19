@@ -1,5 +1,6 @@
 class BaseClass extends HTMLElement { 
 	full_screen_content;
+	language_changer;
 	AddedInit
 	constructor() {
 		super();
@@ -27,12 +28,20 @@ class BaseClass extends HTMLElement {
 
 	RemoveFullScreen() {
 		this.full_screen_content = this.querySelector("full-screen");
-		if(this.full_screen_content != null) this.querySelector("full-screen").remove();
+		if(this.full_screen_content != null) {
+			this.querySelector("full-screen").remove();
+
+		 	this.language_changer = this.querySelector("language-changer");
+			if(this.language_changer != null) {
+				this.querySelector("language-changer").remove();
+			}
+		}
 	}
 
 	AddFullScreen() {
 		if(this.full_screen_content != null) {
 			this.appendChild(this.full_screen_content);
+			if(this.language_changer != null) this.appendChild(this.language_changer);
 			this.querySelector("full-screen").Inisiate();
 		}
 	}
