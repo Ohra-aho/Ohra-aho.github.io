@@ -32,6 +32,7 @@ class BaseClass extends HTMLElement {
 			this.querySelector("full-screen").remove();
 
 		 	this.language_changer = this.querySelector("language-changer");
+			//console.log();
 			if(this.language_changer != null) {
 				this.querySelector("language-changer").remove();
 			}
@@ -41,7 +42,9 @@ class BaseClass extends HTMLElement {
 	AddFullScreen() {
 		if(this.full_screen_content != null) {
 			this.appendChild(this.full_screen_content);
-			if(this.language_changer != null) this.appendChild(this.language_changer);
+			if(this.language_changer != null) {
+				this.appendChild(this.language_changer);
+			}
 			this.querySelector("full-screen").Inisiate();
 		}
 	}

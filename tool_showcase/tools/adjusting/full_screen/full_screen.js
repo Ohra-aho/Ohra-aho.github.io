@@ -9,6 +9,7 @@ class FullScreen extends HTMLElement {
 		for(let i = 0; i < this.children.length; i++) {
 			this.children[i].setAttribute("manual", "#");
 		}
+		this.setAttribute("custom", "#")
 	}
 
 	Inisiate() {
@@ -32,6 +33,19 @@ class FullScreen extends HTMLElement {
 			popup.appendChild(this.children[i].cloneNode(true))
 			if(popup.children[i+1].getAttribute("custom") != null) popup.children[i+1].Inisiate();
 		}
+	}
+
+	ChangeLanguage(LO) { //LanguageOption
+		console.log("que")
+		if(this.getAttribute("add-button") != null) {
+			this.setAttribute(LO.attributes.get("add-button"));
+		}
+	}
+
+	GiveBaseLanguage() {
+		let language = new LanguageOption("", "");
+		if(this.getAttribute("add-button") != null) language.attributes.set("add-button", this.getAttribute("add-button"))
+		return language;
 	}
 }
 

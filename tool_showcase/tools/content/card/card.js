@@ -48,6 +48,7 @@ class Card extends BaseClass {
 			let text_editor = document.createElement("text-editor");
 			text_editor.innerHTML = this.og_content;
 			text_editor.splitter = this.splitter;
+			text_editor.setAttribute("scroll", "#");
 			card.children[1].appendChild(text_editor);
 		}
 
