@@ -38,7 +38,7 @@ content::-webkit-scrollbar {
   transition: right 1s;
 }
 .on-right button {
-  left: -25px;
+  left: -30px;
 }
 .on-right content {
   left: 10%;
@@ -49,7 +49,7 @@ content::-webkit-scrollbar {
   transition: left 1s;
 }
 .on-left button {
-  right: -25px;
+  right: -30px;
 }
 
 .on-right.open {

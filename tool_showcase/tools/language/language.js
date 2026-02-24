@@ -66,7 +66,7 @@ class Language extends HTMLElement {
 		if(!this.target_element.getAttribute("custom")) {
 			let new_language = new LanguageOption(
 					document.querySelector("languages").getAttribute("languages").split(" ")[0],
-					this.target_element.innerText, 
+					this.target_element.innerHTML, 
 				)
 			this.text.push(new_language);
 		} else {
@@ -83,7 +83,7 @@ class Language extends HTMLElement {
 
 			let new_language = new LanguageOption(
 					attr.getNamedItem("name").value, 
-					this.children[i].innerText,
+					this.children[i].innerHTML,
 				);
 
 			for(let i = 0; i < attr.length; i++) {
@@ -111,7 +111,7 @@ class LanguageController extends HTMLElement {
 	}
 
 	connectedCallback() {
-		window.onload = () => {
+		window.addEventListener("load", () => {
 			let lc_s = document.querySelectorAll("language-changer");
 			for(let i = 0; i < lc_s.length; i++) {
 				lc_s[i].Inisiate();
@@ -119,11 +119,10 @@ class LanguageController extends HTMLElement {
 
 			let loading_screen = document.querySelector("loading-screen");
 			if(loading_screen != null) loading_screen.classList.toggle("done");
-		}	
+		})
 	}
 
 }
 
 customElements.define("language-controller", LanguageController);
-
 customElements.define("language-changer", Language);

@@ -30,6 +30,7 @@ class TextColumn extends BaseClass {
 		let prev_text_editor = this.querySelector("text-editor");
 		if(prev_text_editor != null) prev_text_editor.remove();
 		let text_editor = document.createElement("text-editor");
+		if(this.classList.contains("scrollable")) text_editor.setAttribute("scroll", "#");
 		text_editor.innerHTML = this.original_content;
 		text_editor.splitter = this.splitter;
 		this.appendChild(text_editor);

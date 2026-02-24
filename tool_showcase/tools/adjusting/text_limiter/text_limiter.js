@@ -27,8 +27,6 @@ class LimitedText extends HTMLElement {
 				this.innerText = this.content;
 			}
 		});
-
-
 	}
 
 	CalculateCharLimit() {

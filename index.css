@@ -23,8 +23,8 @@ body .header {
   z-index: 1;
   animation: grow_header linear;
   animation-timeline: scroll();
-  animation-range-start: 30%;
-  animation-range-end: 50%;
+  animation-range-start: 10%;
+  animation-range-end: 30%;
   animation-fill-mode: forwards;
 }
 body .header #link_holder {

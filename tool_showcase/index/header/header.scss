@@ -143,9 +143,6 @@ footer {
 
 $radius: 20px;
 #text-column {
-	event-summary {
-		background-color: white;
-	}
 	row {
 		text-column {
 			background-color: var(--secondary-color);
@@ -286,7 +283,6 @@ $radius: 20px;
 		row {
 			text-column {
 				width: 80%;
-				max-height: 100vh;
 			}
 			#testing {
 				width: 300px; 
@@ -418,7 +414,6 @@ $radius: 20px;
 			text-column {
 				margin: 5px;
 				width: 30%;
-				max-height: 50vh;
 
 				h1 {
 					border-bottom: 2px solid black;

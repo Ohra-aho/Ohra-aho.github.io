@@ -16,6 +16,7 @@ class SimpleContact extends BaseClass {
 		this.innerHTML = "";
 		const subject = this.getAttribute("subject");
 		const email = this.getAttribute("email");
+		
 
 		const template = simple_contact_template.content.cloneNode(true);
 		this.appendChild(template.cloneNode(true));
@@ -33,7 +34,7 @@ class SimpleContact extends BaseClass {
 	}
 
 	SetSubject(base_string) {
-		let original_href = "mailto:";
+		let original_href = this.children[0].getAttribute("href");
 		const split_string = base_string.split(" ");
 		let complete_string = "";
 		for(let i = 0; i < split_string.length; i++) {

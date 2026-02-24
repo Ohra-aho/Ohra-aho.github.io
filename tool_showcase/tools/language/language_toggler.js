@@ -75,8 +75,6 @@ class LanguageToggler extends HTMLElement {
 		this.languages = proto_languages.split(" ");
 	}
 
-	
-
 }
 
 customElements.define("language-toggler", LanguageToggler);

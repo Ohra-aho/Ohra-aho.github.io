@@ -120,9 +120,6 @@ footer simple-contact a {
   font-size: x-large;
 }
 
-#text-column event-summary {
-  background-color: white;
-}
 #text-column row text-column {
   background-color: var(--secondary-color);
   margin: 5px;
@@ -239,7 +236,6 @@ footer simple-contact a {
   }
   #text-column row text-column {
     width: 80%;
-    max-height: 100vh;
   }
   #text-column row #testing {
     width: 300px;
@@ -303,7 +299,6 @@ footer simple-contact a {
   }
   #text-column row text-column {
     width: 80%;
-    max-height: 100vh;
   }
   #text-column row #testing {
     width: 300px;
@@ -374,7 +369,6 @@ footer simple-contact a {
   #text-column row text-column {
     margin: 5px;
     width: 30%;
-    max-height: 50vh;
   }
   #text-column row text-column h1 {
     border-bottom: 2px solid black;
