@@ -11,13 +11,32 @@
 	<link rel="stylesheet" href="./tool_showcase/tools/main/loading_screen/loading_screen.css">
 	<script defer src="./tool_showcase/tools/language/language.js"></script>
 	<script defer src="./tool_showcase/tools/language/language_toggler.js"></script>
+
+	<link rel="stylesheet" href="./tool_showcase/tools/popups/popups.css">
+	<script defer src="./tool_showcase/tools/popups/sidebar.js"></script>
+
+	<link rel="stylesheet" href="./tool_showcase/tools/adjusting/row_column.css">
+
 </head>
 
 <body>
 	<languages languages="suomi englanti"></languages>
-	<loading-screen>
-		<img src="./tool_showcase/tools/media/images/header/placeholder_logo.png" alt="Logo">
-	</loading-screen>
+
+	<sidebar-fixed title="Hit-lista" class="on-right">
+		<img src="./media/images/web developer.png" alt="web-developer">
+
+		<h1>Hit-lista</h1>
+		<language-changer>
+			<language name="englanti">Hit-list</language>
+		</language-changer>
+
+		<column>
+			<a href="https://tarery.net/" target="_blank">TARE ry &#8594;</a>
+		</column>
+	</sidebar-fixed>
+	<language-changer>
+		<language name="englanti" title="Hit-list"></language>
+	</language-changer>
 
 	<div class="header">
 		<div id="link_holder">
@@ -53,7 +72,7 @@
 		<h1> Ohra-aho </h1>
 
 		<div id="title">
-			<img src="./media/images/title.png" alt="title">
+			<img src="./media/images/title.jpg" alt="title">
 		</div>
 
 		<div id="intro">

@@ -6,6 +6,46 @@ $top_displacement: 30vh;
 body {
 	@include body();
 
+	sidebar-fixed {
+		background-color: black;
+		border-left: 2px dashed white;
+		color: white;
+
+		button {
+			border: 2px solid white;
+			background-color: black;
+			color: white;
+			border-radius: 5px;
+			padding: 2px;
+		}
+
+		content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			h1 {
+				width: 90%;
+				border-bottom: 1px solid white;
+				text-wrap: nowrap;
+				text-align: center;
+			}
+			img {
+				width: 100%;
+			}
+
+			column {
+				width: 100%;
+				align-items: center;
+
+				a {
+					color: white;
+					margin: 5px 0 5px 0;
+				}
+			}
+		}
+	}
+
 	.header {
 		@include header();
 
