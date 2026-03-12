@@ -11,25 +11,44 @@ fc_media_template.innerHTML =
 class MediaDisplayer extends BaseClass { 
 	family = [];
 	index = 0;
+	media_base
 	constructor() {
 		super();
 		this.AddedInit = this.Activate;
 	}
 
 	Activate() {
+		const family = this.getAttribute("family");
+		if(family == null) {
+			const parent_family = this.parentElement.getAttribute("parent_family");
+			if(parent_family != null) {
+				this.setAttribute("family", parent_family);
+			}
+		}
+
 		if(this.family.length == 0) {
 			this.CollectFamily();
 		}
 
-		const media = this.getAttribute("media");
-		const image = this.getAttribute("image"); //If media is image or not
+		let media = this.getAttribute("media");
+		const video = this.getAttribute("video"); //If media is image or not
+
+		let parent = this.parentElement;
+		while(parent.nodeName != "SECTION" && parent.nodeName != "BODY") {
+			parent = parent.parentElement;
+		}
+		const media_base = parent.getAttribute("media_base");
+		this.media_base = media_base;
+		if(media_base != null) {
+			media = media_base + media;
+		}
 
 		if(this.children.length > 0) {
 			this.children[0].remove();
 		}
 
 		let content = null;
-		if(image) {
+		if(!video) {
 			content = document.createElement("img");
 		} else {
 			content = document.createElement("video");
@@ -44,9 +63,11 @@ class MediaDisplayer extends BaseClass {
 		content.setAttribute("src", media);
 		content.setAttribute("alt", "media");
 		this.appendChild(content);
-		if(image) { this.onclick = this.OnClick; }
 
-		if(!image) {
+
+		if(!video) { this.children[0].onclick = this.OnClick; }
+
+		if(video) {
 			this.classList.add("horizontal");
 		}
 
@@ -69,15 +90,18 @@ class MediaDisplayer extends BaseClass {
 	}
 
 	OnClick() {
+		this.parentElement.CollectFamily();
 		let fc_element = document.createElement("full-screen-media");
-		fc_element.setAttribute("media", this.getAttribute("media"));
-		fc_element.setAttribute("image", this.getAttribute("image"));
-		fc_element.family = this.family;
-		fc_element.current_index = this.index;
+		fc_element.setAttribute("media", `${this.parentElement.getAttribute("media")}`);
+		fc_element.setAttribute("image", this.parentElement.getAttribute("image"));
+		fc_element.family = this.parentElement.family;
+		fc_element.current_index = this.parentElement.index;
+		fc_element.media_base = this.parentElement.media_base ?? "";
 		document.body.appendChild(fc_element);
 	}
 
 	CollectFamily() {
+		this.family = [];
 		if(this.getAttribute("family") != null) {
 			let proto_family = document.getElementsByTagName("media-displayer");
 
@@ -102,15 +126,16 @@ class MediaDisplayer extends BaseClass {
 class FullScreenMedia extends HTMLElement {
 	family = [];
 	current_index = 0;
+	media_base;
 	constructor() {
 		super();
 	}
 
 	connectedCallback() {
-		//const template = document.getElementById("sc-media-template");
 		this.appendChild(fc_media_template.content.cloneNode(true));
-		const media = this.getAttribute("media");
+		const media = this.media_base + this.getAttribute("media");
 		const image = this.getAttribute("image"); //If media is image or not
+		this.setAttribute("media_base", this.media_base)
 
 		let content = null;
 		if(image) {
@@ -166,7 +191,7 @@ class FullScreenMedia extends HTMLElement {
 				}
 				break;
 		}
-		this.parentElement.children[1].children[0].src = parent.family[parent.current_index];
+		this.parentElement.children[1].children[0].src = this.parentElement.parentElement.media_base + parent.family[parent.current_index];
 	}
 }
 

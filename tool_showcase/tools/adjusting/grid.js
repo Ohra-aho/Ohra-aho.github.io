@@ -12,25 +12,27 @@ class GridGenerator extends HTMLElement {
 	}
 
 	connectedCallback() {
+		window.addEventListener("load", () => {this.CreateCells()})
 		window.addEventListener("DOMContentLoaded", () => {this.CreateCells()})
-		window.addEventListener("resize", () => {
-			this.CreateCells();
-		});
-
+		window.addEventListener("resize", () => { this.CreateCells(); });
 	}
 
 	CreateCells() {
 		this.cell_width = this.children[0].offsetWidth;
 		this.cell_height = this.children[0].offsetHeight;
-		const parent_width = this.parentElement.offsetWidth;
+		const parent_width = this.offsetWidth;
 		const columns = Math.floor(parent_width / this.cell_width);
-		const rows = Math.floor(this.CalculateTrueChildCount() / columns);
-		
+		const rows = Math.ceil(this.CalculateTrueChildCount() / columns);
 
-		this.style = 
+		/*this.style = 
 		`
 			grid-template-rows: repeat(${rows}, ${this.cell_height}px);
 			grid-template-columns: repeat(${columns}, ${this.cell_width}px);
+		`;*/
+		this.style = 
+		`
+			grid-template-rows: repeat(${rows}, auto);
+			grid-template-columns: repeat(${columns}, auto);
 		`;
 	}
 

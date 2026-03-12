@@ -4,16 +4,23 @@ media-displayer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	
-	border: 2px solid white;
-}
+	img {
+		max-height: 100%;
+		max-width: 100%;
+	}
 
-media-displayer:hover {
-	border: 2px solid white;
-	cursor: pointer;
+	video {
+		max-height: 100%;
+		max-width: 100%;
+	}
+
+	img:hover {
+		cursor: pointer;
+	}
 }
 
 media-displayer.vertical {
+	height: fit-content;
 	img {
 		width: auto;
 		height: 100%;
@@ -26,6 +33,7 @@ media-displayer.vertical {
 }
 
 media-displayer.horizontal {
+	width: fit-content;
 	img {
 		width: 100%;
 		height: auto;
@@ -44,6 +52,7 @@ full-screen-media {
 	position: fixed;
 	z-index: 3;
 	top: 0;
+	pointer-events: all;
 
 	fc-media {
 		display: block;

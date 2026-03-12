@@ -5,20 +5,32 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ohra-aho</title>
 
-	<link rel="stylesheet" href="index.css">
+	<script defer src="../tool_showcase/tools/base.js"></script>
+
 	<script src="webdeveloper.js"></script>
+
+	<script defer src="../tool_showcase/tools/main/text-editor/text_editor.js"></script>
+	<link rel="stylesheet" href="../tool_showcase/tools//main/text-editor/text_editor.css">
 
 	<link rel="stylesheet" href="../tool_showcase/tools/language/language_toggler.css">
 	<link rel="stylesheet" href="../tool_showcase/tools/main/loading_screen/loading_screen.css">
 	<script defer src="../tool_showcase/tools/language/language.js"></script>
 	<script defer src="../tool_showcase/tools/language/language_toggler.js"></script>
+
+	<link rel="stylesheet" href="../tool_showcase/tools/adjusting/row_column.css">
+	<script defer src="../tool_showcase/tools/adjusting/grid.js"></script>
+
+	<link rel="stylesheet" href="../tool_showcase/tools/content/media_displayer/media_displayer.css">
+	<script defer src="../tool_showcase/tools/content/media_displayer/media_displayer.js"></script>
+
+	<link rel="stylesheet" href="../tool_showcase/tools/content/text_column/text_column.css">
+	<script defer src="../tool_showcase/tools/content/text_column/text_column.js"></script>
+
+	<!-- Site style -->
+	<link rel="stylesheet" href="index.css">
 </head>
 <body>
 	<languages languages="suomi englanti"></languages>
-
-	<loading-screen>
-		<img src="../tool_showcase/tools/media/images/header/placeholder_logo.png" alt="Logo">
-	</loading-screen>
 
 	<div id="header">
 		<a href="../">
@@ -33,6 +45,8 @@
 			<language name="englanti">Web developer</language>
 		</language-changer>
 	</div>
+
+
 	<div id="main">
 
 		<div id="intro">
@@ -44,91 +58,85 @@
 
 		<div id="sample_links">
 
-			<div class="section">
-				<div class="info">
-					<h2>Nettisivutyökalut</h2>
-					<language-changer>
-						<language name="englanti">Website tools</language>
-					</language-changer>
-					<p>
-						Web-component:teihin perustuvia työkaluja nettisivujen luomisen helpottamiseksi. 
-						Henkilökohtainen projektini, jonka lopullinen tarkoitus on tarjota nopeasti tuotettuja ja siten halpoja nettisivuja.
-						Pyrin myös tekemään niistä helposti muokattavia, jotta kuka tahansa voi päivittää sivujen sisältöä ilman ohjelmointitaustaa.
-						Kehitystyö on vielä kesken, mutta alla olevasta linkistä voi tarkastella, mitä olen jo luonut.
-					</p>
-					<language-changer>
-						<language name="englanti">
-							Tools based on web components, made with purpose to make website creation easier.
-							This is my personal project, which end goal is to provide websites quickly and cheaply.
-							I strive to make these tools easy to edit, so even people without coding knowledge can edit the content of the site.
-							Development is still in progress, but behind the link below you can see what I have made already.
-						</language>
-					</language-changer>
+			<div class="section" id="tyokalut">
+
+				<text-column title="Nettisivutyökalut">
+					Web-component:teihin perustuvia työkaluja nettisivujen luomisen helpottamiseksi. 
+					Henkilökohtainen projektini, jonka lopullinen tarkoitus on tarjota nopeasti tuotettuja ja siten halpoja nettisivuja.
+					Pyrin myös tekemään niistä helposti muokattavia, jotta kuka tahansa voi päivittää sivujen sisältöä ilman ohjelmointitaustaa.
+					Kehitystyö on vielä kesken, mutta alla olevasta linkistä voi tarkastella, mitä olen jo luonut.
+					Alapuolella on myös linkki visuihin mitkä olen tehnyt näitä työkaluja käyttäen.
+					$
+					- <a href="https://tarery.net/">TARE ry &#8594;</a>
+					$
 					<a href="../tool_showcase/">Työkaluesittely &#8594;</a>
-					<language-changer>
-						<language name="englanti">Tool showcase &#8594;</language>
-					</language-changer>
-				</div>
+				</text-column>
+				<language-changer>
+					<language name="englanti" title="Website tools">
+						Tools based on web components, made with purpose to make website creation easier.
+						This is my personal project, which end goal is to provide websites quickly and cheaply.
+						I strive to make these tools easy to edit, so even people without coding knowledge can edit the content of the site.
+						Development is still in progress, but behind the link below you can see what I have made already.
+						$
+						- <a href="https://tarery.net/">TARE ry &#8594;</a>
+						$
+						<a href="../tool_showcase/">Tool showcase &#8594;</a>
+					</language>
+				</language-changer>
+
 				<img src="../media/images/MM_logo1.png" id="MM" alt="">
 			</div>
 
 			<div class="section">
-				<div class="info">
-					<h2>Amma: ColS nettisivut</h2>
-					<language-changer>
-						<language name="englanti">Amma: ColS web site</language>
-					</language-changer>
-
-					<p>
-						Viimeisin projektini PHP:llä oli nettisivut Joinplay Games Studios:sille. 
-						He tarvitsivat sivut tulevan pelinsä (Amma: Chronicles of lost Stars) mainostamiseen. 
-						Projektiin liittyi sivuston visuaalisen ilmeen toteuttaminen ja sivuston toiminnalliseuudet.
-						Myöhemmin toteutin myös yhteydenottosysteemin ja sivujen sisällön lataamisen erikseen taustajärjestelmästä editoinnin helpottamiseksi.
-					</p>
-					<language-changer>
-						<language name="englanti">
-							My last project using PHP was a web site for Joinplay Games Studios. 
-							They needed site for advertising their upcomming game. (Amma: Chronicles of lost Stars) 
-							My job included sites visual expression and functionalities. 
-							Later I implemented contacting system and loading system for sites content to make editing easier.
-						</language>
-					</language-changer>
-				</div>
-				<div class="media_grid">
-					<img src="../media/images/amma/home_page.jpg" alt="" onclick="OpenFullScreen(0, 'amma')">
-					<img src="../media/images/amma/feature_page.jpg" alt="" onclick="OpenFullScreen(1, 'amma')">
-					<img src="../media/images/amma/one feature.jpg" alt="" onclick="OpenFullScreen(2, 'amma')">
-					<img src="../media/images/amma/community page.jpg" alt="" onclick="OpenFullScreen(3, 'amma')">
-					<img src="../media/images/amma/contact.jpg" alt="" onclick="OpenFullScreen(4, 'amma')">
-					<img src="../media/images/amma/devlog.jpg" alt="" onclick="OpenFullScreen(5, 'amma')">
-					<img src="../media/images/amma/devlog detail.jpg" alt="" onclick="OpenFullScreen(6, 'amma')">
-				</div>
+				
+				<text-column title="Amma: ColS nettisivut">
+					Viimeisin projektini PHP:llä oli nettisivut Joinplay Games Studios:sille. 
+					He tarvitsivat sivut tulevan pelinsä (Amma: Chronicles of lost Stars) mainostamiseen. 
+					Projektiin liittyi sivuston visuaalisen ilmeen toteuttaminen ja sivuston toiminnalliseuudet.
+					Myöhemmin toteutin myös yhteydenottosysteemin ja sivujen sisällön lataamisen erikseen taustajärjestelmästä editoinnin helpottamiseksi.
+				</text-column>
+				<language-changer>
+					<language name="englanti" title="Amma: ColS web site">
+						My last project using PHP was a web site for Joinplay Games Studios. 
+						They needed site for advertising their upcomming game. (Amma: Chronicles of lost Stars) 
+						My job included sites visual expression and functionalities. 
+						Later I implemented contacting system and loading system for sites content to make editing easier.
+					</language>
+				</language-changer>
+				
+				<grid-generator parent_family="amma">
+					<media-displayer media="../media/images/amma/home_page.jpg"></media-displayer>
+					<media-displayer media="../media/images/amma/feature_page.jpg"></media-displayer>
+					<media-displayer media="../media/images/amma/one feature.jpg"></media-displayer>
+					<media-displayer media="../media/images/amma/community page.jpg"></media-displayer>
+					<media-displayer media="../media/images/amma/contact.jpg"></media-displayer>
+					<media-displayer media="../media/images/amma/devlog.jpg"></media-displayer>
+					<media-displayer media="../media/images/amma/devlog detail.jpg"></media-displayer>
+				</grid-generator>
 			</div>
 
 			<div class="section">
-				<div class="info">
-					<h2>Weather or Not</h2>
-					<p>
-						Toimiva sääsovellus, jonka tein yhden kurssini lopputyönä.
-						Ei varsinaisesti ole web-sovellus, mutta hyödyntää erään nettisivun dataa toimiakseen.
-						Kykenee antamaan säätietoja käyttäjän nykyisen olinpaikan perusteella, 
-						joko reaaliaikaisesti tai seuraavan seitsemän päivän ajalta.
-						Noiden päivien säätiedoja voidaan myös tarkastella tarkemmin.
-					</p>
-					<language-changer>
-						<language name="englanti">
-							Fully functional weather app, which I made for one of my courses. 
-							Not exactly a web app, but it utilizes data from a weather web site. 
-							It can give weather info according to users location, either in real time or for the seven upcomming days. 
-							More detailed information of those days can also be inspected.
-						</language>
-					</language-changer>
-				</div>
-				<div class="media_grid" id="WoN">
-					<img src="../media/images/WoN/WoN 3.jpg" alt="" onclick="OpenFullScreen(0, 'WoN')">
-					<img src="../media/images/WoN/WoN 2.jpg" alt="" onclick="OpenFullScreen(1, 'WoN')">
-					<img src="../media/images/WoN/WoN 4.jpg" alt="" onclick="OpenFullScreen(2, 'WoN')">
-				</div>
+				<text-column title="Weather or Not">
+					Toimiva sääsovellus, jonka tein yhden kurssini lopputyönä.
+					Ei varsinaisesti ole web-sovellus, mutta hyödyntää erään nettisivun dataa toimiakseen.
+					Kykenee antamaan säätietoja käyttäjän nykyisen olinpaikan perusteella, 
+					joko reaaliaikaisesti tai seuraavan seitsemän päivän ajalta.
+					Noiden päivien säätiedoja voidaan myös tarkastella tarkemmin.
+				</text-column>
+				<language-changer>
+					<language name="englanti" title="Weather or Not">
+						Fully functional weather app, which I made for one of my courses. 
+						Not exactly a web app, but it utilizes data from a weather web site. 
+						It can give weather info according to users location, either in real time or for the seven upcomming days. 
+						More detailed information of those days can also be inspected.
+					</language>
+				</language-changer>
+				
+				<grid-generator parent_family="">
+					<media-displayer media="../media/images/WoN/WoN 3.jpg"></media-displayer>
+					<media-displayer media="../media/images/WoN/WoN 2.jpg"></media-displayer>
+					<media-displayer media="../media/images/WoN/WoN 4.jpg"></media-displayer>
+				</grid-generator>
 			</div>
 
 		</div>
@@ -139,13 +147,6 @@
 			<a href="https://seawall-project.itch.io/" target="_blank">Itch.io</a>
 			<a href="https://github.com/Ohra-aho" target="_blank">GitHub</a>
 		</div>
-	</div>
-
-	<div id="full_screen">
-		<button class="close" onclick="CloseFullScreen()">&#10006;</button>
-		<button onclick="ChangeImage(false)">&#8592;</button>
-		<img src="../media/images/amma/home_page.jpg" alt="art" id="full_screen_image">
-		<button onclick="ChangeImage(true)">&#8594;</button>
 	</div>
 	
 	<language-controller></language-controller>

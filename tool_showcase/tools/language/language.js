@@ -58,7 +58,6 @@ class Language extends HTMLElement {
 			}
 		}
 		this.target_element = temp;
-		console.log(temp)
 	}
 
 	Inisiate() {

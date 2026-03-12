@@ -2,14 +2,23 @@ media-displayer {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid white;
 }
-
-media-displayer:hover {
-  border: 2px solid white;
+media-displayer img {
+  max-height: 100%;
+  max-width: 100%;
+}
+media-displayer video {
+  max-height: 100%;
+  max-width: 100%;
+}
+media-displayer img:hover {
   cursor: pointer;
 }
 
+media-displayer.vertical {
+  height: -moz-fit-content;
+  height: fit-content;
+}
 media-displayer.vertical img {
   width: auto;
   height: 100%;
@@ -19,6 +28,10 @@ media-displayer.vertical video {
   height: 100%;
 }
 
+media-displayer.horizontal {
+  width: -moz-fit-content;
+  width: fit-content;
+}
 media-displayer.horizontal img {
   width: 100%;
   height: auto;
@@ -35,6 +48,7 @@ full-screen-media {
   position: fixed;
   z-index: 3;
   top: 0;
+  pointer-events: all;
 }
 full-screen-media fc-media {
   display: block;

@@ -66,44 +66,44 @@ body #main #sample_links {
 }
 body #main #sample_links .section {
   margin-top: 100px;
-  background-image: linear-gradient(transparent, white 5% 95%, transparent);
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
   display: flex;
+  color: white;
+  border-bottom: 2px solid white;
+  padding-bottom: 10px;
+  justify-content: center;
 }
-body #main #sample_links .section .info {
-  margin: 10px;
+body #main #sample_links .section text-column {
+  margin: 10px 30px 10px 10px;
   font-size: 1.2em;
-}
-body #main #sample_links .section .media_grid {
-  margin: 20px;
-  display: grid;
-  grid-template-columns: repeat(3, 300px);
-  grid-template-rows: repeat(3, 150px);
-  gap: 10px;
-  justify-items: center;
-  align-content: center;
-}
-body #main #sample_links .section .media_grid img, body #main #sample_links .section .media_grid video {
-  height: 100%;
-  width: auto;
-}
-body #main #sample_links .section .media_grid img:hover, body #main #sample_links .section .media_grid video:hover {
-  border: 3px solid rgba(0, 0, 0, 0.7);
-  cursor: pointer;
-}
-body #main #sample_links .section #WoN {
-  grid-template-columns: repeat(3, 300px);
-  grid-template-rows: repeat(1, 550px);
-}
-body #main #sample_links .section #MM {
   width: 30%;
-  margin-right: 10%;
+}
+body #main #sample_links .section text-column h1 {
+  border-bottom: 2px solid white;
+}
+body #main #sample_links .section grid-generator {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+}
+body #main #sample_links .section grid-generator media-displayer {
+  width: 300px;
 }
 body #main #sample_links .section a {
   text-decoration: none;
-  color: black;
+  color: white;
+}
+body #main #sample_links #tyokalut .info column {
+  align-items: start;
+  margin-bottom: 10px;
+}
+body #main #sample_links #tyokalut .info column a {
+  position: static;
+  text-decoration: underline;
 }
 body #main #footer {
   width: 100vw;
@@ -130,41 +130,6 @@ body #main #footer a {
 }
 body #main #footer a:hover {
   background-color: rgba(65, 65, 65, 0.5);
-}
-body #full_screen {
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: none;
-  align-items: center;
-  justify-content: space-around;
-  position: fixed;
-  top: 0;
-  z-index: 2;
-}
-body #full_screen img {
-  height: 90%;
-  width: auto;
-  max-width: 80%;
-}
-body #full_screen button {
-  height: 100px;
-  width: 30px;
-  border: none;
-  border-radius: 10px;
-  font-size: 1.2em;
-}
-body #full_screen button:hover {
-  cursor: pointer;
-}
-body #full_screen .close {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  border-radius: 50%;
-  border: none;
-  top: 20px;
-  right: 30px;
 }
 
 @media screen and (max-width: 500px) {
@@ -233,18 +198,12 @@ body #full_screen .close {
   body #main #sample_links .section {
     flex-direction: column;
   }
-  body #main #sample_links .section .media_grid {
-    grid-template-columns: repeat(1, 300px);
-    grid-template-rows: repeat(9, 150px);
-    justify-content: center;
+  body #main #sample_links .section text-column {
+    width: 90%;
   }
-  body #main #sample_links .section #WoN {
-    grid-template-columns: repeat(1, 300px);
-    grid-template-rows: repeat(3, 550px);
-  }
-  body #main #sample_links .section #MM {
-    width: 80%;
-    margin-left: 10%;
+  body #main #sample_links .section grid-generator {
+    margin: 0;
+    width: 100%;
   }
   body #main #footer {
     width: 100vw;
@@ -284,10 +243,6 @@ body #full_screen .close {
     line-height: 1em;
     font-size: 0.7em;
     padding: 2%;
-  }
-  body #full_screen img {
-    height: auto;
-    width: 80%;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 1030px) {
@@ -356,18 +311,12 @@ body #full_screen .close {
   body #main #sample_links .section {
     flex-direction: column;
   }
-  body #main #sample_links .section .media_grid {
-    grid-template-columns: repeat(1, 300px);
-    grid-template-rows: repeat(9, 150px);
-    justify-content: center;
+  body #main #sample_links .section text-column {
+    width: 90%;
   }
-  body #main #sample_links .section #WoN {
-    grid-template-columns: repeat(1, 300px);
-    grid-template-rows: repeat(3, 550px);
-  }
-  body #main #sample_links .section #MM {
-    width: 80%;
-    margin-left: 10%;
+  body #main #sample_links .section grid-generator {
+    margin: 0;
+    width: 100%;
   }
   body #main #footer {
     width: 100vw;
@@ -408,10 +357,6 @@ body #full_screen .close {
     font-size: 0.7em;
     padding: 2%;
   }
-  body #full_screen img {
-    height: auto;
-    width: 80%;
-  }
   body #header {
     height: 12vh;
     max-height: 50px;
@@ -444,10 +389,5 @@ body #full_screen .close {
   }
   body #main #footer a {
     line-height: 1em;
-  }
-  body #full_screen img {
-    height: auto;
-    width: auto;
-    max-height: 100vh;
   }
 }/*# sourceMappingURL=index.css.map */
