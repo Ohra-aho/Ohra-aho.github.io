@@ -40,33 +40,44 @@ class HamList extends HTMLElement {
 	}
 
 	OpenList() {
-		this.parentElement.classList.toggle("open");
-		if(this.parentElement.classList.contains("open")) {
-			const temp = ham_menu_temp.content.cloneNode(true);
-			temp.getElementById("close").addEventListener("click", function () {
-				this.parentElement.parentElement.parentElement.classList.toggle("open");
-				this.parentElement.parentElement.remove();
-			});
-			this.parentElement.appendChild(temp);
-			for(let i = 0; i < this.parentElement.content.length; i++) {
-				this.parentElement.querySelector("ham-menu").appendChild(this.parentElement.content[i].cloneNode(true));
-				this.parentElement.AddCloseToLinks();
-			}
-		} else {
-			this.parentElement.querySelector("ham-menu").remove();
+		let menu = document.createElement("ham-menu");
+		menu.content = this.parentElement.content;
+		menu.Activate();
+	}
+}
+
+class HamMenu extends HTMLElement { 
+	content;
+
+	constructor() {
+		super();
+	}
+
+	Activate() {
+		let template = ham_menu_temp.content.cloneNode(true);
+		document.body.appendChild(template);
+
+		document.querySelector("ham-menu").children[0].children[0].addEventListener("click", () => {
+			document.querySelector("ham-menu").remove();
+		});
+
+		for(let i = 0; i < this.content.length; i++) {
+			document.querySelector("ham-menu").appendChild(this.content[i]);
 		}
+		
+		this.AddCloseToLinks();
 	}
 
 	AddCloseToLinks() {
-		let ham_menu = this.querySelector("ham-menu");
+		let ham_menu = document.querySelector("ham-menu");
 		let links = ham_menu.querySelectorAll("a");
 		for(let i = 0; i < links.length; i++) {
 			links[i].onclick = function () {
-				document.querySelector("ham-list").classList.toggle("open");
 				ham_menu.remove();
 			};
 		}
 	}
 }
 
+customElements.define("ham-menu", HamMenu)
 customElements.define("ham-list", HamList);

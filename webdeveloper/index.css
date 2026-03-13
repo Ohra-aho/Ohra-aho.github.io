@@ -205,6 +205,9 @@ body #main #footer a:hover {
     margin: 0;
     width: 100%;
   }
+  body #main #sample_links .section grid-generator media-displayer {
+    max-width: 100%;
+  }
   body #main #footer {
     width: 100vw;
     height: 10vh;
@@ -317,6 +320,9 @@ body #main #footer a:hover {
   body #main #sample_links .section grid-generator {
     margin: 0;
     width: 100%;
+  }
+  body #main #sample_links .section grid-generator media-displayer {
+    max-width: 100%;
   }
   body #main #footer {
     width: 100vw;

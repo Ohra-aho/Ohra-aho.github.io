@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ohra-aho</title>
 
-	<link rel="stylesheet" href="index.css">
 
 	<link rel="stylesheet" href="./tool_showcase/tools/language/language_toggler.css">
 	<link rel="stylesheet" href="./tool_showcase/tools/main/loading_screen/loading_screen.css">
@@ -16,7 +15,16 @@
 	<script defer src="./tool_showcase/tools/popups/sidebar.js"></script>
 
 	<link rel="stylesheet" href="./tool_showcase/tools/adjusting/row_column.css">
-<!--vdfmv-->
+
+	<link rel="stylesheet" href="./tool_showcase/tools/main/header/ham-list/ham_list.css">
+	<script defer src="./tool_showcase/tools/main/header/ham-list/ham_list.js"></script>
+
+	<link rel="stylesheet" href="./tool_showcase/tools/icons/icons.css">
+	<script defer src="./tool_showcase/tools/icons/icons.js"></script>
+
+	<!--site links-->
+	<link rel="stylesheet" href="index.css">
+
 </head>
 
 <body>
@@ -39,32 +47,33 @@
 	</language-changer>
 
 	<div class="header">
-		<div id="link_holder">
-			<div class="header_links">
-				<a href="./engineer/">IT-insinööri</a>
-				<language-changer>
-					<language name="englanti">IT-engineer</language>
-				</language-changer>
+		<ham-list>
+			<div id="link_holder">
+				<div class="header_links">
+					<a href="./engineer/">IT-insinööri</a>
+					<language-changer>
+						<language name="englanti">IT-engineer</language>
+					</language-changer>
 
-				<a href="./webdeveloper/">Web-kehittäjä</a>
-				<language-changer>
-					<language name="englanti">Web developer</language>
-				</language-changer>
-			</div>
-			<div class="header_links">
-				<a href="./gamedeveloper/">Pelinkehittäjä</a>
-				<language-changer>
-					<language name="englanti">Game developer</language>
-				</language-changer>
+					<a href="./webdeveloper/">Web-kehittäjä</a>
+					<language-changer>
+						<language name="englanti">Web developer</language>
+					</language-changer>
+				</div>
+				<div class="header_links">
+					<a href="./gamedeveloper/">Pelinkehittäjä</a>
+					<language-changer>
+						<language name="englanti">Game developer</language>
+					</language-changer>
 
-				<a href="./2dartist/">2D artisti</a>
-				<language-changer>
-					<language name="englanti">2D artist</language>
-				</language-changer>
+					<a href="./2dartist/">2D artisti</a>
+					<language-changer>
+						<language name="englanti">2D artist</language>
+					</language-changer>
+				</div>
 			</div>
-		</div>
-		<language-toggler></language-toggler>
-		<!--<button onclick="SetNewLanguage(); ChangeLanguage()">Suomi</button>-->
+			<language-toggler></language-toggler>
+		</ham-list>
 	</div>
 	
 	<div id="main">

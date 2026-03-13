@@ -4,7 +4,7 @@ sidebar-fixed {
   height: 100vh;
   position: fixed;
   background-color: gray;
-  z-index: 3;
+  z-index: 2;
   top: 0;
 }
 sidebar-fixed button {

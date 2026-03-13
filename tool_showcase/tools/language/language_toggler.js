@@ -23,11 +23,15 @@ class LanguageToggler extends HTMLElement {
 			this.current_language = this.languages[0];
 			window.sessionStorage.setItem("language", this.current_language);
 		}
-		let template = language_toggler_template.content.cloneNode(true);
-		template.children[0].innerHTML = this.current_language;
-		template.children[0].addEventListener("click", () => {
-			this.ChangeLanguage();
-		});
+
+		let template = null
+		if(!this.querySelector("button")) {
+			template = language_toggler_template.content.cloneNode(true);
+			template.children[0].innerHTML = this.current_language;
+			template.children[0].addEventListener("click", () => {
+				this.ChangeLanguage();
+			});
+		}
 
 		//Set button text
 		let current_index = this.languages.indexOf(this.current_language);
@@ -35,9 +39,10 @@ class LanguageToggler extends HTMLElement {
 		if(current_index >= this.languages.length) {
 			current_index = 0;
 		}
-		template.children[0].innerHTML = this.languages[current_index];
-		
-		this.appendChild(template);
+		if(template != null) {
+			template.children[0].innerHTML = this.languages[current_index];
+			this.appendChild(template);
+		}
 	}
 
 	ChangeLanguage() {

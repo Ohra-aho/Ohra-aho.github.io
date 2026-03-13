@@ -111,6 +111,9 @@ body {
 					grid-generator {
 						margin: 0;
 						width: 100%;
+						media-displayer {
+							max-width: 100%;
+						}
 					}
 				}
 			}
