@@ -1,5 +1,4 @@
 card-img {
-  background-color: gray;
   border-radius: 10px;
   padding: 5px;
   display: flex;
@@ -28,7 +27,6 @@ card-img content {
   padding: 1%;
 }
 card-img content h3 {
-  border-bottom: 2px solid gray;
   margin-bottom: 0;
   margin-top: 0;
 }
