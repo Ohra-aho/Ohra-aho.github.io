@@ -12,7 +12,6 @@ body #header {
   background-color: black;
   margin: 0;
   position: fixed;
-  z-index: 1;
   display: flex;
   align-items: center;
   border-bottom: 2px dashed white;
@@ -141,7 +140,6 @@ body #main #footer a:hover {
     background-color: black;
     margin: 0;
     position: fixed;
-    z-index: 1;
     display: flex;
     align-items: center;
     border-bottom: 2px dashed white;
@@ -153,7 +151,6 @@ body #main #footer a:hover {
     background-color: black;
     margin: 0;
     position: fixed;
-    z-index: 1;
     display: flex;
     align-items: center;
     border-bottom: 2px dashed white;
@@ -257,7 +254,6 @@ body #main #footer a:hover {
     background-color: black;
     margin: 0;
     position: fixed;
-    z-index: 1;
     display: flex;
     align-items: center;
     border-bottom: 2px dashed white;
@@ -269,7 +265,6 @@ body #main #footer a:hover {
     background-color: black;
     margin: 0;
     position: fixed;
-    z-index: 1;
     display: flex;
     align-items: center;
     border-bottom: 2px dashed white;

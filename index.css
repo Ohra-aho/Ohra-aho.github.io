@@ -216,6 +216,9 @@ body #main #snippet_holder .snippet .container .info {
   height: fit-content;
   position: relative;
 }
+body #main #snippet_holder .snippet .container .info card-img h3 {
+  border-bottom: 2px solid black;
+}
 body #main #snippet_holder .snippet .container .info card-img {
   width: 100%;
   height: -moz-fit-content;
@@ -224,6 +227,9 @@ body #main #snippet_holder .snippet .container .info card-img {
 body #main #snippet_holder .snippet .container .info card-img content {
   height: -moz-fit-content;
   height: fit-content;
+}
+body #main #snippet_holder .snippet .container .info card-img.narrow {
+  display: none;
 }
 body #main #snippet_holder .snippet .container .info h2 {
   font-size: large;
@@ -389,9 +395,10 @@ body #main #footer a:hover {
     margin-bottom: 10vh;
   }
   body #main #snippet_holder .snippet #back {
-    top: 0;
+    bottom: 0;
+    top: 45%;
     width: 100%;
-    height: 120%;
+    height: 55%;
     transform: scaleX(1);
   }
   body #main #snippet_holder .snippet .container {
@@ -400,17 +407,26 @@ body #main #footer a:hover {
   body #main #snippet_holder .snippet .container .info {
     width: 100%;
   }
-  body #main #snippet_holder .snippet .container .info h2 {
+  body #main #snippet_holder .snippet .container .info card-img img-frame {
+    max-height: 50%;
+  }
+  body #main #snippet_holder .snippet .container .info card-img img-frame img {
+    width: 100%;
+  }
+  body #main #snippet_holder .snippet .container .info card-img h2 {
     font-size: 1em;
   }
-  body #main #snippet_holder .snippet .container .info p {
+  body #main #snippet_holder .snippet .container .info card-img p {
     font-size: 1em;
   }
-  body #main #snippet_holder .snippet .container .info a {
+  body #main #snippet_holder .snippet .container .info card-img a {
     font-size: 1.1em;
   }
-  body #main #snippet_holder .snippet .container #image {
+  body #main #snippet_holder .snippet .container .info card-img.right {
     display: none;
+  }
+  body #main #snippet_holder .snippet .container .info card-img.narrow {
+    display: flex;
   }
   body #main #snippet_holder .left {
     left: 0;
@@ -556,9 +572,10 @@ body #main #footer a:hover {
     margin-bottom: 10vh;
   }
   body #main #snippet_holder .snippet #back {
-    top: 0;
+    bottom: 0;
+    top: 45%;
     width: 100%;
-    height: 120%;
+    height: 55%;
     transform: scaleX(1);
   }
   body #main #snippet_holder .snippet .container {
@@ -567,17 +584,26 @@ body #main #footer a:hover {
   body #main #snippet_holder .snippet .container .info {
     width: 100%;
   }
-  body #main #snippet_holder .snippet .container .info h2 {
+  body #main #snippet_holder .snippet .container .info card-img img-frame {
+    max-height: 50%;
+  }
+  body #main #snippet_holder .snippet .container .info card-img img-frame img {
+    width: 100%;
+  }
+  body #main #snippet_holder .snippet .container .info card-img h2 {
     font-size: 1em;
   }
-  body #main #snippet_holder .snippet .container .info p {
+  body #main #snippet_holder .snippet .container .info card-img p {
     font-size: 1em;
   }
-  body #main #snippet_holder .snippet .container .info a {
+  body #main #snippet_holder .snippet .container .info card-img a {
     font-size: 1.1em;
   }
-  body #main #snippet_holder .snippet .container #image {
+  body #main #snippet_holder .snippet .container .info card-img.right {
     display: none;
+  }
+  body #main #snippet_holder .snippet .container .info card-img.narrow {
+    display: flex;
   }
   body #main #snippet_holder .left {
     left: 0;

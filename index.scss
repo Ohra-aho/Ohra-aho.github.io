@@ -141,6 +141,7 @@ body {
 		}
 	}
 
+
 	#main {
 		@include main();
 		width: 100vw;
@@ -210,11 +211,20 @@ body {
 						position: relative;
 
 						card-img {
+							h3 {
+								border-bottom: 2px solid black;
+							}
+
 							width: 100%;
 							height: fit-content;
+
 							content {
 								height: fit-content;
 							}
+						}
+
+						card-img.narrow {
+							display: none;
 						}
 
 						h2 {
@@ -228,7 +238,6 @@ body {
 							font-size: 1.2em;
 							width: 100%;
 							height: fit-content;
-							//margin: 10px 5px 10px 5px;
 						}
 
 						a {
@@ -341,9 +350,10 @@ body {
 					margin-bottom: 10vh;
 					
 					#back {
-						top: 0;
+						bottom: 0;
+						top: 45%;
 						width: 100%;
-						height: 120%;
+						height: 55%;
 						-webkit-transform: scaleX(1); 
 						transform: scaleX(1);
 					}
@@ -352,12 +362,25 @@ body {
 
 						.info {
 							width: 100%;
-							h2 { font-size: $small_title; }
-							p { font-size: $small_font; }
-							a { font-size: 1.1em; }
-						}
+							card-img {
+								img-frame {
+									max-height: 50%;
+									img {
+										width: 100%;
+									}
+								}
 
-						#image { display: none; }
+								h2 { font-size: $small_title; }
+								p { font-size: $small_font; }
+								a { font-size: 1.1em; }
+							}
+							card-img.right {
+								display: none;
+							}
+							card-img.narrow {
+								display: flex;
+							}
+						}
 					}
 				}
 
