@@ -20,18 +20,20 @@ class Language extends HTMLElement {
 
 	ChangeLanguage(language) {
 		this.current_language = language;
-		if(this.target_element.getAttribute("custom") != "Y") {
-			for(let i = 0; i < this.text.length; i++) {
-				if(this.current_language == this.text[i].name) {
-					this.target_element.innerHTML = this.text[i].text;
-					break;
+		if(this.target_element != undefined) {
+			if(this.target_element.getAttribute("custom") != "Y") {
+				for(let i = 0; i < this.text.length; i++) {
+					if(this.current_language == this.text[i].name) {
+						this.target_element.innerHTML = this.text[i].text;
+						break;
+					}
 				}
-			}
-		} else {
-			for(let i = 0; i < this.text.length; i++) {
-				if(this.current_language == this.text[i].name) {
-					this.target_element.ChangeLanguage(this.text[i])
-					break;
+			} else {
+				for(let i = 0; i < this.text.length; i++) {
+					if(this.current_language == this.text[i].name) {
+						this.target_element.ChangeLanguage(this.text[i])
+						break;
+					}
 				}
 			}
 		}

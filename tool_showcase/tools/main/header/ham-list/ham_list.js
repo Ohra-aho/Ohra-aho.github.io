@@ -64,6 +64,11 @@ class HamMenu extends HTMLElement {
 		for(let i = 0; i < this.content.length; i++) {
 			document.querySelector("ham-menu").appendChild(this.content[i]);
 		}
+
+		let language_changers = document.querySelector("ham-menu").querySelectorAll("language-changer");
+		for(let i = 0; i < language_changers.length; i++) {
+			language_changers[i].Inisiate();
+		}
 		
 		this.AddCloseToLinks();
 	}
