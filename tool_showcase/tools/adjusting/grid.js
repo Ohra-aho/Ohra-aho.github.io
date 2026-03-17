@@ -24,11 +24,6 @@ class GridGenerator extends HTMLElement {
 		const columns = Math.floor(parent_width / this.cell_width);
 		const rows = Math.ceil(this.CalculateTrueChildCount() / columns);
 
-		/*this.style = 
-		`
-			grid-template-rows: repeat(${rows}, ${this.cell_height}px);
-			grid-template-columns: repeat(${columns}, ${this.cell_width}px);
-		`;*/
 		this.style = 
 		`
 			grid-template-rows: repeat(${rows}, auto);
