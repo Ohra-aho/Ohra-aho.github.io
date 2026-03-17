@@ -1,0 +1,120 @@
+@use "../utils.scss" as *;
+
+
+//Cards will need their own dimension logic based on need
+editable-card-img {
+	border-radius: 10px;
+	padding: 5px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	height: 100%;
+	width: 100%;
+
+
+	img-frame {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 50%;
+		width: 90%;
+		margin: 5px;
+		overflow: hidden;
+		img {
+			height: 100%;
+			width: auto;
+		}
+	}
+	
+
+	content {
+		width: 90%;
+		height: 45%;
+		border-radius: 5px;
+		padding: 1%;
+		h3 {
+			margin-bottom: 0;
+			margin-top: 0;
+		}
+	}
+}
+
+.normal-card {
+	content {
+		overflow-y: scroll;
+		p {
+			height: fit-content;
+			margin-top: 10px;
+		}
+
+		p::-webkit-scrollbar {
+			display: none;
+		}
+	}
+}
+
+editable-card-img.text {
+	img-frame {
+		display: none;
+	}
+	content {
+		height: 95%;
+		width: 95%;
+		p {
+			height: 85%;
+		}
+	}
+}
+
+editable-card-img.horizontal {
+	flex-direction: row;
+	
+	img-frame {
+		height: 90%;
+		width: 50%;
+		img {
+			height: auto;
+			width: 100%;
+		}
+	}
+
+	content {
+		width: 45%;
+		height: 90%;
+		padding: 1%;
+	}
+}
+
+
+
+//narrow screen
+@media screen and (max-width: $narrow) {
+	editable-card-img.horizontal {
+		flex-direction: column;
+		img-frame {
+			height: 50%;
+			width: 90%;
+			img {
+				height: 100%;
+				width: auto;
+			}
+		}
+		content {
+			width: 90%;
+			height: 45%;
+		}
+	}
+}
+
+
+//medium screen
+@media screen and (min-width: $narrow) and (max-width: $medium) {
+
+}
+
+//wide screen
+@media screen and (min-width: $medium) and (max-width: $wide) {
+	
+}

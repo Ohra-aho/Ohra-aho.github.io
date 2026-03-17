@@ -172,7 +172,7 @@ html {
 	#cards {
 		custom_center {
 			row {
-				card-img {
+				editable-card-img {
 					position: relative;
 					width: 300px;
 					height: 500px;
@@ -181,7 +181,7 @@ html {
 				}
 				column {
 					justify-items: center;
-					card-img {
+					editable-card-img {
 						width: 500px;
 						height: 300px;
 						
@@ -204,7 +204,7 @@ html {
 							}
 						}
 					}
-					card-img:last-of-type {
+					editable-card-img:last-of-type {
 						width: 300px;
 						height: 150px;
 						background-color: gray;

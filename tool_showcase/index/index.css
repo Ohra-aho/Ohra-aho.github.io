@@ -134,7 +134,7 @@ html #text-column row #testing {
   padding: 10px;
   background-color: white;
 }
-html #cards custom_center row card-img {
+html #cards custom_center row editable-card-img {
   position: relative;
   width: 300px;
   height: 500px;
@@ -144,12 +144,12 @@ html #cards custom_center row card-img {
 html #cards custom_center row column {
   justify-items: center;
 }
-html #cards custom_center row column card-img {
+html #cards custom_center row column editable-card-img {
   width: 500px;
   height: 300px;
   background-color: transparent;
 }
-html #cards custom_center row column card-img content {
+html #cards custom_center row column editable-card-img content {
   background-color: transparent;
   background-image: linear-gradient(to left, transparent, var(--secondary-color) 10% 90%, transparent);
   height: 75%;
@@ -158,35 +158,35 @@ html #cards custom_center row column card-img content {
   justify-content: center;
   align-items: center;
 }
-html #cards custom_center row column card-img content h3 {
+html #cards custom_center row column editable-card-img content h3 {
   width: 80%;
 }
-html #cards custom_center row column card-img content text-editor {
+html #cards custom_center row column editable-card-img content text-editor {
   display: flex;
   justify-content: center;
 }
-html #cards custom_center row column card-img content text-editor p {
+html #cards custom_center row column editable-card-img content text-editor p {
   width: 80%;
 }
-html #cards custom_center row column card-img:last-of-type {
+html #cards custom_center row column editable-card-img:last-of-type {
   width: 300px;
   height: 150px;
   background-color: gray;
 }
-html #cards custom_center row column card-img:last-of-type img {
+html #cards custom_center row column editable-card-img:last-of-type img {
   height: 100%;
   width: auto;
 }
-html #cards custom_center row column card-img:last-of-type content {
+html #cards custom_center row column editable-card-img:last-of-type content {
   background-color: white;
   background-image: none;
   display: block;
   height: 90%;
 }
-html #cards custom_center row column card-img:last-of-type content h3 {
+html #cards custom_center row column editable-card-img:last-of-type content h3 {
   width: 100%;
 }
-html #cards custom_center row column card-img:last-of-type content p {
+html #cards custom_center row column editable-card-img:last-of-type content p {
   width: 100%;
 }
 html #media-displayers text-column {

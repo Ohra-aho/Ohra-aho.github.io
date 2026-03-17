@@ -34,6 +34,8 @@
 	<link rel="stylesheet" href="./tools/language/language_toggler.css">
 	<link rel="stylesheet" href="./tools/index.css">
 
+	<link rel="stylesheet" href="./tools/editable/e_style.css">
+
 		
 	<script defer src="./tools/base.js"></script>
 
@@ -65,6 +67,7 @@
 	<script defer src="./tools/language/language_toggler.js"></script>
 
 	<script defer src="./tools/mirror_editor.js"></script>
+	<script defer src="./tools/editable/e_card.js"></script>
 
 	<!--main links-->
 	<link rel="stylesheet" href="./index/index.css">
@@ -122,7 +125,7 @@
 		<section id="cards">
 			<custom_center>
 				<row>
-					<card-img title="Kortit" image="./tools/media/images/header/placeholder_logo.png" class="right">
+					<editable-card-img title="Kortit" image="./tools/media/images/header/placeholder_logo.png" class="right">
 						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
 						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
 						Saepe, consectetur vitae?
@@ -144,14 +147,16 @@
 								</card-img>
 
 								<mirror-editor>
-									<p>&lt card-img title="<input type="text" id="title" value="Jotain">" splitter="<input type="text" id="splitter" value="$">"&gt</p>
+									<p>&lt card-img 
+										title="<input type="text" id="title" value="Jotain">" 
+										splitter="<input type="text" id="splitter" value="$">"&gt</p>
 									<textarea name="text" id="text-area"></textarea>
 									<p>&lt card-img &gt</p>
 								</mirror-editor>
 
 							</row>
 						</full-screen>
-					</card-img>
+					</editable-card-img>
 
 				</row>
 			</custom_center>

@@ -1,6 +1,7 @@
 class MirrorEditor extends HTMLElement { 
 	target
 	inputs
+	origin
 	constructor() {
 		super();
 	}
@@ -28,15 +29,30 @@ class MirrorEditor extends HTMLElement {
 				this.RebuildTarget();
 			});
 		}
+
+		this.FindFullscreen();
+	}
+
+	FindFullscreen() {
+		let parent = this.parentElement;
+		while(parent.nodeName != "FULL-SCREEN-POPUP" && parent.nodeName != "BODY") {
+			parent = parent.parentElement;
+		}
+		if(parent.nodeName == "FULL-SCREEN-POPUP") {
+			this.origin = parent.parent;
+		}
 	}
 
 	RebuildTarget() {
 		for(let i = 0; i < this.inputs.length; i++) {
 			if(this.inputs[i].value != "") {
-				this.target.setAttribute(this.inputs[i].id, this.inputs[i].value)
+				this.target.setAttribute(this.inputs[i].id, this.inputs[i].value);
+				this.origin.setAttribute(this.inputs[i].id, this.inputs[i].value);
 			}
 		}
 		this.target.innerHTML = this.querySelector("textarea").value;
+		this.origin.new_content = this.querySelector("textarea").value;
+		this.origin.Edit();
 		this.target.Inisiate();
 	}
 }

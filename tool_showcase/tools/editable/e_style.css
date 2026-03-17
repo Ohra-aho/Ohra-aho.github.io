@@ -1,0 +1,90 @@
+editable-card-img {
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+editable-card-img img-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+  width: 90%;
+  margin: 5px;
+  overflow: hidden;
+}
+editable-card-img img-frame img {
+  height: 100%;
+  width: auto;
+}
+editable-card-img content {
+  width: 90%;
+  height: 45%;
+  border-radius: 5px;
+  padding: 1%;
+}
+editable-card-img content h3 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.normal-card content {
+  overflow-y: scroll;
+}
+.normal-card content p {
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 10px;
+}
+.normal-card content p::-webkit-scrollbar {
+  display: none;
+}
+
+editable-card-img.text img-frame {
+  display: none;
+}
+editable-card-img.text content {
+  height: 95%;
+  width: 95%;
+}
+editable-card-img.text content p {
+  height: 85%;
+}
+
+editable-card-img.horizontal {
+  flex-direction: row;
+}
+editable-card-img.horizontal img-frame {
+  height: 90%;
+  width: 50%;
+}
+editable-card-img.horizontal img-frame img {
+  height: auto;
+  width: 100%;
+}
+editable-card-img.horizontal content {
+  width: 45%;
+  height: 90%;
+  padding: 1%;
+}
+
+@media screen and (max-width: 500px) {
+  editable-card-img.horizontal {
+    flex-direction: column;
+  }
+  editable-card-img.horizontal img-frame {
+    height: 50%;
+    width: 90%;
+  }
+  editable-card-img.horizontal img-frame img {
+    height: 100%;
+    width: auto;
+  }
+  editable-card-img.horizontal content {
+    width: 90%;
+    height: 45%;
+  }
+}/*# sourceMappingURL=e_style.css.map */

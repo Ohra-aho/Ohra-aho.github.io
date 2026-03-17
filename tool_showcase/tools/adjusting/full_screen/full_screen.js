@@ -1,6 +1,7 @@
 
 class FullScreen extends HTMLElement { 
 	og_content
+	parent
 	constructor() {
 		super();
 	}
@@ -28,6 +29,7 @@ class FullScreen extends HTMLElement {
 
 	OpenFullScreen() {
 		let popup = document.createElement("full-screen-popup");
+		popup.parent = this.parentElement;
 		document.body.appendChild(popup);
 		for(let i = 0; i < this.children.length; i++) {
 			popup.appendChild(this.children[i].cloneNode(true));
