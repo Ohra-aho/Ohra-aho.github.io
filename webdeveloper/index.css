@@ -16,6 +16,7 @@ body #header {
   align-items: center;
   border-bottom: 2px dashed white;
   top: 0;
+  z-index: 1;
   padding: 0;
   top: 0;
   left: 0;
@@ -144,6 +145,7 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
+    z-index: 1;
     margin-bottom: 10px;
     width: 100vw;
     height: fit-content;
@@ -155,6 +157,7 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
+    z-index: 1;
     padding: 0;
     top: 0;
     left: 0;
@@ -258,6 +261,7 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
+    z-index: 1;
     margin-bottom: 10px;
     width: 100vw;
     height: fit-content;
@@ -269,6 +273,7 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
+    z-index: 1;
     padding: 0;
     top: 0;
     left: 0;

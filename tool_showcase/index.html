@@ -32,6 +32,7 @@
 
 	<link rel="stylesheet" href="./tools/icons/icons.css">
 	<link rel="stylesheet" href="./tools/language/language_toggler.css">
+	<link rel="stylesheet" href="./tools/index.css">
 
 		
 	<script defer src="./tools/base.js"></script>
@@ -63,18 +64,14 @@
 	<script defer src="./tools/language/language.js"></script>
 	<script defer src="./tools/language/language_toggler.js"></script>
 
+	<script defer src="./tools/mirror_editor.js"></script>
 
 	<!--main links-->
-	<link rel="stylesheet" href="./index/header/header.css">
 	<link rel="stylesheet" href="./index/index.css">
 
 </head>
 <body>
 	<languages languages="suomi englanti"></languages>
-
-	<loading-screen>
-		<img src="./tools/media/images/header/placeholder_logo.png" alt="image">
-	</loading-screen>
 	
 	<sticky-header>
 		<div style="width: 100%; height: 7vh">
@@ -118,186 +115,13 @@
 			
 		</div>
 	</sticky-header>
-
-	<sidebar-fixed
-		title="Sivupalkki"
-		class="on-right"
-	>
-		<media-displayer image="true" media="../media/images/web developer.png" class="horizontal"></media-displayer>
-		<!--<text-column title="Sivupalkki">
-			Vaikka uutisia tai yhteystietoja varten.
-		</text-column>
-		<language-changer>
-			<language name="englanti" title="Sidebar">Maybe for news or contact info.</language>
-		</language-changer>-->
-
-	</sidebar-fixed>
-	<language-changer>
-		<language name="englanti" title="Sidebar"></language>
-	</language-changer>
 	
 	<main-container>
-
-		<section id="title-card">
-			<title-card>
-				
-				<div class="card">
-					<h1>Päägalleria</h1>
-					<language-changer>
-						<language name="englanti">Main gallery</language>
-					</language-changer>
-
-					<p>Voi sisältää mitä tahansa ja rullaa sisällön läpi</p>
-					<language-changer>
-						<language name="englanti">Can contain anything and cycle through it</language>
-					</language-changer>
-					<img src="./tools/media/images/title_screen/placeholder_title_background.png" alt="title_screen">
-				</div>
-
-				<div class="card">
-					<h1>Iskulauseita</h1>
-					<language-changer>
-						<language name="englanti">Catchphrases</language>
-					</language-changer>
-					<img src="./tools/media/images/title_screen/placeholder_title_background.png" alt="title_screen">
-				</div>
-
-				<div class="card">
-					<h1>Informaatiota</h1>
-					<language-changer>
-						<language name="englanti">Information</language>
-					</language-changer>
-					<img src="./tools/media/images/title_screen/placeholder_title_background.png" alt="title_screen">
-				</div>
-
-				<div class="card">
-					<h1>Mainoskuvia</h1>
-					<language-changer>
-						<language name="englanti">Advertisements</language>
-					</language-changer>
-					<img src="./tools/media/images/title_screen/placeholder_title_background.png" alt="title_screen">
-				</div>
-			</title-card>
-		</section>
-
 		<separator></separator>
-		<!--<section id="text-column">
-			<row>
-				<text-column title="Tekstipalsta">
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-					Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-					Saepe, consectetur vitae?
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-					Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-					Saepe, consectetur vitae?
-					$
-					- WTF
-					- <a href="#">jsfdlnsdflnv</a>
-					$
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-					Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-					Saepe, consectetur vitae?
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-					Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-					Saepe, consectetur vitae?
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-					Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-					Saepe, consectetur vitae?
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-					Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-					Saepe, consectetur vitae?
-					$
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-					Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-					Saepe, consectetur vitae?
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-					Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-					Saepe, consectetur vitae?
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-					Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-					Saepe, consectetur vitae?
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-					Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-					Saepe, consectetur vitae?
-				</text-column>
-				<language-changer>
-						<language name="englanti" title="Text column">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							$
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							$
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-						</language>
-				</language-changer>
-
-				<div id="testing">
-					<limited-text>
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-						Saepe, consectetur vitae?
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-						Saepe, consectetur vitae?
-						$
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-						Saepe, consectetur vitae?
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-						Saepe, consectetur vitae?
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-						Saepe, consectetur vitae?
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-						Saepe, consectetur vitae?
-						$
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-						Saepe, consectetur vitae?
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-						Saepe, consectetur vitae?
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-						Saepe, consectetur vitae?
-					</limited-text>
-				</div>
-			</row>
-		</section>-->
-		<separator></separator>
-
+	
 		<section id="cards">
 			<custom_center>
 				<row>
-					
 					<card-img title="Kortit" image="./tools/media/images/header/placeholder_logo.png" class="right">
 						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
 						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
@@ -306,160 +130,32 @@
 						- <a href="#">Jonnekkin</a>
 						- Jotain
 						- Eipä oikeastaan mitään
-						<full-screen add-button="Lisää">
-							<card-img title="Jotain" image="./tools/media/images/header/placeholder_logo.png" class="left" custom-card="#">
-								
-								<item-list>
-									- kkkkkk
-									- llllll
-									- hhhhhhh
-								</item-list>
-								<item-list type="number">
-									- kkkkkk
-									- llllll
-									- hhhhhhh
-								</item-list>
-								
-							</card-img>
-							<language-changer>
-								<language name="englanti" title="Something"></language>
-							</language-changer>
+
+						<full-screen add-button="E">
+							<row>
+								<card-img title="Jotain" image="./tools/media/images/header/placeholder_logo.png" class="left">
+									Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+									Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
+									Saepe, consectetur vitae?
+									$
+									- <a href="#">Jonnekkin</a>
+									- Jotain
+									- Eipä oikeastaan mitään
+								</card-img>
+
+								<mirror-editor>
+									<p>&lt card-img title="<input type="text" id="title" value="Jotain">" splitter="<input type="text" id="splitter" value="$">"&gt</p>
+									<textarea name="text" id="text-area"></textarea>
+									<p>&lt card-img &gt</p>
+								</mirror-editor>
+
+							</row>
 						</full-screen>
-						<language-changer>
-							<language name="englanti" add-button="More"></language>
-						</language-changer>
 					</card-img>
-					<language-changer>
-						<language name="englanti" title="Cards">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						</language>
-					</language-changer>
 
-
-					<card-img title="Paljon pienessä paketissa" image="./tools/media/images/header/placeholder_logo.png">
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-						Saepe, consectetur vitae?
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-					</card-img>
-					<language-changer>
-						<language name="englanti" title="A lot in small package">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						</language>
-					</language-changer>
-					<column>
-
-						<card-img title="Kaiken näköisiä" image="../media/images/MM_logo1.png" class="horizontal right">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-						</card-img>
-						<language-changer>
-							<language name="englanti" title="Various styles">
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-								Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							</language>
-						</language-changer>
-
-						<card-img title="Ja kokoisia" image="./tools/media/images/header/placeholder_logo.png" class="horizontal">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						</card-img>
-						<language-changer>
-							<language name="englanti" title="And sizes">
-								Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							</language>
-						</language-changer>
-					</column>
-
-					<card-img title="Kuvalla tai ilman">
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-						Saepe, consectetur vitae?
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-						Saepe, consectetur vitae?
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-						Saepe, consectetur vitae?
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-					</card-img>
-					<language-changer>
-						<language name="englanti" title="With or without images">
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-							Ducimus, esse qui, et aspernatur quos illo deleniti obcaecati quis optio dignissimos vitae in quae quisquam, distinctio odio tempore. 
-							Saepe, consectetur vitae?
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-						</language>
-					</language-changer>
-				
 				</row>
 			</custom_center>
 		</section>
-
-
-		<separator></separator>
-		<section id="media-displayers">
-			<section-title>Kuvagalleria</section-title>
-			<language-changer>
-				<language name="englanti">Image gallery</language>
-			</language-changer>
-
-			<!--<custom_center>
-				<text-column title="">
-					Mistä tahansa kuvista voi tehdä kuvagallerian.
-					Galleriassa olevia kuvia voi tarkastella tarkemmin niitä klikkaamalla.
-					Olivat ne missä tahansa, jos niillä on sama "perhe", niitä voi selata yhdessä.
-					Alla on kuvia kahdesta eri "perheestä".
-				</text-column>
-				<language-changer>
-					<language name="englanti">
-						Any images can be made into an image gallery.
-						Images in gallery can be inspected by clicking them.
-						No matter where images are, if they are in the same "family", they can be inspected together.
-						There are images from two different "families" below.
-					</language>
-				</language-changer>
-			</custom_center>-->
-
-			<custom_center>
-				<grid-generator height="20vh" width="fit-content">
-					<media-displayer image="true" media="../media/images/it engineer.png" class="vertical red" family="red"></media-displayer>
-					<media-displayer image="true" media="./tools/media/images/image rack/rack_1.png" class="vertical" family="white"></media-displayer>
-					<media-displayer image="true" media="./tools/media/images/image rack/rack_2.png" class="vertical" family="white"></media-displayer>
-					<media-displayer image="true" media="../media/images/artist.png" class="vertical red" family="red"></media-displayer>
-					<media-displayer image="true" media="./tools/media/images/image rack/rack_4.png" class="vertical" family="white"></media-displayer>
-					<media-displayer image="true" media="../media/images/game developer.png" class="vertical red" family="red"></media-displayer>
-					<media-displayer image="true" media="./tools/media/images/image rack/rack_5.png" class="vertical" family="white"></media-displayer>
-					<media-displayer image="true" media="../media/images/web developer.png" class="vertical red" family="red"></media-displayer>
-					<media-displayer image="true" media="./tools/media/images/image rack/rack_3.png" class="vertical" family="white"></media-displayer>
-				</grid-generator>
-			</custom_center>
-		</section>
-
-		<separator></separator>
-		<footer id="contact">
-			<custom_center>
-				<simple-contact email="panu.ohraaho@gmail.com" subject="Tarvitsen nettisivut">Tarvitsetko sivuja? &#8594;</simple-contact>
-				<language-changer>
-					<language name="englanti" subject="I need a website">Need a site? &#8594;</language>
-				</language-changer>
-			</custom_center>
-		</footer>
 	</main-container>
 
 	<language-controller></language-controller>

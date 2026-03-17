@@ -30,13 +30,24 @@ class FullScreen extends HTMLElement {
 		let popup = document.createElement("full-screen-popup");
 		document.body.appendChild(popup);
 		for(let i = 0; i < this.children.length; i++) {
-			popup.appendChild(this.children[i].cloneNode(true))
+			popup.appendChild(this.children[i].cloneNode(true));
 			if(popup.children[i+1].getAttribute("custom") != null) popup.children[i+1].Inisiate();
+
+			if(popup.children[i+1].children.length > 0) {
+				this.ActivateChildren(popup.children[i+1]);
+			}
+		}
+	}
+
+	ActivateChildren(element) {
+		for(let i = 0; i < element.children.length; i++) {
+			let child = element.children[i];
+			if(child.getAttribute("custom") != null) child.Inisiate();
+			else this.ActivateChildren(element.children[i])
 		}
 	}
 
 	ChangeLanguage(LO) { //LanguageOption
-		console.log("que")
 		if(this.getAttribute("add-button") != null) {
 			this.setAttribute(LO.attributes.get("add-button"));
 		}

@@ -9,6 +9,7 @@ class MirrorEditor extends HTMLElement {
 		for(let i = 0; i < this.parentElement.children.length; i++) {
 			if(this.parentElement.children[i].nodeName != "MIRROR-EDITOR") {
 				this.target = this.parentElement.children[i];
+				break;
 			}
 		}
 	
@@ -19,9 +20,14 @@ class MirrorEditor extends HTMLElement {
 			});
 		}
 
-		this.querySelector("textarea").addEventListener("input", () => {
-			this.RebuildTarget();
-		});
+		let text_area = this.querySelector("textarea");
+		if(text_area != undefined) {
+			text_area.value = this.target.innerHTML;
+			text_area.value = text_area.value.replaceAll("\t", "");
+			text_area.addEventListener("input", () => {
+				this.RebuildTarget();
+			});
+		}
 	}
 
 	RebuildTarget() {

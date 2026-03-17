@@ -11,16 +11,21 @@ mirror-editor {
   display: block;
   background-color: black;
   color: rgb(73, 73, 255);
-  width: 40vw;
+  width: -moz-fit-content;
+  width: fit-content;
   height: -moz-fit-content;
   height: fit-content;
   margin-left: 5vw;
 }
+mirror-editor p {
+  margin: 0;
+}
 mirror-editor input {
-  background-color: rgb(44, 44, 44);
+  background-color: rgb(22, 22, 22);
   border: none;
   width: 50px;
-  color: rgb(73, 73, 255);
+  color: rgb(255, 120, 120);
+  text-align: center;
 }
 mirror-editor input::-moz-placeholder {
   color: white;
@@ -29,12 +34,15 @@ mirror-editor input::placeholder {
   color: white;
 }
 mirror-editor textarea {
-  background-color: rgb(44, 44, 44);
+  position: relative;
+  left: 20px;
+  background-color: rgb(22, 22, 22);
   border: none;
-  min-width: 200px;
-  min-height: 200px;
+  min-width: 400px;
+  min-height: 300px;
   color: white;
   border-radius: 0;
+  margin: 2px;
 }
 mirror-editor textarea::-webkit-scrollbar {
   display: none;
