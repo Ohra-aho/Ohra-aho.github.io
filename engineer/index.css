@@ -16,6 +16,7 @@ body #header {
   align-items: center;
   border-bottom: 2px dashed white;
   top: 0;
+  z-index: 1;
   padding: 0;
   top: 0;
   left: 0;
@@ -47,75 +48,65 @@ body #main {
   margin: 0;
   position: relative;
 }
-body #main #intro {
-  display: flex;
-  justify-content: space-between;
+body #main row {
   align-items: center;
-  width: 99vw;
+  width: 100vw;
   height: 30vh;
+  margin-bottom: 10px;
 }
-body #main #intro #info {
+body #main row #info {
   width: 40vw;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
   border: 2px solid white;
-  position: relative;
-  left: -1vw;
   border-radius: 5px;
+  margin-right: 10px;
 }
-body #main #intro #info img {
+body #main row #info img {
   width: auto;
   height: 100%;
 }
-body #main #intro #info #text_box {
-  position: relative;
-  top: 0;
+body #main row #info #text_box {
   color: white;
-  display: inline-block;
   height: 100%;
 }
-body #main #intro #info #text_box p {
+body #main row #info #text_box p {
   font-size: 1.2em;
   margin-right: 5px;
 }
-body #main #intro #left {
+body #main row #left {
   height: -moz-fit-content;
   height: fit-content;
-  width: 35vw;
+  width: -moz-fit-content;
+  width: fit-content;
   border: 2px solid white;
-  position: relative;
   padding: 0 5px 0 5px;
   border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
 }
-body #main #intro #left #section {
+body #main row #left #section {
   color: white;
   width: 100%;
   border-radius: 4px;
   padding: 1px;
 }
-body #main #intro #left #section a {
+body #main row #left #section a {
   color: white;
   text-decoration: none;
   display: flex;
   height: -moz-fit-content;
   height: fit-content;
   align-items: center;
-  justify-content: space-between;
 }
-body #main #intro #left #section h2 {
+body #main row #left #section h2 {
   display: inline;
   font-size: 2em;
 }
-body #main #intro #left #section img {
+body #main row #left #section img {
   width: 100px;
   height: auto;
 }
-body #main #intro #left #section:hover {
+body #main row #left #section:hover {
   background-color: rgba(128, 128, 128, 0.5);
 }
 body #main #grid_container {
@@ -123,7 +114,7 @@ body #main #grid_container {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 99vw;
+  width: 100vw;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -259,7 +250,7 @@ body #main #grid_container #skill_grid .skill:nth-of-type(15) {
 }
 body #main #work_history {
   display: grid;
-  grid-template-rows: 30vw;
+  grid-template-rows: 30vw 30vw;
   grid-template-columns: 50vh 50vh 50vh;
   gap: 15px;
   align-items: center;
@@ -306,6 +297,11 @@ body #main #work_history .job p {
   margin: 20px 10px 0 10px;
   font-size: 1.2em;
 }
+body #main #work_history .job a {
+  margin: 20px 10px 0 10px;
+  font-size: 1.2em;
+  color: white;
+}
 body #footer {
   width: 100vw;
   height: 10vh;
@@ -346,6 +342,7 @@ body #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
+    z-index: 1;
     margin-bottom: 10px;
     width: 100vw;
     height: fit-content;
@@ -357,6 +354,7 @@ body #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
+    z-index: 1;
     padding: 0;
     top: 0;
     left: 0;
@@ -386,45 +384,43 @@ body #footer a:hover {
     width: 65vw;
     font-size: 1.5em;
   }
-  body #main #intro {
-    display: block;
-    width: 100vw;
+  body #main row {
     height: -moz-fit-content;
     height: fit-content;
   }
-  body #main #intro #info {
-    width: 99vw;
+  body #main row #info {
+    width: 90vw;
     height: -moz-fit-content;
     height: fit-content;
-    left: 0;
+    margin-right: 0;
   }
-  body #main #intro #info img {
+  body #main row #info img {
     display: none;
   }
-  body #main #intro #info #text_box h2 {
+  body #main row #info #text_box h2 {
     margin-left: 5px;
+    text-align: center;
   }
-  body #main #intro #info #text_box p {
+  body #main row #info #text_box p {
     font-size: 1.1em;
     margin: 5px;
   }
-  body #main #intro #left {
-    width: 99vw;
+  body #main row #left {
     padding: 0;
     margin-top: 1vh;
   }
-  body #main #intro #left #section {
+  body #main row #left #section {
     width: 100%;
   }
-  body #main #intro #left #section a {
+  body #main row #left #section a {
     justify-content: space-between;
     margin: 0 5px 0 5px;
   }
-  body #main #intro #left #section h2 {
+  body #main row #left #section h2 {
     display: inline;
     font-size: 1.5em;
   }
-  body #main #intro #left #section:last-of-type {
+  body #main row #left #section:last-of-type {
     margin-top: 4%;
   }
   body #main #grid_container {
@@ -613,6 +609,7 @@ body #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
+    z-index: 1;
     margin-bottom: 10px;
     width: 100vw;
     height: fit-content;
@@ -624,6 +621,7 @@ body #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
+    z-index: 1;
     padding: 0;
     top: 0;
     left: 0;
@@ -653,45 +651,43 @@ body #footer a:hover {
     width: 65vw;
     font-size: 1.5em;
   }
-  body #main #intro {
-    display: block;
-    width: 100vw;
+  body #main row {
     height: -moz-fit-content;
     height: fit-content;
   }
-  body #main #intro #info {
-    width: 99vw;
+  body #main row #info {
+    width: 90vw;
     height: -moz-fit-content;
     height: fit-content;
-    left: 0;
+    margin-right: 0;
   }
-  body #main #intro #info img {
+  body #main row #info img {
     display: none;
   }
-  body #main #intro #info #text_box h2 {
+  body #main row #info #text_box h2 {
     margin-left: 5px;
+    text-align: center;
   }
-  body #main #intro #info #text_box p {
+  body #main row #info #text_box p {
     font-size: 1.1em;
     margin: 5px;
   }
-  body #main #intro #left {
-    width: 99vw;
+  body #main row #left {
     padding: 0;
     margin-top: 1vh;
   }
-  body #main #intro #left #section {
+  body #main row #left #section {
     width: 100%;
   }
-  body #main #intro #left #section a {
+  body #main row #left #section a {
     justify-content: space-between;
     margin: 0 5px 0 5px;
   }
-  body #main #intro #left #section h2 {
+  body #main row #left #section h2 {
     display: inline;
     font-size: 1.5em;
   }
-  body #main #intro #left #section:last-of-type {
+  body #main row #left #section:last-of-type {
     margin-top: 4%;
   }
   body #main #grid_container {

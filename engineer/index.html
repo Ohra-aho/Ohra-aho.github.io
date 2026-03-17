@@ -13,6 +13,8 @@
 	<script defer src="../tool_showcase/tools/language/language.js"></script>
 	<script defer src="../tool_showcase/tools/language/language_toggler.js"></script>
 
+	<link rel="stylesheet" href="../tool_showcase/tools/adjusting/row_column.css">
+
 </head>
 <body onload="DisplayGridContent();">
 	<languages languages="suomi englanti"></languages>
@@ -32,10 +34,10 @@
 	</div>
 	<div id="main">
 		
-
-		<div id="intro">
+		<row>
 			<div id="info">
 				<img src="../media/images/it engineer.png" alt="">
+				
 				<div id="text_box">
 					<h2>Mediatekniikan insinööri</h2>
 					<language-changer>
@@ -69,7 +71,7 @@
 					</a>
 				</div>
 			</div>
-		</div>
+		</row>
 
 		<div id="grid_container">
 			<h2>Mitä osaan</h2>
@@ -83,6 +85,49 @@
 		</div>
 
 		<div id="work_history">
+			<div class="job">
+				<h2>Web kehittäjä</h2>
+				<language-changer>
+					<language name="englanti">Web developer</language>
+				</language-changer>
+				<div>
+					<h3>Työnantaja</h3>
+					<language-changer>
+						<language name="englanti">Employer</language>
+					</language-changer>
+					<p>TARE ry</p>
+				</div>
+				<div>
+					<h3>Ajanjakso</h3>
+					<language-changer>
+						<language name="englanti">Duration</language>
+					</language-changer>
+					<p>02.2026 - 02.2026</p>
+				</div>
+
+				<h3>Työtehtävät</h3>
+				<language-changer>
+					<language name="englanti">Tasks</language>
+				</language-changer>
+				<p>
+					Suunnittelin ja ohjelmoin nettisivut asiakkaani käyttöön. 
+					Vastuullani oli sivujen tekninen puoli ja osa visuaalisesta puolesta. 
+					Konsultoin myös asiakkaitani nettisivujen julkaisusta ja ylläpidosta.
+				</p>
+				<language-changer>
+					<language name="englanti">
+						I designed and developed a website for my client. 
+						I was responsible for the technical and visual side of the site.
+						I also consulted my client about the pulishing of the site and the upkeeping of the site.
+					</language>
+				</language-changer>
+
+				<a href="https://tarery.net/" target="_blank">Sivut</a>
+				<language-changer>
+					<language name="englanti">Site</language>
+				</language-changer>
+			</div>
+
 			<div class="job">
 				<h2>Web kehittäjä</h2>
 				<language-changer>
@@ -197,6 +242,11 @@
 						I used Unity as the game engine and C# as the language. 
 						Audiovisual side was achieved with Audacity and Krita.
 					</language>
+				</language-changer>
+
+				<a href="https://seawall-project.itch.io/seawall-demo" target="_blank">Peli</a>
+				<language-changer>
+					<language name="englanti">Game</language>
 				</language-changer>
 			</div>
 			
