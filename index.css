@@ -51,6 +51,7 @@ body .header {
   align-items: center;
   border-bottom: 2px dashed white;
   top: 0;
+  z-index: 1;
   top: -7vh;
   left: 0;
   z-index: 1;
@@ -320,6 +321,7 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
+    z-index: 1;
     margin-bottom: 10px;
     top: 0;
     animation: none;
@@ -497,6 +499,7 @@ body #main #footer a:hover {
     align-items: center;
     border-bottom: 2px dashed white;
     top: 0;
+    z-index: 1;
     margin-bottom: 10px;
     top: 0;
     animation: none;
